@@ -418,7 +418,9 @@ body {
     color: #635a5a;
   }
   .date-in label input{
+    border-radius: 20px;
     padding: 0.5h;
+    border: none;
   }
 
 
