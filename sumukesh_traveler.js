@@ -46,3 +46,31 @@ setInterval(() => {
     if(i === photo.length) i = 0; 
     updateBackgroundImage();
 }, 3000);
+document.getElementById("filter-button").addEventListener("click", () => {
+    const filter_menu=document.querySelector(".filter-menu");
+    if (filter_menu.style.display === "none") {
+        filter_menu.style.display = "flex";  
+    } else {
+        filter_menu.style.display = "none";  
+    }
+});
+
+var bedroom=1;
+document.getElementById("sub-bedroom").addEventListener("click",()=>{
+    if(bedroom===1){
+
+    }
+    else{
+        bedroom=bedroom-1;
+        document.getElementById("bedroom").innerText=bedroom;
+    }
+});
+document.getElementById("add-bedroom").addEventListener("click",()=>{
+    if(bedroom===9){
+
+    }
+    else{
+        bedroom=bedroom+1;
+        document.getElementById("bedroom").innerText=bedroom;
+    }
+});
