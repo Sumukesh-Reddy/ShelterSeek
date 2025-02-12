@@ -424,6 +424,8 @@ body {
 
   .filter-group-1{
     padding: 7px;
+    border-radius: 20px;
+    
   }
 .filter-group-1 {
     transition: box-shadow 0.3s ease;
@@ -431,4 +433,65 @@ body {
 
 .filter-group-1:hover {
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#sub-bedroom{
+    font-size: x-large;
+    margin-left: 4vh;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(165, 165, 165,0.4);
+}
+#bedrooms{
+    font-size: x-large;
+    margin-left: 2vh;
+}
+#add-bedroom{
+    font-size: x-large;
+    margin-left: 2vh;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(165, 165, 165,0.4);
+}
+
+#sub-bedroom:hover{
+ background-color: #d72d6e;   
+ opacity: 0.8;
+}
+#add-bedroom:hover{
+ background-color: #d72d6e;   
+ opacity: 0.8;
+}
+
+
+#sub-beds{
+    font-size: x-large;
+    margin-left: 8vh;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(165, 165, 165,0.4);
+}
+#beds{
+    font-size: x-large;
+    margin-left: 2vh;
+}
+#add-beds{
+    font-size: x-large;
+    margin-left: 2vh;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(165, 165, 165,0.4);
+}
+
+#sub-beds:hover{
+ background-color: #d72d6e;   
+ opacity: 0.8;
+}
+#add-beds:hover{
+ background-color: #d72d6e;   
+ opacity: 0.8;
 }

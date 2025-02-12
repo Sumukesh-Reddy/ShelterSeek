@@ -55,22 +55,35 @@ document.getElementById("filter-button").addEventListener("click", () => {
     }
 });
 
-var bedroom=1;
-document.getElementById("sub-bedroom").addEventListener("click",()=>{
-    if(bedroom===1){
+let bedroom = 1;
 
-    }
-    else{
-        bedroom=bedroom-1;
-        document.getElementById("bedroom").innerText=bedroom;
+document.getElementById("sub-bedroom").addEventListener("click", () => {
+    if (bedroom > 1) {
+        bedroom -= 1;
+        document.getElementById("bedrooms").innerText = bedroom;
     }
 });
-document.getElementById("add-bedroom").addEventListener("click",()=>{
-    if(bedroom===9){
 
+document.getElementById("add-bedroom").addEventListener("click", () => {
+    if (bedroom < 9) {
+        bedroom += 1;
+        document.getElementById("bedrooms").innerText = bedroom;
     }
-    else{
-        bedroom=bedroom+1;
-        document.getElementById("bedroom").innerText=bedroom;
+});
+
+
+let beds = 1;
+
+document.getElementById("sub-beds").addEventListener("click", () => {
+    if (bedroom > 1) {
+        bedroom -= 1;
+        document.getElementById("beds").innerText = bedroom;
+    }
+});
+
+document.getElementById("add-beds").addEventListener("click", () => {
+    if (bedroom < 9) {
+        bedroom += 1;
+        document.getElementById("beds").innerText = bedroom;
     }
 });
