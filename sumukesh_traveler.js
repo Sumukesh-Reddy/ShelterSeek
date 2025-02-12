@@ -75,15 +75,31 @@ document.getElementById("add-bedroom").addEventListener("click", () => {
 let beds = 1;
 
 document.getElementById("sub-beds").addEventListener("click", () => {
-    if (bedroom > 1) {
-        bedroom -= 1;
-        document.getElementById("beds").innerText = bedroom;
+    if (beds > 1) {
+        beds -= 1;
+        document.getElementById("beds").innerText = beds;
     }
 });
 
 document.getElementById("add-beds").addEventListener("click", () => {
-    if (bedroom < 9) {
-        bedroom += 1;
-        document.getElementById("beds").innerText = bedroom;
+    if (beds < 9) {
+        beds += 1;
+        document.getElementById("beds").innerText = beds;
+    }
+});
+
+window.addEventListener("click", (event) => {
+    const userMenu = document.getElementById("user-menu");
+    const menu = document.getElementById("menu");
+    const filterMenu = document.querySelector(".filter-menu");
+
+    if (!userMenu.contains(event.target) && !document.getElementById("user-button").contains(event.target)) {
+        userMenu.style.display = "none";
+    }
+    if (!menu.contains(event.target) && !document.getElementById("menubotton").contains(event.target)) {
+        menu.style.display = "none";
+    }
+    if (!filterMenu.contains(event.target) && !document.getElementById("filter-button").contains(event.target)) {
+        filterMenu.style.display = "none";
     }
 });

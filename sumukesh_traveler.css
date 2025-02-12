@@ -396,14 +396,6 @@ body {
 .filter-group:hover {
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
 }
-
-
-.range_container {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: 100px auto;
-  }
   
   .sliders_control {
     position: relative;
