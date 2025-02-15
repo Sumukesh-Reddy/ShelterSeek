@@ -40,7 +40,7 @@ function updateBackgroundImage() {
 }
 
 updateBackgroundImage();
-
+// sliding photos,below nav bar
 setInterval(() => {
     i++;
     if(i === photo.length) i = 0; 
@@ -54,7 +54,7 @@ document.getElementById("filter-button").addEventListener("click", () => {
         filter_menu.style.display = "none";  
     }
 });
-
+// no.of bedrooms
 let bedroom = 1;
 
 document.getElementById("sub-bedroom").addEventListener("click", () => {
@@ -72,6 +72,7 @@ document.getElementById("add-bedroom").addEventListener("click", () => {
 });
 
 
+// no.of beds
 let beds = 1;
 
 document.getElementById("sub-beds").addEventListener("click", () => {
@@ -88,6 +89,41 @@ document.getElementById("add-beds").addEventListener("click", () => {
     }
 });
 
+// no.of adults
+let adults = 1;
+document.getElementById("sub-adults").addEventListener("click", () => {
+    if (adults > 0) {
+        adults -= 1;
+        document.getElementById("adults").innerText = adults;
+    }
+});
+
+document.getElementById("add-adults").addEventListener("click", () => {
+    if (adults < 9) {
+        adults += 1;
+        document.getElementById("adults").innerText = adults;
+    }
+});
+
+
+// no.of childrens
+let childrens = 1;
+document.getElementById("sub-childrens").addEventListener("click", () => {
+    if (childrens > 0) {
+        childrens -= 1;
+        document.getElementById("childrens").innerText = childrens;
+    }
+});
+
+document.getElementById("add-childrens").addEventListener("click", () => {
+    if (childrens < 9) {
+        childrens += 1;
+        document.getElementById("childrens").innerText = childrens;
+    }
+});
+
+
+
 window.addEventListener("click", (event) => {
     const userMenu = document.getElementById("user-menu");
     const menu = document.getElementById("menu");
@@ -103,3 +139,9 @@ window.addEventListener("click", (event) => {
         filterMenu.style.display = "none";
     }
 });
+
+
+document.getElementById("filter-search-button").addEventListener("click",()=>{
+    const filterMenu = document.querySelector(".filter-menu");
+    filterMenu.style.display = "none";
+})
