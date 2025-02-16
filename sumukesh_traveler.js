@@ -140,12 +140,19 @@ window.addEventListener("click", (event) => {
     }
 });
 
-
+// filter-search button
 document.getElementById("filter-search-button").addEventListener("click",()=>{
     const filterMenu = document.querySelector(".filter-menu");
     filterMenu.style.display = "none";
 })
 
+
+// close filter button
+
+document.getElementById("filter-close-button").addEventListener("click",()=>{
+    const filterMenu=document.querySelector(".filter-menu");
+    filterMenu.style.display = "none";
+})
 // selected rooms
 let selectedRooms = [];
 

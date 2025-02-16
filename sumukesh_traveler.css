@@ -431,6 +431,30 @@ body {
     padding: 0.5h;
     border: none;
   }
+
+/* close filter button */
+
+.filter-close{
+    height: 2vw;
+    width: 2vw;
+    margin-left: 93%;
+}
+#filter-close-button{
+    height: 3vh;  
+    width: 3vw;   
+    font-size: 2rem; 
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#filter-close-button:hover{
+    color: #d72d6e;
+}
 /* date in */
 .date-in input[type="date"] {
     width: 100%;
@@ -449,7 +473,6 @@ body {
 }
 
 /* bedroom,beds strats */
-
 
   .filter-group-1 {
     display: flex;
@@ -521,8 +544,8 @@ body {
 }
 
 #filter-search-button:hover {
-    color:#d72d6e;
-    background-color: #5a5757;
+    background-color:#d72d6e;
+    color: white;
     transform: scale(1.05);
 }
 
@@ -549,7 +572,7 @@ body {
 }
 
 .room-box:hover {
-    background-color: #d72d6e;
+    background-color: #68c55f;
     color: white;
 }
 
@@ -583,7 +606,7 @@ body {
 }
 
 .select-box:hover {
-    background-color: #d72d6e;
+    background-color:  #68c55f;
     color: white;
 }
 
@@ -612,7 +635,7 @@ body {
 }
 
 .radio-option:hover {
-    background-color: #d72d6e;
+    background-color:  #68c55f;
     color: white;
 }
 

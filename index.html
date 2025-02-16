@@ -54,7 +54,7 @@
     <hr style="opacity: 0.3;">
     <div class="filter"><button id="filter-button"><i class="fa fa-sliders" ></i><span >filter</span></button></div>
     <div class="filter-menu">
-
+        <div class="filter-close"><button id="filter-close-button">&times;</button></div>
         <!-- date in -->
         <div class="filter-group">
             <label for="check-in"><b>Check-in Date:</b></label>
@@ -120,7 +120,7 @@
 
         <!-- room location -->
 
-        
+
         <div class="filter-group">
             <label><b>Room Location:</b></label>
             <div class="multi-select" id="room-location">
@@ -151,7 +151,8 @@
         <div class="filter-group">
             <label><b>Room Size:</b></label>
             <div class="radio-group" id="room-size">
-                <label class="radio-option"><input type="radio" name="room-size" value="small" checked> Small</label>
+                <label class="radio-option"><input type="radio" name="room-size" value="any" checked> Any</label>
+                <label class="radio-option"><input type="radio" name="room-size" value="small"> Small</label>
                 <label class="radio-option"><input type="radio" name="room-size" value="medium"> Medium</label>
                 <label class="radio-option"><input type="radio" name="room-size" value="large"> Large</label>
             </div>
