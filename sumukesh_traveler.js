@@ -153,6 +153,8 @@ document.getElementById("filter-close-button").addEventListener("click",()=>{
     const filterMenu=document.querySelector(".filter-menu");
     filterMenu.style.display = "none";
 })
+
+
 // selected rooms
 let selectedRooms = [];
 

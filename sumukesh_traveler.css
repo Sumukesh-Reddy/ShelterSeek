@@ -435,6 +435,7 @@ body {
 /* close filter button */
 
 .filter-close{
+    z-index: 100;
     height: 2vw;
     width: 2vw;
     margin-left: 93%;
