@@ -52,132 +52,145 @@
     <br>
 
     <hr style="opacity: 0.3;">
-
     <div class="filter"><button id="filter-button"><i class="fa fa-sliders" ></i><span >filter</span></button></div>
-    
     <div class="filter-menu">
 
+        <!-- date in -->
         <div class="filter-group">
-            <label><b>Check-in Date</b></label>
+            <label for="check-in"><b>Check-in Date:</b></label>
             <div class="date-in">
-                <label><input type="date" name="check-in-date" value="check-in"></label><br>
+                <input type="date" id="check-in" name="check-in-date">
+            </div>
+        </div>
+        
+
+
+        <div class="filter-group-1">
+            <label><b>Bedrooms:</b></label>
+            <div class="counter">
+                <button id="sub-bedroom">-</button>
+                <span id="bedrooms">1</span>
+                <button id="add-bedroom">+</button>
+            </div>
+        </div>
+        
+        <div class="filter-group-1">
+            <label><b>Beds:</b></label>
+            <div class="counter">
+                <button id="sub-beds">-</button>
+                <span id="beds">1</span>
+                <button id="add-beds">+</button>
+            </div>
+        </div>
+        
+        <div class="filter-group-1">
+            <label><b>Adults:</b></label>
+            <div class="counter">
+                <button id="sub-adults">-</button>
+                <span id="adults">0</span>
+                <button id="add-adults">+</button>
+            </div>
+        </div>
+        
+        <div class="filter-group-1">
+            <label><b>Children:</b></label>
+            <div class="counter">
+                <button id="sub-childrens">-</button>
+                <span id="childrens">0</span>
+                <button id="add-childrens">+</button>
             </div>
         </div>
 
-
-        <div class="filter-group-1">
-            <label ><b>Bedrooms: </b></label>
-            <button id="sub-bedroom">-</button>
-            <label id="bedrooms">1</label>
-            <button id="add-bedroom">+</button>
-        </div>
-        
-
-        <div class="filter-group-1">
-            <label><b>Beds: </b></label>
-            <button id="sub-beds">-</button>
-            <label id="beds">1</label>
-            <button id="add-beds">+</button>
-        </div>
-        
-        <div class="filter-group-1">
-            <label><b>Adults: </b></label>
-            <button id="sub-adults">-</button>
-            <label id="adults">0</label>
-            <button id="add-adults">+</button>
-        </div>
-
-        <div class="filter-group-1">
-            <label><b>Childrens: </b></label>
-            <button id="sub-childrens">-</button>
-            <label id="childrens">0</label>
-            <button id="add-childrens">+</button>
-        </div>
-
+<!-- room type -->
         <div class="filter-group">
             <label><b>Room Type:</b></label>
-            <div>
-                <label><input type="checkbox" name="room" value="pg"> PG</label><br>
-                <label><input type="checkbox" name="room" value="house"> House</label><br>
-                <label><input type="checkbox" name="room" value="resort"> Resort</label><br>
-                <label><input type="checkbox" name="room" value="villa"> Villa</label><br>
-                <label><input type="checkbox" name="room" value="duplex"> Duplex House</label><br>
-                <label><input type="checkbox" name="room" value="cottage"> Cottage</label><br>
-                <label><input type="checkbox" name="room" value="apartment"> Apartment</label><br>
-                <label><input type="checkbox" name="room" value="hostels"> Hostels</label><br>
-                <label><input type="checkbox" name="room" value="farm"> Farm House</label><br>
+            <div class="room-options">
+                <div class="room-box" data-value="pg">PG</div>
+                <div class="room-box" data-value="house">House</div>
+                <div class="room-box" data-value="resort">Resort</div>
+                <div class="room-box" data-value="villa">Villa</div>
+                <div class="room-box" data-value="duplex">Duplex</div>
+                <div class="room-box" data-value="cottage">Cottage</div>
+                <div class="room-box" data-value="apartment">Apartment</div>
+                <div class="room-box" data-value="hostels">Hostels</div>
+                <div class="room-box" data-value="farm">Farm House</div>
             </div>
+            <input type="hidden" id="selected-room-types" name="room" value="">
         </div>
-        
 
+        <!-- room location -->
+
+        
         <div class="filter-group">
             <label><b>Room Location:</b></label>
-            <div>
-                <label><input type="checkbox" name="room-location" value="in-town"> In Town</label><br>
-                <label><input type="checkbox" name="room-location" value="outside-town"> Outside of Town</label><br>
-                <label><input type="checkbox" name="room-location" value="nearby-villages"> Nearby Villages</label><br>
-                <label><input type="checkbox" name="room-location" value="residential-area"> Residential Area</label><br>
-                <label><input type="checkbox" name="room-location" value="commercial-area"> Commercial Area</label><br>
-                <label><input type="checkbox" name="room-location" value="near-highway"> Near Highway</label><br>
-                <label><input type="checkbox" name="room-location" value="countryside"> Countryside</label><br>
+            <div class="multi-select" id="room-location">
+              <div class="select-box" data-value="in-town">In Town</div>
+              <div class="select-box" data-value="outside-town">Outside of Town</div>
+              <div class="select-box" data-value="nearby-villages">Nearby Villages</div>
+              <div class="select-box" data-value="residential-area">Residential Area</div>
+              <div class="select-box" data-value="commercial-area">Commercial Area</div>
+              <div class="select-box" data-value="near-highway">Near Highway</div>
+              <div class="select-box" data-value="countryside">Countryside</div>
             </div>
-        </div>
-        
-        
-        <!-- prise -->
+            <input type="hidden" id="selected-room-location" name="room-location" value="">
+          </div>
 
+
+        <!-- Room Near Transport Station -->
         <div class="filter-group">
-            <label><b>Room near a transport station:</b></label>
-            <div>
-                <label><input type="radio" name="room-distance" value="0km" checked> Any</label><br>
-                <label><input type="radio" name="room-distance" value="2km"> 2 km</label><br>
-                <label><input type="radio" name="room-distance" value="5km" checked> 5 km</label><br>
-                <label><input type="radio" name="room-distance" value="10km"> 10 km</label><br>
+            <label><b>Room Near a Transport Station:</b></label>
+            <div class="radio-group" id="transport-station">
+                <label class="radio-option"><input type="radio" name="room-distance" value="any" checked> Any</label>
+                <label class="radio-option"><input type="radio" name="room-distance" value="2km"> 2 km</label>
+                <label class="radio-option"><input type="radio" name="room-distance" value="5km"> 5 km</label>
+                <label class="radio-option"><input type="radio" name="room-distance" value="10km"> 10 km</label>
             </div>
         </div>
-        
 
+        <!-- Room Size -->
         <div class="filter-group">
-            <label><b>Room size:</b></label>
-            <div>
-                <label><input type="radio" name="room-size" value="small" checked> Small</label><br>
-                <label><input type="radio" name="room-size" value="medium"> Medium</label><br>
-                <label><input type="radio" name="room-size" value="large"> Large</label><br>
+            <label><b>Room Size:</b></label>
+            <div class="radio-group" id="room-size">
+                <label class="radio-option"><input type="radio" name="room-size" value="small" checked> Small</label>
+                <label class="radio-option"><input type="radio" name="room-size" value="medium"> Medium</label>
+                <label class="radio-option"><input type="radio" name="room-size" value="large"> Large</label>
             </div>
         </div>
-        
 
+        <!-- Amenities -->
         <div class="filter-group">
             <label><b>Amenities:</b></label>
-            <div>
-                <label><input type="checkbox" name="amenities" value="wifi"> WiFi</label><br>
-                <label><input type="checkbox" name="amenities" value="ac"> AC</label><br>
-                <label><input type="checkbox" name="amenities" value="laundry"> Laundry</label><br>
-                <label><input type="checkbox" name="amenities" value="hotwater"> Hot Water</label><br>
-                <label><input type="checkbox" name="amenities" value="lift"> Lift</label><br>
-                <label><input type="checkbox" name="amenities" value="car-parking"> Free Car Parking</label><br>
-                <label><input type="checkbox" name="amenities" value="ev-charging"> EV Charging</label><br>
+            <div class="multi-select" id="amenities">
+                <div class="select-box" data-value="wifi">WiFi</div>
+                <div class="select-box" data-value="ac">AC</div>
+                <div class="select-box" data-value="laundry">Laundry</div>
+                <div class="select-box" data-value="hotwater">Hot Water</div>
+                <div class="select-box" data-value="lift">Lift</div>
+                <div class="select-box" data-value="car-parking">Free Car Parking</div>
+                <div class="select-box" data-value="ev-charging">EV Charging</div>
             </div>
+            <input type="hidden" id="selected-amenities" name="amenities" value="">
         </div>
-        
 
+        <!-- Host Gender -->
         <div class="filter-group">
             <label><b>Host Gender:</b></label>
-            <div>
-                <label><input type="radio" name="host" value="any" checked> Any</label><br>
-                <label><input type="radio" name="host" value="male"> Male</label><br>
-                <label><input type="radio" name="host" value="female"> Female</label><br>
-                <label><input type="radio" name="host" value="family"> Family-friendly</label><br>
+            <div class="radio-group" id="host-gender">
+                <label class="radio-option"><input type="radio" name="host" value="any" checked> Any</label>
+                <label class="radio-option"><input type="radio" name="host" value="male"> Male</label>
+                <label class="radio-option"><input type="radio" name="host" value="female"> Female</label>
+                <label class="radio-option"><input type="radio" name="host" value="family"> Family-friendly</label>
             </div>
         </div>
 
-
+        <!-- Food Preferences -->
         <div class="filter-group">
             <label><b>Food Preferences:</b></label>
-            <div>
-                <label><input type="checkbox" name="food" value="vegetarian"> Vegetarian</label><br>
-                <label><input type="checkbox" name="food" value="non-vegetarian"> Non-Vegetarian</label><br>
+            <div class="multi-select" id="food-preferences">
+                <div class="select-box" data-value="vegetarian">Vegetarian</div>
+                <div class="select-box" data-value="non-vegetarian">Non-Vegetarian</div>
             </div>
+            <input type="hidden" id="selected-food" name="food" value="">
         </div>
         
 

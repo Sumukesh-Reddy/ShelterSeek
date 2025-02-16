@@ -145,3 +145,81 @@ document.getElementById("filter-search-button").addEventListener("click",()=>{
     const filterMenu = document.querySelector(".filter-menu");
     filterMenu.style.display = "none";
 })
+
+// selected rooms
+let selectedRooms = [];
+
+document.querySelectorAll('.room-box').forEach(box => {
+    box.addEventListener('click', function() {
+        let roomType = this.getAttribute('data-value');
+
+        if (selectedRooms.includes(roomType)) {
+            selectedRooms = selectedRooms.filter(item => item !== roomType);
+            this.classList.remove('active');
+        } else {
+            selectedRooms.push(roomType);
+            this.classList.add('active');
+        }
+        document.getElementById('selected-room-types').value = selectedRooms.join(',');
+    });
+});
+
+
+// Radio Button Handling (Room Distance, Room Size, Host Gender)
+document.querySelectorAll('.radio-group').forEach(group => {
+    group.addEventListener('click', function(event) {
+        if (event.target.classList.contains('radio-option')) {
+            group.querySelectorAll('.radio-option').forEach(label => label.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const input = event.target.querySelector('input[type="radio"]');
+            if (input) {
+                input.checked = true;
+            }
+        }
+    });
+
+    const checkedInput = group.querySelector('input[type="radio"]:checked');
+    if (checkedInput) {
+        checkedInput.parentElement.classList.add('active');
+    }
+});
+
+// Multi-Select Handling (Amenities, Food Preferences)
+document.querySelectorAll('.multi-select').forEach(multiSelect => {
+    const hiddenInput = multiSelect.nextElementSibling;
+    const selectBoxes = multiSelect.querySelectorAll('.select-box');
+    let selectedValues = [];
+    selectBoxes.forEach(box => {
+        box.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+
+            if (selectedValues.includes(value)) {
+                selectedValues = selectedValues.filter(item => item !== value);
+                this.classList.remove('active');
+            } else {
+                selectedValues.push(value);
+                this.classList.add('active');
+            }
+
+            hiddenInput.value = selectedValues.join(',');
+        });
+    });
+});
+
+// type of location
+let selectedLocations = [];
+document.querySelectorAll('#room-location .select-box').forEach(box => {
+  box.addEventListener('click', function() {
+    let location = this.getAttribute('data-value');
+
+    if (selectedLocations.includes(location)) {
+      selectedLocations = selectedLocations.filter(item => item !== location);
+      this.classList.remove('active');
+    } else {
+      selectedLocations.push(location);
+      this.classList.add('active');
+    }
+    document.getElementById('selected-room-location').value = selectedLocations.join(',');
+  });
+});
