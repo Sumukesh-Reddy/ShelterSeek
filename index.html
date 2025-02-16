@@ -18,7 +18,8 @@
         </div>
        
         <div class="cart"><a href="#" style="text-decoration:none; color:black"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
-        <div class="about"><a href="#" style="text-decoration: none; color: #d72d6e;    ">About</a></div>
+        <div class="about"><a href="#" style="text-decoration: none; color: black;    ">About</a></div>
+        <div class="inbox"><a href="#"></a><i class="fa fa-envelope" aria-hidden="true"></i></div>
         <div class="traveler"><button id="user-button"><i class="fa fa-user" aria-hidden="true"></i></button></div>
         <div id="user-menu" class="user-menu">
             <button id="user-close-btn" class="user-close-btn">&times;</button>
@@ -52,6 +53,7 @@
     <br>
 
     <hr style="opacity: 0.3;">
+
     <div class="filter"><button id="filter-button"><i class="fa fa-sliders" ></i><span >filter</span></button></div>
     <div class="filter-menu">
         <div class="filter-close"><button id="filter-close-button">&times;</button></div>
@@ -62,8 +64,23 @@
                 <input type="date" id="check-in" name="check-in-date">
             </div>
         </div>
+        <!-- shared or full room -->
+        <div class="filter-group">
+            <label><b>Sharing type:</b></label>
+            <div class="room-options">
+                <div class="room-box" data-value="pg">PG</div>
+                <div class="room-box" data-value="house">House</div>
+                <div class="room-box" data-value="resort">Resort</div>
+                <div class="room-box" data-value="villa">Villa</div>
+                <div class="room-box" data-value="duplex">Duplex</div>
+                <div class="room-box" data-value="cottage">Cottage</div>
+                <div class="room-box" data-value="apartment">Apartment</div>
+                <div class="room-box" data-value="hostels">Hostels</div>
+                <div class="room-box" data-value="farm">Farm House</div>
+            </div>
+            <input type="hidden" id="selected-room-types" name="room" value="">
+        </div>
         
-
 
         <div class="filter-group-1">
             <label><b>Bedrooms:</b></label>
