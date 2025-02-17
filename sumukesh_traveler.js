@@ -318,3 +318,9 @@ priceInputMax.addEventListener("input", function () {
     maxVal.value = this.value;
     updateSlider();
 });
+
+
+
+
+// rooms boxes js starts from here
+

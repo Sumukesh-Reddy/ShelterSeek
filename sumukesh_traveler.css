@@ -71,6 +71,7 @@ body {
 }
 
 .help {
+    z-index: 100;
     position: fixed;
     right: 5%;
     bottom: 7%;
@@ -664,7 +665,6 @@ body {
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    
     transition: all 0.3s ease;
 }
 
@@ -743,4 +743,61 @@ body {
 }
 .range-price input:first-of-type {
   margin-right: 15px;
+}
+
+/* Main wrapper for the block */
+.main-home-block {
+    width: 95%;
+    height: auto;
+    margin-left: 1%;
+    padding: 1%;
+    /* border: 2px solid #000000; */
+    display: grid;
+    grid-template-columns: 1fr; 
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (min-width: 1005px) {
+    .main-home-block {
+        grid-template-columns: 23% 23% 23% 23%; 
+    }
+}
+.home-block{
+    border-radius: 20px;
+    justify-content: center;
+    border: 0.9px solid rgb(219, 214, 217) ;
+    margin-left: 1%;
+    transition:all 0.3s ease ;
+}
+.home-block:hover{
+    transition: back-ground 0.3s ease, transform 0.2s ease;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.03);
+}
+.home-content{
+    margin-left: 2%;
+    justify-content: center;
+}
+
+.home-photos{
+    height: 260px;
+    width: 100%;
+}
+@media (min-width: 930px) and (max-width: 1005px) {
+    .main-home-block {
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap: 20px;
+    }
+}
+@media (min-width: 260px) and (max-width: 930px) {
+    .main-home-block {
+        grid-template-columns:1fr 1fr; 
+        gap: 20px;
+    }
+}
+@media (max-width: 26px){
+    .main-home-block {
+        grid-template-columns:1fr; 
+    }
 }
