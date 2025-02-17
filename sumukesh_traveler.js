@@ -321,14 +321,164 @@ priceInputMax.addEventListener("input", function () {
 
 
 // liked rooms
-let likedrooms=[];
-document.getElementById("home-like").addEventListener("click",()=>{
-    if(document.)
+// let likedrooms=[];
+// document.getElementById("home-like").addEventListener("click",()=>{
+//     if(document.)
 
-// write code
+// // write code
 
 
-})
+// })
 
 // rooms boxes js starts from here
+// const homes = [
+//     {
+//         id: 1,
+//         title: "Modern Apartment",
+//         location: "New York",
+//         price: "$250,000",
+//         description: "Beautiful home with a great view and spacious rooms.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false
+//     },
+//     {
+//         id: 2,
+//         title: "Cozy Cottage",
+//         location: "California",
+//         price: "$180,000",
+//         description: "A charming cottage surrounded by nature.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false
+//     },
+//     {
+//         id: 3,
+//         title: "Luxury Villa",
+//         location: "Miami",
+//         price: "$1,200,000",
+//         description: "A stunning villa with a private beach and pool.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false
+//     }
+// ];
+
+// homes.forEach(home => addHomeToPage(home));
+
+// function addHomeToPage(home) {
+//     const container = document.getElementById("homes-container"); // Ensure an element with this ID exists
+
+//     // Create the home block
+//     const homeBlock = document.createElement("div");
+//     homeBlock.classList.add("home-block");
+
+//     // Create the photo container
+//     const homePhotos = document.createElement("div");
+//     homePhotos.classList.add("home-photos");
+
+//     // Create the like button
+//     const likeButton = document.createElement("button");
+//     likeButton.id = `home-like-${home.id}`;
+//     likeButton.innerHTML = `<i class="fa fa-heart" aria-hidden="true"></i>`;
+//     likeButton.classList.add("like-button");
+//     if (home.liked) likeButton.classList.add("liked");
+
+//     // Toggle like functionality
+//     likeButton.addEventListener("click", () => {
+//         home.liked = !home.liked;
+//         likeButton.classList.toggle("liked");
+//     });
+
+//     // Create left and right navigation buttons
+//     const leftButton = document.createElement("button");
+//     leftButton.innerHTML = "&lt;";
+//     leftButton.classList.add("img-move-left");
+
+//     const rightButton = document.createElement("button");
+//     rightButton.innerHTML = "&gt;";
+//     rightButton.classList.add("img-move-right");
+
+//     // Create image slider container
+//     const imageContainer = document.createElement("div");
+//     imageContainer.classList.add("image-container");
+
+//     // Add images
+//     home.images.forEach((src, index) => {
+//         const img = document.createElement("img");
+//         img.src = src;
+//         img.classList.add("slide");
+//         if (index === 0) img.classList.add("active"); // Show the first image initially
+//         imageContainer.appendChild(img);
+//     });
+
+//     let currentImageIndex = 0;
+//     const slides = imageContainer.querySelectorAll(".slide");
+
+//     // Function to show the next or previous image
+//     function showSlide(index) {
+//         slides.forEach(slide => slide.classList.remove("active"));
+//         slides[index].classList.add("active");
+//     }
+
+//     // Event listeners for navigation buttons
+//     leftButton.addEventListener("click", () => {
+//         currentImageIndex = (currentImageIndex === 0) ? slides.length - 1 : currentImageIndex - 1;
+//         showSlide(currentImageIndex);
+//     });
+
+//     rightButton.addEventListener("click", () => {
+//         currentImageIndex = (currentImageIndex === slides.length - 1) ? 0 : currentImageIndex + 1;
+//         showSlide(currentImageIndex);
+//     });
+
+//     // Append elements
+//     homePhotos.appendChild(likeButton);
+//     homePhotos.appendChild(leftButton);
+//     homePhotos.appendChild(rightButton);
+//     homePhotos.appendChild(imageContainer);
+
+//     // Home content
+//     const homeContent = document.createElement("div");
+//     homeContent.classList.add("home-content");
+//     homeContent.innerHTML = `
+//         <h3>${home.title}</h3>
+//         <p>Location: ${home.location}</p>
+//         <p class="price">${home.price}</p>
+//         <p>Description: ${home.description}</p>
+//     `;
+
+//     // Append everything to the home block
+//     homeBlock.appendChild(homePhotos);
+//     homeBlock.appendChild(document.createElement("hr"));
+//     homeBlock.appendChild(homeContent);
+
+//     // Append to main container
+//     container.appendChild(homeBlock);
+// }
+
+// home images in blocks
+const bgImages = [
+    "img/photo1.jpg",
+    "img/photo2.jpg",
+    "img/photo3.jpg",
+    "img/photo4.jpg"
+];
+let currentIndex = 0;
+
+const homeImageDiv = document.querySelector('.home-image');
+const leftBtn = document.getElementById('img-move-left');
+const rightBtn = document.getElementById('img-move-right');
+
+function updateBackground() {
+    homeImageDiv.style.backgroundImage = `url(${bgImages[currentIndex]})`;
+}
+
+leftBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? bgImages.length - 1 : currentIndex - 1;
+    updateBackground();
+});
+
+rightBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % bgImages.length;
+    updateBackground();
+});
+
 
