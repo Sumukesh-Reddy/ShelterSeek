@@ -64,21 +64,15 @@
                 <input type="date" id="check-in" name="check-in-date">
             </div>
         </div>
+
         <!-- shared or full room -->
         <div class="filter-group">
-            <label><b>Sharing type:</b></label>
-            <div class="room-options">
-                <div class="room-box" data-value="pg">PG</div>
-                <div class="room-box" data-value="house">House</div>
-                <div class="room-box" data-value="resort">Resort</div>
-                <div class="room-box" data-value="villa">Villa</div>
-                <div class="room-box" data-value="duplex">Duplex</div>
-                <div class="room-box" data-value="cottage">Cottage</div>
-                <div class="room-box" data-value="apartment">Apartment</div>
-                <div class="room-box" data-value="hostels">Hostels</div>
-                <div class="room-box" data-value="farm">Farm House</div>
+            <label><b>Room Type:</b></label>
+            <div class="radio-group" id="room-type">
+                <label class="radio-option"><input type="radio" name="room" value="any" checked> Any</label>
+                <label class="radio-option"><input type="radio" name="room" value="shared"> Shared</label>
+                <label class="radio-option"><input type="radio" name="room" value="full"> Full</label>
             </div>
-            <input type="hidden" id="selected-room-types" name="room" value="">
         </div>
         
 
@@ -118,9 +112,34 @@
             </div>
         </div>
 
+        <!-- price -->
+        <div class="filter-group">
+            <div class="double-slider-box">
+                <h3 class="range-title">Price Range</h3>
+                
+                <div class="range-slider">
+                    <div class="range-selected"></div>
+                </div>
+            
+                <div class="range-input">
+                    <input type="range" class="min-input" min="500" max="10000" value="2500">
+                    <input type="range" class="max-input" min="500" max="10000" value="7500">
+                </div>
+            
+                <div class="range-price">
+                    <label for="min-price">Min:&nbsp;&#8377;</label>
+                    <input class="min-price" style="background-color: none;border:none;padding:none;font-size:medium">
+                    
+                    <label for="max-price">Max:&nbsp;&#8377;</label>
+                    <input class="max-price" style="background-color: none;border:none;padding:none;font-size:medium">
+                </div>
+            </div>
+            
+        </div>
+
 <!-- room type -->
         <div class="filter-group">
-            <label><b>Room Type:</b></label>
+            <label><b>Type of House:</b></label>
             <div class="room-options">
                 <div class="room-box" data-value="pg">PG</div>
                 <div class="room-box" data-value="house">House</div>

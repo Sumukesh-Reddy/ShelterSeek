@@ -232,3 +232,89 @@ document.querySelectorAll('#room-location .select-box').forEach(box => {
     document.getElementById('selected-room-location').value = selectedLocations.join(',');
   });
 });
+
+// shared room
+document.querySelectorAll('.radio-group').forEach(group => {
+    group.addEventListener('click', function(event) {
+        if (event.target.classList.contains('radio-option')) {
+            group.querySelectorAll('.radio-option').forEach(label => label.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const input = event.target.querySelector('input[type="radio"]');
+            if (input) {
+                input.checked = true;
+            }
+        }
+    });
+
+    const checkedInput = group.querySelector('input[type="radio"]:checked');
+    if (checkedInput) {
+        checkedInput.parentElement.classList.add('active');
+    }
+});
+
+// price
+window.onload = function () {
+    loadStoredValues();
+    updateSlider();
+};
+
+const minVal = document.querySelector(".min-input");
+const maxVal = document.querySelector(".max-input");
+const range = document.querySelector(".range-selected");
+const priceInputMin = document.querySelector(".min-price");
+const priceInputMax = document.querySelector(".max-price");
+const sliderMinValue = parseInt(minVal.min);
+const sliderMaxValue = parseInt(maxVal.max);
+const minGap = 1500;
+
+// Load values from localStorage if they exist
+function loadStoredValues() {
+    const storedMin = localStorage.getItem("priceMin");
+    const storedMax = localStorage.getItem("priceMax");
+
+    if (storedMin) minVal.value = storedMin;
+    if (storedMax) maxVal.value = storedMax;
+
+    priceInputMin.value = minVal.value;
+    priceInputMax.value = maxVal.value;
+}
+
+// Update the slider when inputs change
+function updateSlider() {
+    let minValue = parseInt(minVal.value);
+    let maxValue = parseInt(maxVal.value);
+
+    if (maxValue - minValue < minGap) {
+        if (event.target === minVal) {
+            minVal.value = maxValue - minGap;
+        } else {
+            maxVal.value = minValue + minGap;
+        }
+    }
+
+    let minPercent = ((minVal.value - sliderMinValue) / (sliderMaxValue - sliderMinValue)) * 100;
+    let maxPercent = ((maxVal.value - sliderMinValue) / (sliderMaxValue - sliderMinValue)) * 100;
+
+    range.style.left = minPercent + "%";
+    range.style.right = (100 - maxPercent) + "%";
+
+    priceInputMin.value = minVal.value;
+    priceInputMax.value = maxVal.value;
+
+    // Store values in localStorage
+    localStorage.setItem("priceMin", minVal.value);
+    localStorage.setItem("priceMax", maxVal.value);
+}
+
+// Event Listeners
+minVal.addEventListener("input", updateSlider);
+maxVal.addEventListener("input", updateSlider);
+priceInputMin.addEventListener("input", function () {
+    minVal.value = this.value;
+    updateSlider();
+});
+priceInputMax.addEventListener("input", function () {
+    maxVal.value = this.value;
+    updateSlider();
+});
