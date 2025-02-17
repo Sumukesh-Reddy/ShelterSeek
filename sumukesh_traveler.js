@@ -320,7 +320,15 @@ priceInputMax.addEventListener("input", function () {
 });
 
 
+// liked rooms
+let likedrooms=[];
+document.getElementById("home-like").addEventListener("click",()=>{
+    if(document.)
 
+// write code
+
+
+})
 
 // rooms boxes js starts from here
 

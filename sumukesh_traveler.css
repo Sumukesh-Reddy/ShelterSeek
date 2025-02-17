@@ -705,6 +705,7 @@ body {
     height: 5px;
     top: -7px;
     background: none;
+    cursor: pointer;
     pointer-events: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -814,4 +815,21 @@ body {
         height: 160px;
         width: 100%;
     }
+}
+.home-photos button{
+    position: relative;
+    top:3%;
+    left:85%;
+    border: none;
+    font-size: large;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+.home-photos button i{
+    font-size: x-large;
+    color: rgb(214, 213, 213);
+}
+.home-photos button i.active{
+    color: #d72d6e;
 }
