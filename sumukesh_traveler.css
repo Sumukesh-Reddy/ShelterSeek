@@ -263,7 +263,7 @@ body {
     }
     .inbox{
         position: relative;
-        margin-left: 10%;
+        margin-left: 5%;
         font-size: x-large;
         cursor: pointer;   
     }
