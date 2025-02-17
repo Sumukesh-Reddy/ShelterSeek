@@ -302,7 +302,7 @@ function updateSlider() {
     priceInputMin.value = minVal.value;
     priceInputMax.value = maxVal.value;
 
-    // Store values in localStorage
+    // Storing
     localStorage.setItem("priceMin", minVal.value);
     localStorage.setItem("priceMax", maxVal.value);
 }
@@ -321,164 +321,174 @@ priceInputMax.addEventListener("input", function () {
 
 
 // liked rooms
-// let likedrooms=[];
-// document.getElementById("home-like").addEventListener("click",()=>{
-//     if(document.)
-
-// // write code
-
-
-// })
+let likedHomes = [];
 
 // rooms boxes js starts from here
-// const homes = [
-//     {
-//         id: 1,
-//         title: "Modern Apartment",
-//         location: "New York",
-//         price: "$250,000",
-//         description: "Beautiful home with a great view and spacious rooms.",
-//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-//         liked: false
-//     },
-//     {
-//         id: 2,
-//         title: "Cozy Cottage",
-//         location: "California",
-//         price: "$180,000",
-//         description: "A charming cottage surrounded by nature.",
-//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-//         liked: false
-//     },
-//     {
-//         id: 3,
-//         title: "Luxury Villa",
-//         location: "Miami",
-//         price: "$1,200,000",
-//         description: "A stunning villa with a private beach and pool.",
-//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-//         liked: false
-//     }
-// ];
-
-// homes.forEach(home => addHomeToPage(home));
-
-// function addHomeToPage(home) {
-//     const container = document.getElementById("homes-container"); // Ensure an element with this ID exists
-
-//     // Create the home block
-//     const homeBlock = document.createElement("div");
-//     homeBlock.classList.add("home-block");
-
-//     // Create the photo container
-//     const homePhotos = document.createElement("div");
-//     homePhotos.classList.add("home-photos");
-
-//     // Create the like button
-//     const likeButton = document.createElement("button");
-//     likeButton.id = `home-like-${home.id}`;
-//     likeButton.innerHTML = `<i class="fa fa-heart" aria-hidden="true"></i>`;
-//     likeButton.classList.add("like-button");
-//     if (home.liked) likeButton.classList.add("liked");
-
-//     // Toggle like functionality
-//     likeButton.addEventListener("click", () => {
-//         home.liked = !home.liked;
-//         likeButton.classList.toggle("liked");
-//     });
-
-//     // Create left and right navigation buttons
-//     const leftButton = document.createElement("button");
-//     leftButton.innerHTML = "&lt;";
-//     leftButton.classList.add("img-move-left");
-
-//     const rightButton = document.createElement("button");
-//     rightButton.innerHTML = "&gt;";
-//     rightButton.classList.add("img-move-right");
-
-//     // Create image slider container
-//     const imageContainer = document.createElement("div");
-//     imageContainer.classList.add("image-container");
-
-//     // Add images
-//     home.images.forEach((src, index) => {
-//         const img = document.createElement("img");
-//         img.src = src;
-//         img.classList.add("slide");
-//         if (index === 0) img.classList.add("active"); // Show the first image initially
-//         imageContainer.appendChild(img);
-//     });
-
-//     let currentImageIndex = 0;
-//     const slides = imageContainer.querySelectorAll(".slide");
-
-//     // Function to show the next or previous image
-//     function showSlide(index) {
-//         slides.forEach(slide => slide.classList.remove("active"));
-//         slides[index].classList.add("active");
-//     }
-
-//     // Event listeners for navigation buttons
-//     leftButton.addEventListener("click", () => {
-//         currentImageIndex = (currentImageIndex === 0) ? slides.length - 1 : currentImageIndex - 1;
-//         showSlide(currentImageIndex);
-//     });
-
-//     rightButton.addEventListener("click", () => {
-//         currentImageIndex = (currentImageIndex === slides.length - 1) ? 0 : currentImageIndex + 1;
-//         showSlide(currentImageIndex);
-//     });
-
-//     // Append elements
-//     homePhotos.appendChild(likeButton);
-//     homePhotos.appendChild(leftButton);
-//     homePhotos.appendChild(rightButton);
-//     homePhotos.appendChild(imageContainer);
-
-//     // Home content
-//     const homeContent = document.createElement("div");
-//     homeContent.classList.add("home-content");
-//     homeContent.innerHTML = `
-//         <h3>${home.title}</h3>
-//         <p>Location: ${home.location}</p>
-//         <p class="price">${home.price}</p>
-//         <p>Description: ${home.description}</p>
-//     `;
-
-//     // Append everything to the home block
-//     homeBlock.appendChild(homePhotos);
-//     homeBlock.appendChild(document.createElement("hr"));
-//     homeBlock.appendChild(homeContent);
-
-//     // Append to main container
-//     container.appendChild(homeBlock);
-// }
-
-// home images in blocks
-const bgImages = [
-    "img/photo1.jpg",
-    "img/photo2.jpg",
-    "img/photo3.jpg",
-    "img/photo4.jpg"
+const homes = [
+    {
+        id: 1,
+        title: "Modern Apartment",
+        location: "New York",
+        price: "250000",
+        description: "Beautiful home with a great view and spacious rooms.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 20
+    },
+    {
+        id: 2,
+        title: "Cozy Cottage",
+        location: "California",
+        price: "180000",
+        description: "A charming cottage surrounded by nature.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 30
+    },
+    {
+        id: 3,
+        title: "Luxury Villa",
+        location: "Miami",
+        price: "120000",
+        description: "A stunning villa with a private beach and pool.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 25
+    },
+    {
+        id: 4,
+        title: "Downtown Loft",
+        location: "Chicago",
+        price: "300000",
+        description: "Spacious loft in the heart of the city with modern amenities.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 15
+    },
+    {
+        id: 5,
+        title: "Beach House",
+        location: "Florida",
+        price: "450000",
+        description: "A beautiful beachfront property with stunning ocean views.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 10
+    },
+    {
+        id: 6,
+        title: "Mountain Retreat",
+        location: "Colorado",
+        price: "350000",
+        description: "A perfect getaway nestled in the mountains with breathtaking views.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 12
+    },
+    {
+        id: 7,
+        title: "Suburban House",
+        location: "Texas",
+        price: "280000",
+        description: "A spacious family home in a quiet neighborhood.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 18
+    },
+    {
+        id: 8,
+        title: "Penthouse Suite",
+        location: "Los Angeles",
+        price: "750000",
+        description: "A luxurious penthouse with panoramic city views.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 22
+    },
+    {
+        id: 9,
+        title: "Farmhouse",
+        location: "Iowa",
+        price: "230000",
+        description: "A traditional farmhouse with acres of land and fresh air.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 17
+    },
+    {
+        id: 10,
+        title: "Lakefront Cabin",
+        location: "Minnesota",
+        price: "200000",
+        description: "A cozy cabin on the lake, perfect for relaxing weekends.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 14
+    }
 ];
-let currentIndex = 0;
 
-const homeImageDiv = document.querySelector('.home-image');
-const leftBtn = document.getElementById('img-move-left');
-const rightBtn = document.getElementById('img-move-right');
+// Loop through each home and add it to the page
+homes.forEach(home => addHomeToPage(home));
 
-function updateBackground() {
-    homeImageDiv.style.backgroundImage = `url(${bgImages[currentIndex]})`;
+function addHomeToPage(home, blockNumber) {
+    const container = document.getElementById("homes-container");
+
+    const homeBlock = document.createElement("div");
+    homeBlock.classList.add("home-block");
+
+    homeBlock.innerHTML = `
+        <div class="home-photos-block">
+            <button id="home-like" data-home-id="${home.id}"><i class="fa fa-heart"></i></button>
+            <button id="img-move-left">&lt;</button>
+            <button id="img-move-right">&gt;</button>
+            <div class="home-image" style="background-image: url(${home.images[0]})"></div> 
+        </div>
+        <hr style="opacity: 0.3;">
+        <div class="home-content">
+            <h3>${home.title}</h3>
+            <p>Location: ${home.location}</p>
+            <p class="price">${formatCurrency(home.price * (1 - home.discountPercentage / 100))}</p>
+            <span class="old-price">${formatCurrency(home.price)}</span>
+            <p style="color: green;font-weight: bold;">Discount : ${home.discountPercentage}% off</p>
+            <p>Description: ${home.description}</p>
+        </div>
+    `;
+    container.appendChild(homeBlock);
+    const homeImage = homeBlock.querySelector(".home-image");
+    const leftButton = homeBlock.querySelector("#img-move-left");
+    const rightButton = homeBlock.querySelector("#img-move-right");
+    let currentImageIndex = 0;
+
+    function showSlide(index) {
+        homeImage.style.backgroundImage = `url(${home.images[index]})`;
+    }
+
+    leftButton.addEventListener("click", () => {
+        currentImageIndex = (currentImageIndex === 0) ? home.images.length - 1 : currentImageIndex - 1;
+        showSlide(currentImageIndex);
+    });
+
+    rightButton.addEventListener("click", () => {
+        currentImageIndex = (currentImageIndex === home.images.length - 1) ? 0 : currentImageIndex + 1;
+        showSlide(currentImageIndex);
+    });
+    
+    const likeButton = homeBlock.querySelector("#home-like");
+    likeButton.addEventListener("click", () => {
+        
+        if(home.liked){
+            likedHomes.push(home.id);
+        }
+        else{
+            likedHomes = likedHomes.filter(id => id !== home.id); 
+        }
+        home.liked = !home.liked; 
+        likeButton.classList.toggle("liked");
+    });
+
+    container.appendChild(homeBlock);
 }
 
-leftBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex === 0) ? bgImages.length - 1 : currentIndex - 1;
-    updateBackground();
-});
-
-rightBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % bgImages.length;
-    updateBackground();
-});
-
-
+function formatCurrency(number) {
+    return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(number);
+}
