@@ -262,16 +262,10 @@ body {
         display: none;
     }
     .inbox{
-        position: relative;
-        margin-left: 5%;
-        font-size: x-large;
-        cursor: pointer;   
+        display: none;
     }
 
-    .inbox:hover{
-        color: #d72d6e;
-        transition: color 0.3s ease;
-    }
+   
 
     #logo-r {
         font-size: medium;
@@ -372,7 +366,7 @@ body {
 
 @media (max-width:994.9px){
     .slide-2{
-        margin: 2%;
+        margin:0;
         width: 90%;
     }
     .slide-1{
