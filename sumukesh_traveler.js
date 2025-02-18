@@ -46,6 +46,7 @@ setInterval(() => {
     if(i === photo.length) i = 0; 
     updateBackgroundImage();
 }, 3000);
+
 document.getElementById("filter-button").addEventListener("click", () => {
     const filter_menu=document.querySelector(".filter-menu");
     if (filter_menu.style.display === "none") {
