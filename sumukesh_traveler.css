@@ -389,7 +389,7 @@ body {
 #filter-button {
     transition: all 0.3s ease;
     position: relative;
-    left: 90%;
+    left: 87%;
     margin: 2vh;
     background: none;
     border: none;
@@ -401,7 +401,12 @@ body {
     align-items: center;
     gap: 8px;
 }
-
+@media (max-width: 900px){
+    #filter-button{
+        position: relative;
+        left: 1%;
+    }
+}
 #filter-button i {
     font-size: x-large;
     color: inherit;
