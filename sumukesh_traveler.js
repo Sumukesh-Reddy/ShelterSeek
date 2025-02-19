@@ -90,6 +90,23 @@ document.getElementById("add-beds").addEventListener("click", () => {
     }
 });
 
+// no.of days
+let days = 1;
+document.getElementById("sub-days").addEventListener("click", () => {
+    if (days > 0) {
+        days -= 1;
+        document.getElementById("days").innerText = days;
+    }
+});
+
+document.getElementById("add-days").addEventListener("click", () => {
+    if (days < 30) {
+        days += 1;
+        document.getElementById("days").innerText = days;
+    }
+});
+
+
 // no.of adults
 let adults = 1;
 document.getElementById("sub-adults").addEventListener("click", () => {
