@@ -1,0 +1,50 @@
+/* .layout-big-box{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4vh;
+    border: 1px solid #ddd;
+    border-radius: 20px; 
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 10px;
+    margin-left: 1%;
+    transition: all 0.3s ease;
+}
+.home-photos-block-l{
+    position: relative;
+    width: 60%;
+    height: 55vh; 
+    overflow: hidden;
+    border-radius: 10px;
+}
+.home-image {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/photo1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ;
+}
+
+
+.home-photos-block-l button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#img-move-left {
+    left: 10px;
+}
+
+#img-move-right {
+    right: 10px;
+} */

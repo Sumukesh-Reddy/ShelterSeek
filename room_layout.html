@@ -3,12 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Room</title>
     <link rel="stylesheet" href="sumukesh_traveler.css">
     <link rel="stylesheet" href="sumukesh_room_layout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    
+    <!-- nav bar -->
+    <div class="traveler_navbar">
+        <div id="traveler_logo"><a href="index.html" style="text-decoration:none"><div ><span id="logo-s">S</span><span id="logo-r">helter</span><span id="logo-s">S</span><span id="logo-r">eek</span></div></a> </div>
+         <div id="traveler_searchbar">
+             <input type="text" id="search-bar" name="destination" placeholder="Where to go!">
+             <button><i class="fa fa-search" id="search-button"></i></button>
+         </div>
+        
+         <div class="cart"><a href="#" style="text-decoration:none; color:black"><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
+         <div class="about"><a href="#" style="text-decoration: none; color: black;    ">About</a></div>
+         <div class="inbox"><a href="#"></a><i class="fa fa-envelope" aria-hidden="true"></i></div>
+         <div class="traveler"><button id="user-button"><i class="fa fa-user" aria-hidden="true"></i></button></div>
+         <div id="user-menu" class="user-menu">
+             <button id="user-close-btn" class="user-close-btn">&times;</button>
+             <ul>
+                 <li><a href="#">profile</a></li>
+                 <li><a href="#">history</a></li>
+                 <li><a href="#">login</a></li>
+             </ul>
+         </div>
+         <div class="menubar"><button id="menubotton" ><i class="fa fa-navicon">‌</i></button></div>
+         <div id="menu" class="menu">
+         <button id="close-btn" class="close-btn">&times;</button>
+             <ul>
+                 <li><a href="#">profile</a></li>
+                 <li><a href="#">inbox</a></li>
+                 <li><a href="#">history</a></li>
+                 <li><a href="#">Wish List</a></li>
+                 <li><a href="#">about</a></li>
+                 <li><a href="#">login</a></li>
+             </ul>
+         </div>
+     </div>
+     
+    <!-- layout -->
+     <div id="home-details"></div>
+
+
+     <!-- help -->
+      <!-- help -->
+    <div class="help"><a href="#" style="color: #d72d6e; text-decoration:none;"><i class="fa fa-commenting-o" aria-hidden="true" id="help-icon"></i><br><span >&nbsp;&nbsp;&nbsp;Help</span></a></div>
+   
+     <script src="sumukesh_traveler.js"></script>
+     <script src="sumukesh_layout.js"></script>
 </body>
 </html>

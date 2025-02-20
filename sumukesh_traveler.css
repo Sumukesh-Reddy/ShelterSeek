@@ -891,7 +891,7 @@ body {
 #img-move-right {
     right: 10px;
 }
-price {
+.price {
     color: #333;
     font-size: 18px;
     font-weight: bold;

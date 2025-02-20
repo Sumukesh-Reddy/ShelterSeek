@@ -342,7 +342,7 @@ priceInputMax.addEventListener("input", function () {
 let likedHomes = [];
 
 // rooms boxes js starts from here
-const homes = [
+var homes = [
     {
         id: 1,
         title: "Modern Apartment",
@@ -490,21 +490,22 @@ function addHomeToPage(home, blockNumber) {
         currentImageIndex = (currentImageIndex === home.images.length - 1) ? 0 : currentImageIndex + 1;
         showSlide(currentImageIndex);
     });
-    
     const likeButton = homeBlock.querySelector("#home-like");
     likeButton.addEventListener("click", () => {
         
-        if(home.liked){
+        if (!home.liked){
             likedHomes.push(home.id);
-        }
-        else{
-            likedHomes = likedHomes.filter(id => id !== home.id); 
-        }
+        }else{
+            likedHomes=likedHomes.filter(id=id!==home.id);
+        }        
         home.liked = !home.liked; 
         likeButton.classList.toggle("liked");
     });
 
-    container.appendChild(homeBlock);
+    homeBlock.addEventListener("click",()=>{
+        window.location.href=`room_layout.html?id=${home.id}`;
+    });
+    
 }
 
 function formatCurrency(number) {
