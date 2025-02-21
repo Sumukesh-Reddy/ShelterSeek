@@ -491,17 +491,16 @@ function addHomeToPage(home, blockNumber) {
         showSlide(currentImageIndex);
     });
     const likeButton = homeBlock.querySelector("#home-like");
-    likeButton.addEventListener("click", () => {
-        
-        if (!home.liked){
-            likedHomes.push(home.id);
-        }else{
-            likedHomes=likedHomes.filter(id=id!==home.id);
-        }        
-        home.liked = !home.liked; 
-        likeButton.classList.toggle("liked");
-    });
-
+    likeButton.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    if (!home.liked) {
+        likedHomes.push(home.id);
+    } else {
+        likedHomes = likedHomes.filter(id => id !== home.id);
+    }        
+    home.liked = !home.liked; 
+    likeButton.classList.toggle("liked");
+});
     homeBlock.addEventListener("click",()=>{
         window.location.href=`room_layout.html?id=${home.id}`;
     });
