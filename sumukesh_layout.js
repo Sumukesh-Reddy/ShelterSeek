@@ -115,13 +115,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         const originalPrice=parseFloat(home.price);
         document.title = `${home.title} - ${home.location}`;
         layout_html_details.innerHTML = `
-            <h2>${home.title}</h2>
-            <p><strong>Location:</strong> ${home.location}</p>
-            <p><strong>Price:</strong> ${formatCurrency(discountedPrice)}</p>
-            <p><strong>Original Price:</strong> <span style="text-decoration: line-through;">${formatCurrency(originalPrice)}</span></p>
-            <p><strong>Discount:</strong> ${home.discountPercentage}% off</p>
-            <p><strong>Description:</strong> ${home.description}</p>
-            <button id="back_to_index"><a href="index.html">back</a></button>
+           
         `;
     } else {
         layout_html_details.innerHTML = "<p>Home not found.</p>";

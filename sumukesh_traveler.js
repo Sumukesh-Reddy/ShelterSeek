@@ -475,24 +475,27 @@ function addHomeToPage(home, blockNumber) {
     const homeImage = homeBlock.querySelector(".home-image");
     const leftButton = homeBlock.querySelector("#img-move-left");
     const rightButton = homeBlock.querySelector("#img-move-right");
+    const likeButton = homeBlock.querySelector('#home-like');
     let currentImageIndex = 0;
 
     function showSlide(index) {
         homeImage.style.backgroundImage = `url(${home.images[index]})`;
     }
+// Modify the event listeners for the left, right, and like buttons
+leftButton.addEventListener("click", (event) => {
+    event.stopPropagation(); 
+    currentImageIndex = (currentImageIndex === 0) ? home.images.length - 1 : currentImageIndex - 1;
+    showSlide(currentImageIndex);
+});
 
-    leftButton.addEventListener("click", () => {
-        currentImageIndex = (currentImageIndex === 0) ? home.images.length - 1 : currentImageIndex - 1;
-        showSlide(currentImageIndex);
-    });
+rightButton.addEventListener("click", (event) => {
+    event.stopPropagation(); 
+    currentImageIndex = (currentImageIndex === home.images.length - 1) ? 0 : currentImageIndex + 1;
+    showSlide(currentImageIndex);
+});
 
-    rightButton.addEventListener("click", () => {
-        currentImageIndex = (currentImageIndex === home.images.length - 1) ? 0 : currentImageIndex + 1;
-        showSlide(currentImageIndex);
-    });
-    const likeButton = homeBlock.querySelector("#home-like");
-    likeButton.addEventListener("click", (event) => {
-    event.preventDefault(); 
+likeButton.addEventListener("click", (event) => {
+    event.stopPropagation(); 
     if (!home.liked) {
         likedHomes.push(home.id);
     } else {
@@ -501,7 +504,7 @@ function addHomeToPage(home, blockNumber) {
     home.liked = !home.liked; 
     likeButton.classList.toggle("liked");
 });
-    homeBlock.addEventListener("click",()=>{
+document.querySelector(".home-content").addEventListener("click",()=>{
         window.location.href=`room_layout.html?id=${home.id}`;
     });
     
