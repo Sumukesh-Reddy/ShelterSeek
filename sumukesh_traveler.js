@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function () {
+
 document.getElementById("user-button").addEventListener("click",()=>{
     const user_menu=document.getElementById("user-menu");
     if(user_menu.display==="block"){
@@ -34,6 +36,7 @@ const photo = [
 ];
 
 const photoblock = document.querySelector(".slide-2");
+if(photoblock){
 let i = 0;
 function updateBackgroundImage() {
     photoblock.style.backgroundImage = `url(${photo[i]})`; 
@@ -46,7 +49,10 @@ setInterval(() => {
     if(i === photo.length) i = 0; 
     updateBackgroundImage();
 }, 3000);
-
+}
+else{
+    console.log("error");
+}
 document.getElementById("filter-button").addEventListener("click", () => {
     const filter_menu=document.querySelector(".filter-menu");
     if (filter_menu.style.display === "none") {
@@ -341,8 +347,12 @@ priceInputMax.addEventListener("input", function () {
 // liked rooms
 let likedHomes = [];
 
+const link = document.createElement("a");
+    link.style.display = "none";
+    document.body.appendChild(link);
+
 // rooms boxes js starts from here
-var homes = [
+const homes = [
     {
         id: 1,
         title: "Modern Apartment",
@@ -448,7 +458,7 @@ var homes = [
 // Loop through each home and add it to the page
 homes.forEach(home => addHomeToPage(home));
 
-function addHomeToPage(home, blockNumber) {
+function addHomeToPage(home) {
     const container = document.getElementById("homes-container");
 
     const homeBlock = document.createElement("div");
@@ -471,45 +481,53 @@ function addHomeToPage(home, blockNumber) {
             <p>Description: ${home.description}</p>
         </div>
     `;
-    container.appendChild(homeBlock);
+
     const homeImage = homeBlock.querySelector(".home-image");
     const leftButton = homeBlock.querySelector("#img-move-left");
     const rightButton = homeBlock.querySelector("#img-move-right");
-    const likeButton = homeBlock.querySelector('#home-like');
     let currentImageIndex = 0;
 
     function showSlide(index) {
         homeImage.style.backgroundImage = `url(${home.images[index]})`;
     }
-// Modify the event listeners for the left, right, and like buttons
-leftButton.addEventListener("click", (event) => {
-    event.stopPropagation(); 
-    currentImageIndex = (currentImageIndex === 0) ? home.images.length - 1 : currentImageIndex - 1;
-    showSlide(currentImageIndex);
-});
 
-rightButton.addEventListener("click", (event) => {
-    event.stopPropagation(); 
-    currentImageIndex = (currentImageIndex === home.images.length - 1) ? 0 : currentImageIndex + 1;
-    showSlide(currentImageIndex);
-});
-
-likeButton.addEventListener("click", (event) => {
-    event.stopPropagation(); 
-    if (!home.liked) {
-        likedHomes.push(home.id);
-    } else {
-        likedHomes = likedHomes.filter(id => id !== home.id);
-    }        
-    home.liked = !home.liked; 
-    likeButton.classList.toggle("liked");
-});
-document.querySelector(".home-content").addEventListener("click",()=>{
-        window.location.href=`room_layout.html?id=${home.id}`;
+    leftButton.addEventListener("click", (event) => {
+        event.preventDefault(); 
+        event.stopPropagation();
+        currentImageIndex = (currentImageIndex === 0) ? home.images.length - 1 : currentImageIndex - 1;
+        showSlide(currentImageIndex);
     });
-    
-}
 
+    rightButton.addEventListener("click", (event) => {
+        event.preventDefault(); 
+        event.stopPropagation(); 
+        currentImageIndex = (currentImageIndex === home.images.length - 1) ? 0 : currentImageIndex + 1;
+        showSlide(currentImageIndex);
+    });
+
+    const likeButton = homeBlock.querySelector("#home-like");
+    likeButton.addEventListener("click", (event) => {
+        event.preventDefault(); 
+            event.stopPropagation();
+        home.liked = !home.liked;
+        likeButton.classList.toggle("liked");
+        if (home.liked) {
+            likedHomes.push(home.id);
+        } else {
+            likedHomes = likedHomes.filter(id => id !== home.id);
+        }
+    });
+
+    // Add click event listener to the entire home block
+    homeBlock.addEventListener("click", () => {
+        
+        link.href = `room_layout.html?id=${home.id}`;
+        link.click();
+    });
+
+    container.appendChild(homeBlock);
+}
 function formatCurrency(number) {
     return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(number);
 }
+});
