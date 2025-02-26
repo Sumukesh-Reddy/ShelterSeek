@@ -348,6 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <label for="check-out">Check-out Date:</label>
                         <input type="date" id="check-out" name="check-out">
                         <button id="rent-button">Rent Now</button>
+                         <button id="save-button">save for late</button>
                     </div>
                     <div class="host">
                         <img src="${home.host.image}" alt="Host Photo" class="host-photo">
