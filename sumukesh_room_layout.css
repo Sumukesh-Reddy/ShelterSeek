@@ -191,12 +191,16 @@ body {
     border: none;
     border-radius: 1vw;
     cursor: pointer;
-    font-size: large;
     background-color: #d72d6e;
     color: white;
     align-items: center;
     display: flex;
     flex-direction: column;
+}
+@media (min-width: 768px){
+    #message{
+        font-size: large;
+    }
 }
 @media (max-width: 768px) {
     .container {
