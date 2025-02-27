@@ -71,12 +71,6 @@ body {
     border: 2px solid rgb(245, 232, 155);
 }
 
-.help {
-    z-index: 100;
-    position: fixed;
-    right: 5%;
-    bottom: 7%;
-}
 
 
 .slide-1{
@@ -242,6 +236,13 @@ body {
     #user-close-btn:hover {
         color: #d72d6e; 
     }
+    .help {
+        z-index: 100;
+        position: fixed;
+        right: 5%;
+        bottom: 7%;
+    }
+    
 }
 
 
@@ -364,6 +365,13 @@ body {
     .user-menu button{
         display: none;
     }
+    .help {
+        z-index: 100;
+        position: fixed;
+        right: 7%;
+        bottom: 7%;
+    }
+    
 }
 
 
