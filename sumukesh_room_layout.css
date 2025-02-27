@@ -12,10 +12,6 @@ body {
     align-items: center;
 }
 
-.share-button-div{
-    margin-left: 65vw;
-}
-
 .share-button-div button{
     font-size: larger;
     background-color: #f4f4f4;
@@ -197,12 +193,22 @@ body {
     flex-direction: column;
 }
 @media (min-width: 768px){
+
+    .share-button-div{
+        margin-left: 65vw;
+    }
+
     #message{
         width: 50%;
         font-size: large;
     }
 }
 @media (max-width: 768px) {
+
+    .share-button-div{
+        margin-left: 45vw;
+    }
+
     .container {
         flex-direction: column;
     }
