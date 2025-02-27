@@ -205,6 +205,9 @@ body {
     .left-side, .right-side {
         width: 100%;
     }
+    #message{
+        font-size: medium;
+    }
 }
 
 /* Map Styling */
