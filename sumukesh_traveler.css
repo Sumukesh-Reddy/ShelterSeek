@@ -117,20 +117,30 @@ body {
     .menubar{
         display: none;
     }
-    .cart {
+    .cart a{
         position: relative;
         margin-left: 5vw;
         font-size: x-large;
         color: black;
+        text-decoration:none; 
+        transition: all 0.3s ease;
+    }
+    .cart a:hover{
+        color: #d72d6e;
     }
 
-    .about {
+    .about a{
         position: relative;
         margin-left: 5vw;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: x-large;
+        text-decoration: none; 
+        color: black;  
+        transition: all 0.3s ease; 
     }
-
+    .about a:hover{
+        color: #d72d6e;
+    }
     .inbox{
         position: relative;
         margin-left: 5vw;
