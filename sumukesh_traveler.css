@@ -458,7 +458,7 @@ body {
 }
 .filter-menu {
     position: absolute; 
-    top: 70%;  
+    top: 35%;  
     left: 50%;
     transform: translateX(-50%); 
     display: none;

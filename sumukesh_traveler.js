@@ -53,6 +53,7 @@ setInterval(() => {
 else{
     console.log("error");
 }
+
 document.getElementById("filter-button").addEventListener("click", () => {
     const filter_menu=document.querySelector(".filter-menu");
     if (filter_menu.style.display === "none") {
@@ -356,8 +357,8 @@ const homes = [
     {
         id: 1,
         title: "Modern Apartment",
-        location: "New York",
-        price: "250000",
+        location: "Mumbai",
+        price: "2500",
         description: "Beautiful home with a great view and spacious rooms.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
@@ -366,8 +367,8 @@ const homes = [
     {
         id: 2,
         title: "Cozy Cottage",
-        location: "California",
-        price: "180000",
+        location: "Kerala",
+        price: "1800",
         description: "A charming cottage surrounded by nature.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
@@ -376,8 +377,8 @@ const homes = [
     {
         id: 3,
         title: "Luxury Villa",
-        location: "Miami",
-        price: "120000",
+        location: "Goa",
+        price: "1200",
         description: "A stunning villa with a private beach and pool.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
@@ -386,8 +387,8 @@ const homes = [
     {
         id: 4,
         title: "Downtown Loft",
-        location: "Chicago",
-        price: "300000",
+        location: "Bengaluru",
+        price: "3000",
         description: "Spacious loft in the heart of the city with modern amenities.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
@@ -396,8 +397,8 @@ const homes = [
     {
         id: 5,
         title: "Beach House",
-        location: "Florida",
-        price: "450000",
+        location: "Pondicherry",
+        price: "4500",
         description: "A beautiful beachfront property with stunning ocean views.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
@@ -406,8 +407,8 @@ const homes = [
     {
         id: 6,
         title: "Mountain Retreat",
-        location: "Colorado",
-        price: "350000",
+        location: "Himachal Pradesh",
+        price: "3500",
         description: "A perfect getaway nestled in the mountains with breathtaking views.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
@@ -416,8 +417,8 @@ const homes = [
     {
         id: 7,
         title: "Suburban House",
-        location: "Texas",
-        price: "280000",
+        location: "Gurgaon",
+        price: "2800",
         description: "A spacious family home in a quiet neighborhood.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
@@ -426,8 +427,8 @@ const homes = [
     {
         id: 8,
         title: "Penthouse Suite",
-        location: "Los Angeles",
-        price: "750000",
+        location: "Delhi",
+        price: "7500",
         description: "A luxurious penthouse with panoramic city views.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
@@ -436,8 +437,8 @@ const homes = [
     {
         id: 9,
         title: "Farmhouse",
-        location: "Iowa",
-        price: "230000",
+        location: "Punjab",
+        price: "2300",
         description: "A traditional farmhouse with acres of land and fresh air.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
@@ -446,12 +447,212 @@ const homes = [
     {
         id: 10,
         title: "Lakefront Cabin",
-        location: "Minnesota",
-        price: "200000",
+        location: "Uttarakhand",
+        price: "2000",
         description: "A cozy cabin on the lake, perfect for relaxing weekends.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 14
+    },
+    {
+        id: 11,
+        title: "Hilltop Mansion",
+        location: "Rajasthan",
+        price: 6000,
+        description: "A magnificent mansion on top of a hill with expansive views.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 30
+    },
+    {
+        id: 12,
+        title: "Contemporary House",
+        location: "Hyderabad",
+        price: 3500,
+        description: "Sleek and modern house with floor-to-ceiling windows.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 18
+    },
+    {
+        id: 13,
+        title: "Tropical Villa",
+        location: "Andaman and Nicobar Islands",
+        price: 5000,
+        description: "Luxurious villa surrounded by tropical gardens.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 15
+    },
+    {
+        id: 14,
+        title: "Urban Studio",
+        location: "Chennai",
+        price: 2200,
+        description: "Chic studio apartment with a modern feel and city views.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 10
+    },
+    {
+        id: 15,
+        title: "Victorian House",
+        location: "Kolkata",
+        price: 4200,
+        description: "A grand Victorian home with vintage charm and modern upgrades.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 12
+    },
+    {
+        id: 16,
+        title: "Country Estate",
+        location: "Maharashtra",
+        price: 5000,
+        description: "A luxurious estate with large grounds and a private lake.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 20
+    },
+    {
+        id: 17,
+        title: "Modern Condo",
+        location: "Ahmedabad",
+        price: 2500,
+        description: "A stylish condo with a rooftop terrace and great amenities.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 17
+    },
+    {
+        id: 18,
+        title: "Ranch House",
+        location: "Madhya Pradesh",
+        price: 3500,
+        description: "A spacious ranch with a beautiful garden and private stables.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 10
+    },
+    {
+        id: 19,
+        title: "Beachfront Villa",
+        location: "Kochi",
+        price: 7000,
+        description: "An exclusive beachfront villa with luxury amenities.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 5
+    },
+    {
+        id: 20,
+        title: "Skyscraper Apartment",
+        location: "Noida",
+        price: 8000,
+        description: "A penthouse apartment with panoramic views of the city skyline.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 8
+    },
+    {
+        id: 21,
+        title: "Rustic Lodge",
+        location: "Madhya Pradesh",
+        price: 2800,
+        description: "A cozy lodge surrounded by forests and mountains.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 16
+    },
+    {
+        id: 22,
+        title: "Heritage Haveli",
+        location: "Jaipur",
+        price: 6000,
+        description: "A beautiful heritage haveli with traditional architecture and modern amenities.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 15
+    },
+    {
+        id: 23,
+        title: "Countryside Villa",
+        location: "Coorg",
+        price: 4500,
+        description: "A serene villa surrounded by coffee plantations and lush greenery.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 20
+    },
+    {
+        id: 24,
+        title: "Luxury Apartment",
+        location: "Gurgaon",
+        price: 8000,
+        description: "A luxurious apartment with state-of-the-art facilities and city views.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 10
+    },
+    {
+        id: 25,
+        title: "Eco-Friendly Cottage",
+        location: "Rishikesh",
+        price: 3000,
+        description: "An eco-friendly cottage near the Ganges, perfect for yoga and meditation.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 15
+    },
+    {
+        id: 26,
+        title: "Charming Bungalow",
+        location: "Mysore",
+        price: 3500,
+        description: "A charming bungalow with a garden and vintage decor.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 12
+    },
+    {
+        id: 27,
+        title: "Desert Camp",
+        location: "Jaisalmer",
+        price: 4000,
+        description: "A unique desert camp experience with luxury tents and cultural activities.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 20
+    },
+    {
+        id: 28,
+        title: "Hill Station Retreat",
+        location: "Manali",
+        price: 5000,
+        description: "A beautiful retreat in the hills with stunning views and cozy interiors.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 15
+    },
+    {
+        id: 29,
+        title: "Penthouse Suite",
+        location: "Kolkata, West Bengal",
+        price: "7500",
+        description: "A luxurious penthouse with panoramic city views.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 22
+    },
+    {
+        id: 30,
+        title: "Farmhouse",
+        location: "Pune, Maharashtra",
+        price: "2300",
+        description: "A traditional farmhouse with acres of land and fresh air.",
+        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        liked: false,
+        discountPercentage: 17
     }
 ];
 
