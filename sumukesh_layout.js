@@ -733,7 +733,7 @@ function calculateRent(home) {
                 return;
             } else {
             const pricePerNight = parseFloat(home.price); // Get price from home data
-            const totalCost = days * pricePerNight; // Calculate total cost
+            const totalCost = days * pricePerNight *(1- home.discountPercentage/100); // Calculate total cost
             rentButton.textContent = `Rent Now for ₹${totalCost}`; // Update button text
             }
         } else {
@@ -793,7 +793,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="right-side">
                     <div class="rent">
                         <h2 style="color: #d72d6e;">Book Your Stay</h2>
-                        <p><strong>Cost:</strong> <span id="cost">₹${home.price}</span> / night</p>
+                        <p><strong>Cost:</strong> <span id="cost">${formatCurrency(home.price * (1 - home.discountPercentage / 100))}</span> / night</p>
                         <p><strong>Rating:</strong> <span id="rating">${calculateAverageRating(home)}</span> / 5</p>
                         <div id="avg-stars"></div>
                         <p><strong> Maximum Days:</strong><span >  ${home.maxdays} Days</span>
@@ -879,4 +879,7 @@ L.marker([home.host.latitude, home.host.longitude]).addTo(map)
     .bindPopup("Your Room 🏠")
     .openPopup();
 
+    function formatCurrency(number) {
+        return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(number);
+    }
 });
