@@ -1,3 +1,4 @@
+import { likedHomes } from "./sorted_houses.js";
 document.addEventListener("DOMContentLoaded", function () {
 
 document.getElementById("user-button").addEventListener("click",()=>{
@@ -346,7 +347,6 @@ priceInputMax.addEventListener("input", function () {
 
 
 // liked rooms
-let likedHomes = [];
 
 const link = document.createElement("a");
     link.style.display = "none";
@@ -594,367 +594,6 @@ const homes = [
         hostgender:"female",
         maxdays:1
     },
-    {
-        id: 13,
-        title: "Tropical Villa",
-        location: "Andaman and Nicobar Islands",
-        price: 5000,
-        description: "Luxurious villa surrounded by tropical gardens.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 15,
-        roomType: "full",
-        locationType: "outside-town",
-        amenities: ["wifi", "ac", "pool"],
-        bedrooms: 4,
-        beds: 5,
-        adults: 4,
-        children: 2,
-        food:"non-veg",
-        hostgender:"male",
-        maxdays:1
-    },
-    {
-        id: 14,
-        title: "Urban Studio",
-        location: "Chennai",
-        price: 2200,
-        description: "Chic studio apartment with a modern feel and city views.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 10,
-        roomType: "shared",
-        locationType: "in-town",
-        amenities: ["wifi", "ac"],
-        bedrooms: 1,
-        beds: 1,
-        adults: 1,
-        children: 0,
-        food:"non-veg",
-        hostgender:"family",
-        maxdays:1
-    },
-    {
-        id: 15,
-        title: "Victorian House",
-        location: "Kolkata",
-        price: 4200,
-        description: "A grand Victorian home with vintage charm and modern upgrades.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 12,
-        roomType: "full",
-        locationType: "residential-area",
-        amenities: ["wifi", "ac", "lift"],
-        bedrooms: 4,
-        beds: 5,
-        adults: 4,
-        children: 2,
-        food:"veg",
-        hostgender:"female",
-        maxdays:1
-    },
-    {
-        id: 16,
-        title: "Country Estate",
-        location: "Maharashtra",
-        price: 5000,
-        description: "A luxurious estate with large grounds and a private lake.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 20,
-        roomType: "full",
-        locationType: "countryside",
-        amenities: ["wifi", "ac", "pool", "car-parking"],
-        bedrooms: 5,
-        beds: 6,
-        adults: 6,
-        children: 3,
-        food:"veg",
-        hostgender:"family",
-        maxdays:3
-    },
-    {
-        id: 17,
-        title: "Modern Condo",
-        location: "Ahmedabad",
-        price: 2500,
-        description: "A stylish condo with a rooftop terrace and great amenities.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 17,
-        roomType: "full",
-        locationType: "in-town",
-        amenities: ["wifi", "ac", "lift"],
-        bedrooms: 2,
-        beds: 2,
-        adults: 2,
-        children: 1,
-        food:"veg",
-        hostgender:"family",
-        maxdays:12
-    },
-    {
-        id: 18,
-        title: "Ranch House",
-        location: "Madhya Pradesh",
-        price: 3500,
-        description: "A spacious ranch with a beautiful garden and private stables.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 10,
-        roomType: "full",
-        locationType: "countryside",
-        amenities: ["wifi", "hotwater"],
-        bedrooms: 4,
-        beds: 5,
-        adults: 4,
-        children: 2,
-        food:"non-veg",
-        hostgender:"male",
-        maxdays:13
-    },
-    {
-        id: 19,
-        title: "Beachfront Villa",
-        location: "Kochi",
-        price: 7000,
-        description: "An exclusive beachfront villa with luxury amenities.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 5,
-        roomType: "full",
-        locationType: "outside-town",
-        amenities: ["wifi", "ac", "pool", "car-parking"],
-        bedrooms: 4,
-        beds: 5,
-        adults: 4,
-        children: 2,
-        food:"veg",
-        hostgender:"male",
-        maxdays:14
-    },
-    {
-        id: 20,
-        title: "Skyscraper Apartment",
-        location: "Noida",
-        price: 8000,
-        description: "A penthouse apartment with panoramic views of the city skyline.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 8,
-        roomType: "full",
-        locationType: "in-town",
-        amenities: ["wifi", "ac", "lift", "car-parking"],
-        bedrooms: 3,
-        beds: 3,
-        adults: 2,
-        children: 1,
-        food:"non-veg",
-        hostgender:"female",
-        maxdays:16
-    },
-    {
-        id: 21,
-        title: "Rustic Lodge",
-        location: "Madhya Pradesh",
-        price: 2800,
-        description: "A cozy lodge surrounded by forests and mountains.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 16,
-        roomType: "shared",
-        locationType: "countryside",
-        amenities: ["wifi", "hotwater"],
-        bedrooms: 2,
-        beds: 3,
-        adults: 2,
-        children: 1,
-        food:"non-veg",
-        hostgender:"family",
-        maxdays:16
-    },
-    {
-        id: 22,
-        title: "Heritage Haveli",
-        location: "Jaipur",
-        price: 6000,
-        description: "A beautiful heritage haveli with traditional architecture and modern amenities.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 15,
-        roomType: "full",
-        locationType: "in-town",
-        amenities: ["wifi", "ac", "lift", "car-parking"],
-        bedrooms: 5,
-        beds: 6,
-        adults: 6,
-        children: 3,
-        food:"veg",
-        hostgender:"male",
-        maxdays:3
-    },
-    {
-        id: 23,
-        title: "Countryside Villa",
-        location: "Coorg",
-        price: 4500,
-        description: "A serene villa surrounded by coffee plantations and lush greenery.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 20,
-        roomType: "full",
-        locationType: "countryside",
-        amenities: ["wifi", "ac", "pool"],
-        bedrooms: 4,
-        beds: 5,
-        adults: 4,
-        children: 2,
-        food:"veg",
-        hostgender:"female",
-        maxdays:4,
-        maxdays:4
-    },
-    {
-        id: 24,
-        title: "Luxury Apartment",
-        location: "Gurgaon",
-        price: 8000,
-        description: "A luxurious apartment with state-of-the-art facilities and city views.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 10,
-        roomType: "full",
-        locationType: "in-town",
-        amenities: ["wifi", "ac", "lift", "car-parking"],
-        bedrooms: 3,
-        beds: 3,
-        adults: 2,
-        children: 1,
-        food:"non-veg",
-        hostgender:"male",
-        maxdays:2
-    },
-    {
-        id: 25,
-        title: "Eco-Friendly Cottage",
-        location: "Rishikesh",
-        price: 3000,
-        description: "An eco-friendly cottage near the Ganges, perfect for yoga and meditation.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 15,
-        roomType: "shared",
-        locationType: "countryside",
-        amenities: ["wifi", "hotwater"],
-        bedrooms: 2,
-        beds: 3,
-        adults: 2,
-        children: 1,
-        food:"veg",
-        hostgender:"family",
-        maxdays:5
-    },
-    {
-        id: 26,
-        title: "Charming Bungalow",
-        location: "Mysore",
-        price: 3500,
-        description: "A charming bungalow with a garden and vintage decor.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 12,
-        roomType: "full",
-        locationType: "residential-area",
-        amenities: ["wifi", "ac"],
-        bedrooms: 3,
-        beds: 4,
-        adults: 3,
-        children: 1,
-        food:"non-veg",
-        hostgender:"family",
-        maxdays:3
-    },
-    {
-        id: 27,
-        title: "Desert Camp",
-        location: "Jaisalmer",
-        price: 4000,
-        description: "A unique desert camp experience with luxury tents and cultural activities.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 20,
-        roomType: "shared",
-        locationType: "countryside",
-        amenities: ["wifi", "hotwater"],
-        bedrooms: 2,
-        beds: 3,
-        adults: 2,
-        children: 1,
-        food:"non-veg",
-        hostgender:"male",
-        maxdays:2
-    },
-    {
-        id: 28,
-        title: "Hill Station Retreat",
-        location: "Manali",
-        price: 5000,
-        description: "A beautiful retreat in the hills with stunning views and cozy interiors.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 15,
-        roomType: "full",
-        locationType: "countryside",
-        amenities: ["wifi", "ac", "hotwater" ,"laundry","carParking"],
-        bedrooms: 3,
-        beds: 6,
-        adults: 2,
-        children: 6,
-        food:"non-veg",
-        hostgender:"female",
-        maxdays:4
-    },
-    {
-        id: 29,
-        title: "Penthouse Suite",
-        location: "Kolkata, West Bengal",
-        price: "7500",
-        description: "A luxurious penthouse with panoramic city views.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 22,
-        roomType: "full",
-        locationType: "countryside",
-        amenities: ["wifi", "ac"],
-        bedrooms: 3,
-        beds: 4,
-        adults: 3,
-        children: 6,
-        food:"non-veg",
-        hostgender:"male",
-        maxdays:7
-    },
-    {
-        id: 30,
-        title: "Farmhouse",
-        location: "Pune, Maharashtra",
-        price: "2300",
-        description: "A traditional farmhouse with acres of land and fresh air.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 17,
-        roomType: "full",
-        locationType: "countryside",
-        amenities: ["wifi", "ac"],
-        bedrooms: 3,
-        beds: 4,
-        adults: 3,
-        children: 0,
-        food:"non-veg",
-        hostgender:"family",
-        maxdays:7
-    }
 ]; 
 
 // Loop through each home and add it to the page
@@ -1008,21 +647,22 @@ function addHomeToPage(home) {
     });
 
     const likeButton = homeBlock.querySelector("#home-like");
-    likeButton.addEventListener("click", (event) => {
-        event.preventDefault(); 
-            event.stopPropagation();
-        home.liked = !home.liked;
-        likeButton.classList.toggle("liked");
-        if (home.liked) {
-            likedHomes.push(home.id);
-        } else {
-            likedHomes = likedHomes.filter(id => id !== home.id);
-        }
-    });
+        likeButton.classList.toggle("liked", home.liked); // Set the initial liked state
 
+        likeButton.addEventListener("click", (event) => {
+            event.preventDefault(); 
+            event.stopPropagation();
+            home.liked = !home.liked;
+            likeButton.classList.toggle("liked");
+            if (home.liked) {
+                likedHomes.push(home.id);
+            } else {
+                likedHomes = likedHomes.filter(id => id !== home.id);
+            }
+            console.log(likedHomes); // Debugging: Check if likedHomes is updated correctly
+        });
     // Add click event listener to the entire home block
     homeBlock.addEventListener("click", () => {
-        
         link.href = `room_layout.html?id=${home.id}`;
         link.click();
     });
