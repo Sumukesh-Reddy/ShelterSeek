@@ -277,5 +277,5 @@ const { homes, layout_homes } = homeData;
     }
     
 });
-    export default { likedHomes };
+    export { likedHomes };
     
