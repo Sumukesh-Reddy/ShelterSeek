@@ -362,7 +362,17 @@ const homes = [
         description: "Beautiful home with a great view and spacious rooms.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 20
+        discountPercentage: 20,
+        roomType: "full",
+        locationType: "in-town",
+        amenities: ["wifi", "ac"],
+        bedrooms: 2,
+        beds: 3,
+        adults: 2,
+        children: 1,
+        food:"veg",
+        hostgender:"male",
+        maxdays:4
     },
     {
         id: 2,
@@ -372,7 +382,17 @@ const homes = [
         description: "A charming cottage surrounded by nature.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 30
+        discountPercentage: 30,
+        roomType: "shared",
+        locationType: "countryside",
+        amenities: ["wifi"],
+        bedrooms: 1,
+        beds: 2,
+        adults: 1,
+        children: 0,
+        food:"no",
+        hostgender:"male",
+        maxdays:3
     },
     {
         id: 3,
@@ -382,7 +402,17 @@ const homes = [
         description: "A stunning villa with a private beach and pool.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 25
+        discountPercentage: 25,
+        roomType: "full",
+        locationType: "outside-town",
+        amenities: ["wifi", "ac", "pool"],
+        bedrooms: 3,
+        beds: 4,
+        adults: 4,
+        children: 2,
+        food:"veg",
+        hostgender:"female",
+        maxdays:2
     },
     {
         id: 4,
@@ -392,7 +422,17 @@ const homes = [
         description: "Spacious loft in the heart of the city with modern amenities.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 15
+        discountPercentage: 15,
+        roomType: "full",
+        locationType: "in-town",
+        amenities: ["wifi", "ac", "lift"],
+        bedrooms: 2,
+        beds: 2,
+        adults: 2,
+        children: 0,
+        food:"no",
+        hostgender:"male",
+        maxdays:5
     },
     {
         id: 5,
@@ -402,7 +442,17 @@ const homes = [
         description: "A beautiful beachfront property with stunning ocean views.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 10
+        discountPercentage: 10,
+        roomType: "full",
+        locationType: "outside-town",
+        amenities: ["wifi", "ac", "hotwater"],
+        bedrooms: 3,
+        beds: 4,
+        adults: 4,
+        children: 2,
+        food:"non-veg",
+        hostgender:"male",
+        maxdays:5
     },
     {
         id: 6,
@@ -412,7 +462,17 @@ const homes = [
         description: "A perfect getaway nestled in the mountains with breathtaking views.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 12
+        discountPercentage: 12,
+        roomType: "full",
+        locationType: "countryside",
+        amenities: ["wifi", "hotwater"],
+        bedrooms: 2,
+        beds: 3,
+        adults: 2,
+        children: 1,
+        food:"non-veg",
+        hostgender:"male",
+        maxdays:7
     },
     {
         id: 7,
@@ -422,7 +482,17 @@ const homes = [
         description: "A spacious family home in a quiet neighborhood.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 18
+        discountPercentage: 18,
+        roomType: "full",
+        locationType: "residential-area",
+        amenities: ["wifi", "ac", "car-parking"],
+        bedrooms: 3,
+        beds: 4,
+        adults: 4,
+        children: 2,
+        food:"veg",
+        hostgender:"female",
+        maxdays:3
     },
     {
         id: 8,
@@ -432,7 +502,17 @@ const homes = [
         description: "A luxurious penthouse with panoramic city views.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 22
+        discountPercentage: 22,
+        roomType: "full",
+        locationType: "in-town",
+        amenities: ["wifi", "ac", "lift", "car-parking"],
+        bedrooms: 3,
+        beds: 3,
+        adults: 2,
+        children: 1,
+        food:"non-veg",
+        hostgender:"family",
+        maxdays:7
     },
     {
         id: 9,
@@ -442,7 +522,17 @@ const homes = [
         description: "A traditional farmhouse with acres of land and fresh air.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 17
+        discountPercentage: 17,
+        roomType: "full",
+        locationType: "countryside",
+        amenities: ["wifi", "hotwater"],
+        bedrooms: 4,
+        beds: 5,
+        adults: 6,
+        children: 3,
+        food:"veg",
+        hostgender:"family",
+        maxdays:7
     },
     {
         id: 10,
@@ -452,7 +542,17 @@ const homes = [
         description: "A cozy cabin on the lake, perfect for relaxing weekends.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 14
+        discountPercentage: 14,
+        roomType: "shared",
+        locationType: "countryside",
+        amenities: ["wifi"],
+        bedrooms: 1,
+        beds: 2,
+        adults: 2,
+        children: 0,
+        food:"veg",
+        hostgender:"family",
+        maxdays:1
     },
     {
         id: 11,
@@ -462,7 +562,17 @@ const homes = [
         description: "A magnificent mansion on top of a hill with expansive views.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 30
+        discountPercentage: 30,
+        roomType: "full",
+        locationType: "countryside",
+        amenities: ["wifi", "ac", "pool", "car-parking"],
+        bedrooms: 5,
+        beds: 6,
+        adults: 6,
+        children: 3,
+        food:"non-veg",
+        hostgender:"male",
+        maxdays:1
     },
     {
         id: 12,
@@ -472,7 +582,17 @@ const homes = [
         description: "Sleek and modern house with floor-to-ceiling windows.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 18
+        discountPercentage: 18,
+        roomType: "full",
+        locationType: "residential-area",
+        amenities: ["wifi", "ac", "lift"],
+        bedrooms: 3,
+        beds: 3,
+        adults: 3,
+        children: 1,
+        food:"non-veg",
+        hostgender:"female",
+        maxdays:1
     },
     {
         id: 13,
@@ -482,7 +602,17 @@ const homes = [
         description: "Luxurious villa surrounded by tropical gardens.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 15
+        discountPercentage: 15,
+        roomType: "full",
+        locationType: "outside-town",
+        amenities: ["wifi", "ac", "pool"],
+        bedrooms: 4,
+        beds: 5,
+        adults: 4,
+        children: 2,
+        food:"non-veg",
+        hostgender:"male",
+        maxdays:1
     },
     {
         id: 14,
@@ -492,7 +622,17 @@ const homes = [
         description: "Chic studio apartment with a modern feel and city views.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 10
+        discountPercentage: 10,
+        roomType: "shared",
+        locationType: "in-town",
+        amenities: ["wifi", "ac"],
+        bedrooms: 1,
+        beds: 1,
+        adults: 1,
+        children: 0,
+        food:"non-veg",
+        hostgender:"family",
+        maxdays:1
     },
     {
         id: 15,
@@ -502,7 +642,17 @@ const homes = [
         description: "A grand Victorian home with vintage charm and modern upgrades.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 12
+        discountPercentage: 12,
+        roomType: "full",
+        locationType: "residential-area",
+        amenities: ["wifi", "ac", "lift"],
+        bedrooms: 4,
+        beds: 5,
+        adults: 4,
+        children: 2,
+        food:"veg",
+        hostgender:"female",
+        maxdays:1
     },
     {
         id: 16,
@@ -512,7 +662,17 @@ const homes = [
         description: "A luxurious estate with large grounds and a private lake.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 20
+        discountPercentage: 20,
+        roomType: "full",
+        locationType: "countryside",
+        amenities: ["wifi", "ac", "pool", "car-parking"],
+        bedrooms: 5,
+        beds: 6,
+        adults: 6,
+        children: 3,
+        food:"veg",
+        hostgender:"family",
+        maxdays:3
     },
     {
         id: 17,
@@ -522,7 +682,17 @@ const homes = [
         description: "A stylish condo with a rooftop terrace and great amenities.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 17
+        discountPercentage: 17,
+        roomType: "full",
+        locationType: "in-town",
+        amenities: ["wifi", "ac", "lift"],
+        bedrooms: 2,
+        beds: 2,
+        adults: 2,
+        children: 1,
+        food:"veg",
+        hostgender:"family",
+        maxdays:12
     },
     {
         id: 18,
@@ -532,7 +702,17 @@ const homes = [
         description: "A spacious ranch with a beautiful garden and private stables.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 10
+        discountPercentage: 10,
+        roomType: "full",
+        locationType: "countryside",
+        amenities: ["wifi", "hotwater"],
+        bedrooms: 4,
+        beds: 5,
+        adults: 4,
+        children: 2,
+        food:"non-veg",
+        hostgender:"male",
+        maxdays:13
     },
     {
         id: 19,
@@ -542,7 +722,17 @@ const homes = [
         description: "An exclusive beachfront villa with luxury amenities.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 5
+        discountPercentage: 5,
+        roomType: "full",
+        locationType: "outside-town",
+        amenities: ["wifi", "ac", "pool", "car-parking"],
+        bedrooms: 4,
+        beds: 5,
+        adults: 4,
+        children: 2,
+        food:"veg",
+        hostgender:"male",
+        maxdays:14
     },
     {
         id: 20,
@@ -552,7 +742,17 @@ const homes = [
         description: "A penthouse apartment with panoramic views of the city skyline.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 8
+        discountPercentage: 8,
+        roomType: "full",
+        locationType: "in-town",
+        amenities: ["wifi", "ac", "lift", "car-parking"],
+        bedrooms: 3,
+        beds: 3,
+        adults: 2,
+        children: 1,
+        food:"non-veg",
+        hostgender:"female",
+        maxdays:16
     },
     {
         id: 21,
@@ -562,7 +762,17 @@ const homes = [
         description: "A cozy lodge surrounded by forests and mountains.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 16
+        discountPercentage: 16,
+        roomType: "shared",
+        locationType: "countryside",
+        amenities: ["wifi", "hotwater"],
+        bedrooms: 2,
+        beds: 3,
+        adults: 2,
+        children: 1,
+        food:"non-veg",
+        hostgender:"family",
+        maxdays:16
     },
     {
         id: 22,
@@ -572,7 +782,17 @@ const homes = [
         description: "A beautiful heritage haveli with traditional architecture and modern amenities.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 15
+        discountPercentage: 15,
+        roomType: "full",
+        locationType: "in-town",
+        amenities: ["wifi", "ac", "lift", "car-parking"],
+        bedrooms: 5,
+        beds: 6,
+        adults: 6,
+        children: 3,
+        food:"veg",
+        hostgender:"male",
+        maxdays:3
     },
     {
         id: 23,
@@ -582,7 +802,18 @@ const homes = [
         description: "A serene villa surrounded by coffee plantations and lush greenery.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 20
+        discountPercentage: 20,
+        roomType: "full",
+        locationType: "countryside",
+        amenities: ["wifi", "ac", "pool"],
+        bedrooms: 4,
+        beds: 5,
+        adults: 4,
+        children: 2,
+        food:"veg",
+        hostgender:"female",
+        maxdays:4,
+        maxdays:4
     },
     {
         id: 24,
@@ -592,7 +823,17 @@ const homes = [
         description: "A luxurious apartment with state-of-the-art facilities and city views.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 10
+        discountPercentage: 10,
+        roomType: "full",
+        locationType: "in-town",
+        amenities: ["wifi", "ac", "lift", "car-parking"],
+        bedrooms: 3,
+        beds: 3,
+        adults: 2,
+        children: 1,
+        food:"non-veg",
+        hostgender:"male",
+        maxdays:2
     },
     {
         id: 25,
@@ -602,7 +843,17 @@ const homes = [
         description: "An eco-friendly cottage near the Ganges, perfect for yoga and meditation.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 15
+        discountPercentage: 15,
+        roomType: "shared",
+        locationType: "countryside",
+        amenities: ["wifi", "hotwater"],
+        bedrooms: 2,
+        beds: 3,
+        adults: 2,
+        children: 1,
+        food:"veg",
+        hostgender:"family",
+        maxdays:5
     },
     {
         id: 26,
@@ -612,7 +863,17 @@ const homes = [
         description: "A charming bungalow with a garden and vintage decor.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 12
+        discountPercentage: 12,
+        roomType: "full",
+        locationType: "residential-area",
+        amenities: ["wifi", "ac"],
+        bedrooms: 3,
+        beds: 4,
+        adults: 3,
+        children: 1,
+        food:"non-veg",
+        hostgender:"family",
+        maxdays:3
     },
     {
         id: 27,
@@ -622,7 +883,17 @@ const homes = [
         description: "A unique desert camp experience with luxury tents and cultural activities.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 20
+        discountPercentage: 20,
+        roomType: "shared",
+        locationType: "countryside",
+        amenities: ["wifi", "hotwater"],
+        bedrooms: 2,
+        beds: 3,
+        adults: 2,
+        children: 1,
+        food:"non-veg",
+        hostgender:"male",
+        maxdays:2
     },
     {
         id: 28,
@@ -632,7 +903,17 @@ const homes = [
         description: "A beautiful retreat in the hills with stunning views and cozy interiors.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 15
+        discountPercentage: 15,
+        roomType: "full",
+        locationType: "countryside",
+        amenities: ["wifi", "ac", "hotwater" ,"laundry","carParking"],
+        bedrooms: 3,
+        beds: 6,
+        adults: 2,
+        children: 6,
+        food:"non-veg",
+        hostgender:"female",
+        maxdays:4
     },
     {
         id: 29,
@@ -642,7 +923,17 @@ const homes = [
         description: "A luxurious penthouse with panoramic city views.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 22
+        discountPercentage: 22,
+        roomType: "full",
+        locationType: "countryside",
+        amenities: ["wifi", "ac"],
+        bedrooms: 3,
+        beds: 4,
+        adults: 3,
+        children: 6,
+        food:"non-veg",
+        hostgender:"male",
+        maxdays:7
     },
     {
         id: 30,
@@ -652,9 +943,19 @@ const homes = [
         description: "A traditional farmhouse with acres of land and fresh air.",
         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
-        discountPercentage: 17
+        discountPercentage: 17,
+        roomType: "full",
+        locationType: "countryside",
+        amenities: ["wifi", "ac"],
+        bedrooms: 3,
+        beds: 4,
+        adults: 3,
+        children: 0,
+        food:"non-veg",
+        hostgender:"family",
+        maxdays:7
     }
-];
+]; 
 
 // Loop through each home and add it to the page
 homes.forEach(home => addHomeToPage(home));

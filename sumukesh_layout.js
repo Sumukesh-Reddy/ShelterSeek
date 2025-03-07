@@ -8,6 +8,9 @@ var homes = [
         description: "Beautiful home with a great view and spacious rooms.",
         liked: false,
         discountPercentage: 20,
+        locationType: "in-town",
+        size: "1200 sq.feet", // Added
+        transport: "2km", // Added
         media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
@@ -18,7 +21,7 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 19.0760, longitude: 72.8777 },
+        host: { name: "John Doe", gen: "male", food: "vegeterain", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 19.0760, longitude: 72.8777 },
         maxdays: 4
     },
     {
@@ -29,13 +32,16 @@ var homes = [
         description: "A charming cottage surrounded by nature.",
         liked: false,
         discountPercentage: 30,
+        locationType: "countryside",
+        size: "800 sq.feet", // Added
+        transport: "5km", // Added
         media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: false, laundry: true, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: true, Electricity: true },
         review_main: [
             { name: "alex", review: "amazing place", rating: 4.8, image: "img/photo1.jpg" },
             { name: "maria", review: "peaceful", rating: 4.2, image: "img/photo2.jpg" }
         ],
-        host: { name: "Jane Smith", image: "img/photo2.jpg", yearsWithUs: 3, latitude: 10.8505, longitude: 76.2711 },
+        host: { name: "Jane Smith", gen: "male", food: "no food", image: "img/photo2.jpg", yearsWithUs: 3, latitude: 10.8505, longitude: 76.2711 },
         maxdays: 3
     },
     {
@@ -46,12 +52,15 @@ var homes = [
         description: "A stunning villa with a private beach and pool.",
         liked: false,
         discountPercentage: 25,
+        locationType: "outside-town",
+        size: "2500 sq.feet", // Added
+        transport: "10km", // Added
         media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: true, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "tom", review: "great luxury experience", rating: 5, image: "img/photo1.jpg" }
         ],
-        host: { name: "Mark Taylor", image: "img/photo3.jpg", yearsWithUs: 4, latitude: 15.2993, longitude: 74.1240 },
+        host: { name: "Mark Taylor", gen: "female", food: "vegetarian", image: "img/photo3.jpg", yearsWithUs: 4, latitude: 15.2993, longitude: 74.1240 },
         maxdays: 2
     },
     {
@@ -62,12 +71,15 @@ var homes = [
         description: "Spacious loft in the heart of the city with modern amenities.",
         liked: false,
         discountPercentage: 15,
+        locationType: "in-town",
+        size: "1500 sq.feet", // Added
+        transport: "2km", // Added
         media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: true, taps: true, lift: true, carParking: false, EvCharging: false, Electricity: true },
         review_main: [
             { name: "lisa", review: "loved the urban vibe", rating: 4.6, image: "img/photo1.jpg" }
         ],
-        host: { name: "Alice Green", image: "img/photo4.jpg", yearsWithUs: 6, latitude: 12.9716, longitude: 77.5946 },
+        host: { name: "Alice Green", gen: "family", food: "no food", image: "img/photo4.jpg", yearsWithUs: 6, latitude: 12.9716, longitude: 77.5946 },
         maxdays: 5
     },
     {
@@ -78,12 +90,15 @@ var homes = [
         description: "A beautiful beachfront property with stunning ocean views.",
         liked: false,
         discountPercentage: 10,
+        locationType: "outside-town",
+        size: "2000 sq.feet", // Added
+        transport: "5km", // Added
         media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: true, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: true, Electricity: true },
         review_main: [
             { name: "emma", review: "perfect beach house", rating: 5, image: "img/photo1.jpg" }
         ],
-        host: { name: "Chris Brown", image: "img/photo5.jpg", yearsWithUs: 2, latitude: 11.9416, longitude: 79.8083 },
+        host: { name: "Chris Brown", gen: "male", food: "non-vegetarian", image: "img/photo5.jpg", yearsWithUs: 2, latitude: 11.9416, longitude: 79.8083 },
         maxdays: 5
     },
     {
@@ -92,9 +107,12 @@ var homes = [
         location: "Himachal Pradesh",
         price: "3500",
         description: "A perfect getaway nestled in the mountains with breathtaking views.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 12,
+        locationType: "countryside",
+        size: "1800 sq.feet", // Added
+        transport: "10km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -104,7 +122,7 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 32.0657, longitude: 77.1983 },
+        host: { name: "John Doe", gen: "male", food: "non-vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 32.0657, longitude: 77.1983 },
         maxdays: 7
     },
     {
@@ -113,9 +131,12 @@ var homes = [
         location: "Gurgaon",
         price: "2800",
         description: "A spacious family home in a quiet neighborhood.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 18,
+        locationType: "residential-area",
+        size: "2200 sq.feet", // Added
+        transport: "5km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -125,7 +146,7 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 28.4595, longitude: 77.0266 },
+        host: { name: "John Doe", gen: "female", food: "vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 28.4595, longitude: 77.0266 },
         maxdays: 3
     },
     {
@@ -134,9 +155,12 @@ var homes = [
         location: "Delhi",
         price: "7500",
         description: "A luxurious penthouse with panoramic city views.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 22,
+        locationType: "in-town",
+        size: "3000 sq.feet", // Added
+        transport: "2km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -146,7 +170,7 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 28.6139, longitude: 77.2090 },
+        host: { name: "John Doe", gen: "family", food: "non-vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 28.6139, longitude: 77.2090 },
         maxdays: 7
     },
     {
@@ -155,9 +179,12 @@ var homes = [
         location: "Punjab",
         price: "2300",
         description: "A traditional farmhouse with acres of land and fresh air.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 17,
+        locationType: "countryside",
+        size: "4000 sq.feet", // Added
+        transport: "10km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -167,7 +194,7 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 30.7333, longitude: 76.7794 },
+        host: { name: "John Doe", gen: "female", food: "non-vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 30.7333, longitude: 76.7794 },
         maxdays: 7
     },
     {
@@ -176,9 +203,12 @@ var homes = [
         location: "Uttarakhand",
         price: "2000",
         description: "A cozy cabin on the lake, perfect for relaxing weekends.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 14,
+        locationType: "countryside",
+        size: "1000 sq.feet", // Added
+        transport: "5km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -188,7 +218,7 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 30.0668, longitude: 79.0193 },
+        host: { name: "John Doe", gen: "family", food: "vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 30.0668, longitude: 79.0193 },
         maxdays: 1
     },
     {
@@ -197,12 +227,12 @@ var homes = [
         location: "Rajasthan",
         price: 6000,
         description: "A magnificent mansion on top of a hill with expansive views.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 30,
-        roomType: "Mansion",
-        bedrooms: 6,
-        beds: 8,
+        locationType: "countryside",
+        size: "5000 sq.feet", // Added
+        transport: "10km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -212,7 +242,7 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 27.0238, longitude: 74.2176 },
+        host: { name: "John Doe", gen: "male", food: "non-vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 27.0238, longitude: 74.2176 },
         maxdays: 1
     },
     {
@@ -221,12 +251,12 @@ var homes = [
         location: "Hyderabad",
         price: 3500,
         description: "Sleek and modern house with floor-to-ceiling windows.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 18,
-        roomType: "House",
-        bedrooms: 3,
-        beds: 4,
+        locationType: "residential-area",
+        size: "1800 sq.feet", // Added
+        transport: "5km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -236,7 +266,7 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 17.3850, longitude: 78.4867 },
+        host: { name: "John Doe", gen: "female", food: "non-vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 17.3850, longitude: 78.4867 },
         maxdays: 1
     },
     {
@@ -245,12 +275,12 @@ var homes = [
         location: "Andaman and Nicobar Islands",
         price: 5000,
         description: "Luxurious villa surrounded by tropical gardens.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 15,
-        roomType: "Villa",
-        bedrooms: 5,
-        beds: 6,
+        locationType: "outside-town",
+        size: "3000 sq.feet", // Added
+        transport: "10km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -260,7 +290,7 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 11.6234, longitude: 92.7265 },
+        host: { name: "John Doe", gen: "male", food: "non-vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 11.6234, longitude: 92.7265 },
         maxdays: 1
     },
     {
@@ -269,12 +299,12 @@ var homes = [
         location: "Chennai",
         price: 2200,
         description: "Chic studio apartment with a modern feel and city views.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 10,
-        roomType: "Studio",
-        bedrooms: 1,
-        beds: 1,
+        locationType: "in-town",
+        size: "800 sq.feet", // Added
+        transport: "2km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -284,7 +314,7 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 13.0827, longitude: 80.2707 },
+        host: { name: "John Doe", gen: "male", food: "non-vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 13.0827, longitude: 80.2707 },
         maxdays: 1
     },
     {
@@ -293,12 +323,12 @@ var homes = [
         location: "Kolkata",
         price: 4200,
         description: "A grand Victorian home with vintage charm and modern upgrades.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 12,
-        roomType: "House",
-        bedrooms: 4,
-        beds: 6,
+        locationType: "residential-area",
+        size: "2500 sq.feet", // Added
+        transport: "5km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -308,7 +338,7 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 22.5726, longitude: 88.3639 },
+        host: { name: "John Doe", gen: "female", food: "vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 22.5726, longitude: 88.3639 },
         maxdays: 1
     },
     {
@@ -317,12 +347,12 @@ var homes = [
         location: "Maharashtra",
         price: 5000,
         description: "A luxurious estate with large grounds and a private lake.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 20,
-        roomType: "Estate",
-        bedrooms: 6,
-        beds: 7,
+        locationType: "countryside",
+        size: "6000 sq.feet", // Added
+        transport: "10km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -332,8 +362,8 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 19.6633, longitude: 75.3280 },
-        maxdays: 1
+        host: { name: "John Doe", gen: "family", food: "vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 19.6633, longitude: 75.3280 },
+        maxdays: 3
     },
     {
         id: 17,
@@ -341,12 +371,12 @@ var homes = [
         location: "Ahmedabad",
         price: 2500,
         description: "A stylish condo with a rooftop terrace and great amenities.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 17,
-        roomType: "Condo",
-        bedrooms: 2,
-        beds: 2,
+        locationType: "in-town",
+        size: "1200 sq.feet", // Added
+        transport: "2km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -356,8 +386,8 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 23.0225, longitude: 72.5714 },
-        maxdays: 1
+        host: { name: "John Doe", gen: "family", food: "vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 23.0225, longitude: 72.5714 },
+        maxdays: 12
     },
     {
         id: 18,
@@ -365,12 +395,12 @@ var homes = [
         location: "Madhya Pradesh",
         price: 3500,
         description: "A spacious ranch with a beautiful garden and private stables.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 10,
-        roomType: "House",
-        bedrooms: 4,
-        beds: 5,
+        locationType: "countryside",
+        size: "3500 sq.feet", // Added
+        transport: "10km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -380,8 +410,8 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 23.1815, longitude: 79.9867 },
-        maxdays: 1
+        host: { name: "John Doe", gen: "male", food: "non-vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 23.1815, longitude: 79.9867 },
+        maxdays: 13
     },
     {
         id: 19,
@@ -389,12 +419,12 @@ var homes = [
         location: "Kochi",
         price: 7000,
         description: "An exclusive beachfront villa with luxury amenities.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 5,
-        roomType: "Villa",
-        bedrooms: 5,
-        beds: 6,
+        locationType: "outside-town",
+        size: "4000 sq.feet", // Added
+        transport: "10km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -404,8 +434,8 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 9.9312, longitude: 76.2673 },
-        maxdays: 1
+        host: { name: "John Doe", gen: "male", food: "vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 9.9312, longitude: 76.2673 },
+        maxdays: 14
     },
     {
         id: 20,
@@ -413,12 +443,12 @@ var homes = [
         location: "Noida",
         price: 8000,
         description: "A penthouse apartment with panoramic views of the city skyline.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 8,
-        roomType: "Apartment",
-        bedrooms: 3,
-        beds: 4,
+        locationType: "in-town",
+        size: "2800 sq.feet", // Added
+        transport: "2km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
@@ -428,8 +458,8 @@ var homes = [
             { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
             { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
         ],
-        host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 28.5355, longitude: 77.3910 },
-        maxdays: 1
+        host: { name: "John Doe", gen: "female", food: "non-vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 28.5355, longitude: 77.3910 },
+        maxdays: 16
     },
     {
         id: 21,
@@ -437,203 +467,210 @@ var homes = [
         location: "Madhya Pradesh",
         price: 2800,
         description: "A cozy lodge surrounded by forests and mountains.",
-        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         liked: false,
         discountPercentage: 16,
-        roomType: "Lodge",
-        bedrooms: 3,
-        beds: 4,
+        locationType: "countryside",
+        size: "1500 sq.feet", // Added
+        transport: "10km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
         amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
         review_main: [
             { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
             { name: "bobby", review: "nice", rating: 4.5, image: "img/photo2.jpg" },
             { name: "sai", review: "good", rating: 3.4, image: "img/photo3.jpg" },
-            { name: "jhansi", review: "very good", rating: 4.4, image: "img/photo1.jpg"}],
-            host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 28.5355, longitude: 77.3910 },
-            maxdays: 1
-        },
-            {
-                id: 22,
-                title: "Heritage Haveli",
-                location: "Jaipur",
-                price: 6000,
-                description: "A beautiful heritage haveli with traditional architecture and modern amenities.",
-                media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-                liked: false,
-                discountPercentage: 15,
-                roomType: "Haveli",
-                bedrooms: 5,
-                beds: 6,
-                amenities: { wifi: true, ac: true, laundry: true, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
-                review_main: [
-                    { name: "arjun", review: "A royal experience!", rating: 5, image: "img/photo1.jpg" },
-                    { name: "neha", review: "Loved the decor!", rating: 4.8, image: "img/photo2.jpg" }
-                ],
-                host: { name: "Ravi Singh", image: "img/photo1.jpg", yearsWithUs: 4, latitude: 26.9124, longitude: 75.7873 },
-                maxdays: 3
-            },
-            {
-                id: 23,
-                title: "Countryside Villa",
-                location: "Coorg",
-                price: 4500,
-                description: "A serene villa surrounded by coffee plantations and lush greenery.",
-                media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-                liked: false,
-                discountPercentage: 20,
-                roomType: "Villa",
-                bedrooms: 4,
-                beds: 5,
-                amenities: { wifi: true, ac: true, laundry: true, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
-                review_main: [
-                    { name: "suresh", review: "Perfect getaway!", rating: 5, image: "img/photo1.jpg" },
-                    { name: "anita", review: "Very peaceful!", rating: 4.7, image: "img/photo2.jpg" }
-                ],
-                host: { name: "Kumar", image: "img/photo2.jpg", yearsWithUs: 3, latitude: 12.3372, longitude: 75.7310 },
-                maxdays: 4
-            },
-            {
-                id: 24,
-                title: "Luxury Apartment",
-                location: "Gurgaon",
-                price: 8000,
-                description: "A luxurious apartment with state-of-the-art facilities and city views.",
-                media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-                liked: false,
-                discountPercentage: 10,
-                roomType: "Apartment",
-                bedrooms: 3,
-                beds: 4,
-                amenities: { wifi: true, ac: true, laundry: true, hotWater: true, taps: true, lift: true, carParking: true, EvCharging: true, Electricity: true },
-                review_main: [
-                    { name: "rahul", review: "Amazing place!", rating: 5, image: "img/photo1.jpg" },
-                    { name: "priya", review: "Very comfortable!", rating: 4.5, image: "img/photo2.jpg" }
-                ],
-                host: { name: "Anil Sharma", image: "img/photo3.jpg", yearsWithUs: 5, latitude: 28.4595, longitude: 77.0266 },
-                maxdays: 2
-            },
-            {
-                id: 25,
-                title: "Eco-Friendly Cottage",
-                location: "Rishikesh",
-                price: 3000,
-                description: "An eco-friendly cottage near the Ganges, perfect for yoga and meditation.",
-                media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-                liked: false,
-                discountPercentage: 15,
-                roomType: "Cottage",
-                bedrooms: 2,
-                beds: 2,
-                amenities: { wifi: true, ac: false, laundry: false, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
-                review_main: [
-                    { name: "deepak", review: "A peaceful retreat!", rating: 5, image: "img/photo1.jpg" },
-                    { name: "sita", review: "Loved the ambiance!", rating: 4.8, image: "img/photo2.jpg" }
-                ],
-                host: { name: "Vikram", image: "img/photo4.jpg", yearsWithUs: 2, latitude: 30.0865, longitude: 78.2675 },
-                maxdays: 5
-            },
-            {
-                id: 26,
-                title: "Charming Bungalow",
-                location: "Mysore",
-                price: 3500,
-                description: "A charming bungalow with a garden and vintage decor.",
-                media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-                liked: false,
-                discountPercentage: 12,
-                roomType: "Bungalow",
-                bedrooms: 3,
-                beds: 4,
-                amenities: { wifi: true, ac: true, laundry: true, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
-                review_main: [
-                    { name: "manoj", review: "Very cozy!", rating: 5, image: "img/photo1.jpg" },
-                    { name: "neelam", review: "Felt like home!", rating: 4.6, image: "img/photo2.jpg" }
-                ],
-                host: { name: "Ramesh", image: "img/photo5.jpg", yearsWithUs: 3, latitude: 12.2958, longitude: 76.6393 },
-                maxdays: 3
-            },
-            {
-                id: 27,
-                title: "Desert Camp",
-                location: "Jaisalmer",
-                price: 4000,
-                description: "A unique desert camp experience with luxury tents and cultural activities.",
-                media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-                liked: false,
-                discountPercentage: 20,
-                roomType: "Camp",
-                bedrooms: 2,
-                beds: 2,
-                amenities: { wifi: false, ac: false, laundry: false, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
-                review_main: [
-                    { name: "sanjay", review: "An unforgettable experience!", rating: 5, image: "img/photo1.jpg" },
-                    { name: "isha", review: "Loved the cultural shows!", rating: 4.9, image: "img/photo2.jpg" }
-                ],
-                host: { name: "Karan", image: "img/photo1.jpg", yearsWithUs: 4, latitude: 26.9157, longitude: 70.9083 },
-                maxdays: 2
-            },
-            {
-                id: 28,
-                title: "Hill Station Retreat",
-                location: "Manali",
-                price: 5000,
-                description: "A beautiful retreat in the hills with stunning views and cozy interiors.",
-                media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-                liked: false,
-                discountPercentage: 15,
-                roomType: "Retreat",
-                bedrooms: 4,
-                beds: 5,
-                amenities: { wifi: true, ac: true, laundry: true, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
-                review_main: [
-                    { name: "pradeep", review: "A perfect getaway!", rating: 5, image: "img/photo1.jpg" },
-                    { name: "ananya", review: "Stunning views!", rating: 4.8, image: "img/photo2.jpg" }
-                ],
-                host: { name: "Raj", image: "img/photo2.jpg", yearsWithUs: 3, latitude: 32.2397, longitude: 77.1887 },
-                maxdays: 4
-            },{
-                id: 29,
-                title: "Penthouse Suite",
-                location: "Kolkata, West Bengal",
-                price: "7500",
-                description: "A luxurious penthouse with panoramic city views.",
-                media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-                liked: false,
-                discountPercentage: 22,
-                amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
-                review_main: [
-                    { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
-                    { name: "bobby", review: "nice", rating: 4.5, image: "img/photo2.jpg" },
-                    { name: "sai", review: "good", rating: 3.4, image: "img/photo3.jpg" },
-                    { name: "jhansi", review: "very good", rating: 4.4, image: "img/photo3.jpg" },
-                    { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
-                    { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
-                ],
-                host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 22.5726, longitude: 88.3639 },
-                maxdays: 7
-            },
-            {
-                id: 30,
-                title: "Farmhouse",
-                location: "Pune, Maharashtra",
-                price: "2300",
-                description: "A traditional farmhouse with acres of land and fresh air.",
-                media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-                liked: false,
-                discountPercentage: 17,
-                amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
-                review_main: [
-                    { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
-                    { name: "bobby", review: "nice", rating: 4.5, image: "img/photo2.jpg" },
-                    { name: "sai", review: "good", rating: 3.4, image: "img/photo3.jpg" },
-                    { name: "jhansi", review: "very good", rating: 4.4, image: "img/photo3.jpg" },
-                    { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
-                    { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
-                ],
-                host: { name: "John Doe", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 18.5204, longitude: 73.8567 },
-                maxdays: 7
-            }
-        ];
+            { name: "jhansi", review: "very good", rating: 4.4, image: "img/photo1.jpg"}
+        ],
+        host: { name: "John Doe", gen: "family", food: "non-vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 28.5355, longitude: 77.3910 },
+        maxdays: 16
+    },
+    {
+        id: 22,
+        title: "Heritage Haveli",
+        location: "Jaipur",
+        price: 6000,
+        description: "A beautiful heritage haveli with traditional architecture and modern amenities.",
+        liked: false,
+        discountPercentage: 15,
+        locationType: "in-town",
+        size: "4500 sq.feet", // Added
+        transport: "5km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        amenities: { wifi: true, ac: true, laundry: true, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
+        review_main: [
+            { name: "arjun", review: "A royal experience!", rating: 5, image: "img/photo1.jpg" },
+            { name: "neha", review: "Loved the decor!", rating: 4.8, image: "img/photo2.jpg" }
+        ],
+        host: { name: "Ravi Singh", gen: "male", food: "vegetarian", image: "img/photo1.jpg", yearsWithUs: 4, latitude: 26.9124, longitude: 75.7873 },
+        maxdays: 3
+    },
+    {
+        id: 23,
+        title: "Countryside Villa",
+        location: "Coorg",
+        price: 4500,
+        description: "A serene villa surrounded by coffee plantations and lush greenery.",
+        liked: false,
+        discountPercentage: 20,
+        locationType: "countryside",
+        size: "3000 sq.feet", // Added
+        transport: "10km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        amenities: { wifi: true, ac: true, laundry: true, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
+        review_main: [
+            { name: "suresh", review: "Perfect getaway!", rating: 5, image: "img/photo1.jpg" },
+            { name: "anita", review: "Very peaceful!", rating: 4.7, image: "img/photo2.jpg" }
+        ],
+        host: { name: "Kumar", gen: "female", food: "vegetarian", image: "img/photo2.jpg", yearsWithUs: 3, latitude: 12.3372, longitude: 75.7310 },
+        maxdays: 4
+    },
+    {
+        id: 24,
+        title: "Luxury Apartment",
+        location: "Gurgaon",
+        price: 8000,
+        description: "A luxurious apartment with state-of-the-art facilities and city views.",
+        liked: false,
+        discountPercentage: 10,
+        locationType: "in-town",
+        size: "2000 sq.feet", // Added
+        transport: "2km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        amenities: { wifi: true, ac: true, laundry: true, hotWater: true, taps: true, lift: true, carParking: true, EvCharging: true, Electricity: true },
+        review_main: [
+            { name: "rahul", review: "Amazing place!", rating: 5, image: "img/photo1.jpg" },
+            { name: "priya", review: "Very comfortable!", rating: 4.5, image: "img/photo2.jpg" }
+        ],
+        host: { name: "Anil Sharma", gen: "male", food: "non-vegetarian", image: "img/photo3.jpg", yearsWithUs: 5, latitude: 28.4595, longitude: 77.0266 },
+        maxdays: 2
+    },
+    {
+        id: 25,
+        title: "Eco-Friendly Cottage",
+        location: "Rishikesh",
+        price: 3000,
+        description: "An eco-friendly cottage near the Ganges, perfect for yoga and meditation.",
+        liked: false,
+        discountPercentage: 15,
+        locationType: "countryside",
+        size: "1200 sq.feet", // Added
+        transport: "5km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        amenities: { wifi: true, ac: false, laundry: false, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
+        review_main: [
+            { name: "deepak", review: "A peaceful retreat!", rating: 5, image: "img/photo1.jpg" },
+            { name: "sita", review: "Loved the ambiance!", rating: 4.8, image: "img/photo2.jpg" }
+        ],
+        host: { name: "Vikram", gen: "family", food: "vegetarian", image: "img/photo4.jpg", yearsWithUs: 2, latitude: 30.0865, longitude: 78.2675 },
+        maxdays: 5
+    },
+    {
+        id: 26,
+        title: "Charming Bungalow",
+        location: "Mysore",
+        price: 3500,
+        description: "A charming bungalow with a garden and vintage decor.",
+        liked: false,
+        discountPercentage: 12,
+        locationType: "residential-area",
+        size: "1800 sq.feet", // Added
+        transport: "5km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        amenities: { wifi: true, ac: true, laundry: true, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
+        review_main: [
+            { name: "manoj", review: "Very cozy!", rating: 5, image: "img/photo1.jpg" },
+            { name: "neelam", review: "Felt like home!", rating: 4.6, image: "img/photo2.jpg" }
+        ],
+        host: { name: "Ramesh", gen: "family", food: "non-vegetarian", image: "img/photo5.jpg", yearsWithUs: 3, latitude: 12.2958, longitude: 76.6393 },
+        maxdays: 3
+    },
+    {
+        id: 27,
+        title: "Desert Camp",
+        location: "Jaisalmer",
+        price: 4000,
+        description: "A unique desert camp experience with luxury tents and cultural activities.",
+        liked: false,
+        discountPercentage: 20,
+        locationType: "countryside",
+        size: "1000 sq.feet", // Added
+        transport: "10km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        amenities: { wifi: false, ac: false, laundry: false, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
+        review_main: [
+            { name: "sanjay", review: "An unforgettable experience!", rating: 5, image: "img/photo1.jpg" },
+            { name: "isha", review: "Loved the cultural shows!", rating: 4.9, image: "img/photo2.jpg" }
+        ],
+        host: { name: "Karan", gen: "male", food: "non-vegetarian", image: "img/photo1.jpg", yearsWithUs: 4, latitude: 26.9157, longitude: 70.9083 },
+        maxdays: 2
+    },
+    {
+        id: 28,
+        title: "Hill Station Retreat",
+        location: "Manali",
+        price: 5000,
+        description: "A beautiful retreat in the hills with stunning views and cozy interiors.",
+        liked: false,
+        discountPercentage: 15,
+        locationType: "countryside",
+        size: "2500 sq.feet", // Added
+        transport: "10km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        amenities: { wifi: true, ac: true, laundry: true, hotWater: true, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
+        review_main: [
+            { name: "pradeep", review: "A perfect getaway!", rating: 5, image: "img/photo1.jpg" },
+            { name: "ananya", review: "Stunning views!", rating: 4.8, image: "img/photo2.jpg" }
+        ],
+        host: { name: "Raj", gen: "female", food: "non-vegetarian", image: "img/photo2.jpg", yearsWithUs: 3, latitude: 32.2397, longitude: 77.1887 },
+        maxdays: 4
+    },
+    {
+        id: 29,
+        title: "Penthouse Suite",
+        location: "Kolkata, West Bengal",
+        price: "7500",
+        description: "A luxurious penthouse with panoramic city views.",
+        liked: false,
+        discountPercentage: 22,
+        locationType: "countryside",
+        size: "3000 sq.feet", // Added
+        transport: "5km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
+        review_main: [
+            { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
+            { name: "bobby", review: "nice", rating: 4.5, image: "img/photo2.jpg" },
+            { name: "sai", review: "good", rating: 3.4, image: "img/photo3.jpg" },
+            { name: "jhansi", review: "very good", rating: 4.4, image: "img/photo3.jpg" },
+            { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
+            { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
+        ],
+        host: { name: "John Doe", gen: "male", food: "non-vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 22.5726, longitude: 88.3639 },
+        maxdays: 7
+    },
+    {
+        id: 30,
+        title: "Farmhouse",
+        location: "Pune, Maharashtra",
+        price: "2300",
+        description: "A traditional farmhouse with acres of land and fresh air.",
+        liked: false,
+        discountPercentage: 17,
+        locationType: "countryside",
+        size: "5000 sq.feet", // Added
+        transport: "10km", // Added
+        media: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+        amenities: { wifi: true, ac: true, laundry: false, hotWater: false, taps: true, lift: false, carParking: true, EvCharging: false, Electricity: true },
+        review_main: [
+            { name: "sumukesh", review: "it is soo good", rating: 5, image: "img/photo1.jpg" },
+            { name: "bobby", review: "nice", rating: 4.5, image: "img/photo2.jpg" },
+            { name: "sai", review: "good", rating: 3.4, image: "img/photo3.jpg" },
+            { name: "jhansi", review: "very good", rating: 4.4, image: "img/photo3.jpg" },
+            { name: "chinnu", review: "very bad", rating: 2.4, image: "img/photo3.jpg" },
+            { name: "jaswanth", review: "good", rating: 5, image: "img/photo3.jpg" }
+        ],
+        host: { name: "John Doe", gen: "family", food: "non-vegetarian", image: "img/photo1.jpg", yearsWithUs: 5, latitude: 18.5204, longitude: 73.8567 },
+        maxdays: 7
+    }];
 // Function to format currency
 function formatCurrency(number) {
     return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(number);
@@ -787,6 +824,16 @@ document.addEventListener("DOMContentLoaded", () => {
                             <li><span class="amenity-name">Car Parking</span> <span class="separator">:</span> <span id="carParking-verify">Pending</span></li>
                             <li><span class="amenity-name">EV Charging</span> <span class="separator">:</span> <span id="EvCharging-verify">Pending</span></li>
                             <li><span class="amenity-name">Electricity</span> <span class="separator">:</span> <span id="Electricity-verify">Pending</span></li>
+                        </ul>
+                    </div>
+                    <div class="room-information">
+                        <h2 style="color:#d72d6e">Room Information</h2>
+                        <ul class="amenities-list">
+                            <li><span class="amenity-name">Type of Host<span style="margin-left:4vw">:</span><span style="color:#d72d6e;margin-left:1vw">${home.host.gen.toUpperCase()}</span></span></li>
+                            <li><span class="amenity-name">Food<span style="margin-left:7.9vw">:</span ><span style="color:#d72d6e;margin-left:1vw">${home.host.food.toUpperCase()}</span></span></li>
+                            <li><span class="amenity-name">Room Location<span style="margin-left:2.6vw">:</span ><span style="color:#d72d6e;margin-left:1vw">${home.locationType.toUpperCase()}</span></span></li>
+                            <li><span class="amenity-name">Room Size:<span style="margin-left:4.6vw">:</span ><span style="color:#d72d6e;margin-left:1vw">${home.size}</span></span></li>
+                            <li><span class="amenity-name">Nearest Transport:<span style="margin-left:0.8vw">:</span ><span style="color:#d72d6e;margin-left:1vw">${home.transport.toUpperCase()}</span></span></li>
                         </ul>
                     </div>
                 </div>

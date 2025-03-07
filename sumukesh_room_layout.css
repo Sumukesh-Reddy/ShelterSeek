@@ -69,7 +69,7 @@ body {
     gap: 2vh;
 }
 
-.layout-description, .verification {
+.layout-description, .verification , .room-information{
     background: #fff;
     padding: 3vh;
     border-radius: 2vw;

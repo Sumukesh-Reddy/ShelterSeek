@@ -11,11 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
             discountPercentage: 20,
             roomType: "full",
             locationType: "in-town",
-            amenities: ["wifi", "ac"],
+            amenities: ["wifi", "ac", "laundry"],
             bedrooms: 2,
             beds: 3,
             adults: 2,
-            children: 1
+            children: 1,
+            food: "veg",
+            hostgender: "male",
+            maxdays: 4,
+            transport: "2km", // Added
+            size: "1200", // Added
         },
         {
             id: 2,
@@ -32,7 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 1,
             beds: 2,
             adults: 1,
-            children: 0
+            children: 0,
+            food: "non-veg",
+            hostgender: "male",
+            maxdays: 3,
+            transport: "5km", // Added
+            size: "900", // Added
         },
         {
             id: 3,
@@ -45,11 +55,16 @@ document.addEventListener("DOMContentLoaded", function () {
             discountPercentage: 25,
             roomType: "full",
             locationType: "outside-town",
-            amenities: ["wifi", "ac", "pool"],
+            amenities: ["wifi", "ac", "pool", "laundry"],
             bedrooms: 3,
             beds: 4,
             adults: 4,
-            children: 2
+            children: 2,
+            food: "veg",
+            hostgender: "female",
+            maxdays: 2,
+            transport: "10km", // Added
+            size: "1000", // Added
         },
         {
             id: 4,
@@ -66,7 +81,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 2,
             beds: 2,
             adults: 2,
-            children: 0
+            children: 0,
+            food: "no",
+            hostgender: "male",
+            maxdays: 5,
+            transport: "2km", // Added
+            size: "medium", // Added
         },
         {
             id: 5,
@@ -83,7 +103,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 3,
             beds: 4,
             adults: 4,
-            children: 2
+            children: 2,
+            food: "non-veg",
+            hostgender: "male",
+            maxdays: 5,
+            transport: "5km", // Added
+            size: "2000 sq.feet", // Added
         },
         {
             id: 6,
@@ -100,7 +125,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 2,
             beds: 3,
             adults: 2,
-            children: 1
+            children: 1,
+            food: "non-veg",
+            hostgender: "male",
+            maxdays: 7,
+            transport: "10km", // Added
+            size: "1800 sq.feet", // Added
         },
         {
             id: 7,
@@ -117,7 +147,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 3,
             beds: 4,
             adults: 4,
-            children: 2
+            children: 2,
+            food: "veg",
+            hostgender: "female",
+            maxdays: 3,
+            transport: "5km", // Added
+            size: "2200 sq.feet", // Added
         },
         {
             id: 8,
@@ -134,7 +169,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 3,
             beds: 3,
             adults: 2,
-            children: 1
+            children: 1,
+            food: "non-veg",
+            hostgender: "family",
+            maxdays: 7,
+            transport: "2km", // Added
+            size: "3000 sq.feet", // Added
         },
         {
             id: 9,
@@ -151,7 +191,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 4,
             beds: 5,
             adults: 6,
-            children: 3
+            children: 3,
+            food: "veg",
+            hostgender: "family",
+            maxdays: 7,
+            transport: "10km", // Added
+            size: "4000 sq.feet", // Added
         },
         {
             id: 10,
@@ -168,7 +213,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 1,
             beds: 2,
             adults: 2,
-            children: 0
+            children: 0,
+            food: "veg",
+            hostgender: "family",
+            maxdays: 1,
+            transport: "5km", // Added
+            size: "1000 sq.feet", // Added
         },
         {
             id: 11,
@@ -185,7 +235,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 5,
             beds: 6,
             adults: 6,
-            children: 3
+            children: 3,
+            food: "non-veg",
+            hostgender: "male",
+            maxdays: 1,
+            transport: "10km", // Added
+            size: "5000 sq.feet", // Added
         },
         {
             id: 12,
@@ -202,7 +257,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 3,
             beds: 3,
             adults: 3,
-            children: 1
+            children: 1,
+            food: "non-veg",
+            hostgender: "female",
+            maxdays: 1,
+            transport: "5km", // Added
+            size: "1800 sq.feet", // Added
         },
         {
             id: 13,
@@ -219,7 +279,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 4,
             beds: 5,
             adults: 4,
-            children: 2
+            children: 2,
+            food: "non-veg",
+            hostgender: "male",
+            maxdays: 1,
+            transport: "10km", // Added
+            size: "3000 sq.feet", // Added
         },
         {
             id: 14,
@@ -236,7 +301,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 1,
             beds: 1,
             adults: 1,
-            children: 0
+            children: 0,
+            food: "non-veg",
+            hostgender: "family",
+            maxdays: 1,
+            transport: "2km", // Added
+            size: "800 sq.feet", // Added
         },
         {
             id: 15,
@@ -253,7 +323,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 4,
             beds: 5,
             adults: 4,
-            children: 2
+            children: 2,
+            food: "veg",
+            hostgender: "female",
+            maxdays: 1,
+            transport: "5km", // Added
+            size: "2500 sq.feet", // Added
         },
         {
             id: 16,
@@ -270,7 +345,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 5,
             beds: 6,
             adults: 6,
-            children: 3
+            children: 3,
+            food: "veg",
+            hostgender: "family",
+            maxdays: 3,
+            transport: "10km", // Added
+            size: "6000 sq.feet", // Added
         },
         {
             id: 17,
@@ -287,7 +367,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 2,
             beds: 2,
             adults: 2,
-            children: 1
+            children: 1,
+            food: "veg",
+            hostgender: "family",
+            maxdays: 12,
+            transport: "2km", // Added
+            size: "1200 sq.feet", // Added
         },
         {
             id: 18,
@@ -304,7 +389,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 4,
             beds: 5,
             adults: 4,
-            children: 2
+            children: 2,
+            food: "non-veg",
+            hostgender: "male",
+            maxdays: 13,
+            transport: "10km", // Added
+            size: "3500 sq.feet", // Added
         },
         {
             id: 19,
@@ -321,7 +411,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 4,
             beds: 5,
             adults: 4,
-            children: 2
+            children: 2,
+            food: "veg",
+            hostgender: "male",
+            maxdays: 14,
+            transport: "10km", // Added
+            size: "4000 sq.feet", // Added
         },
         {
             id: 20,
@@ -338,7 +433,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 3,
             beds: 3,
             adults: 2,
-            children: 1
+            children: 1,
+            food: "non-veg",
+            hostgender: "female",
+            maxdays: 16,
+            transport: "2km", // Added
+            size: "2800 sq.feet", // Added
         },
         {
             id: 21,
@@ -355,7 +455,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 2,
             beds: 3,
             adults: 2,
-            children: 1
+            children: 1,
+            food: "non-veg",
+            hostgender: "family",
+            maxdays: 16,
+            transport: "10km", // Added
+            size: "1500 sq.feet", // Added
         },
         {
             id: 22,
@@ -372,7 +477,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 5,
             beds: 6,
             adults: 6,
-            children: 3
+            children: 3,
+            food: "veg",
+            hostgender: "male",
+            maxdays: 3,
+            transport: "5km", // Added
+            size: "4500 sq.feet", // Added
         },
         {
             id: 23,
@@ -389,7 +499,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 4,
             beds: 5,
             adults: 4,
-            children: 2
+            children: 2,
+            food: "veg",
+            hostgender: "female",
+            maxdays: 4,
+            transport: "10km", // Added
+            size: "3000 sq.feet", // Added
         },
         {
             id: 24,
@@ -406,7 +521,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 3,
             beds: 3,
             adults: 2,
-            children: 1
+            children: 1,
+            food: "non-veg",
+            hostgender: "male",
+            maxdays: 2,
+            transport: "2km", // Added
+            size: "2000 sq.feet", // Added
         },
         {
             id: 25,
@@ -423,7 +543,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 2,
             beds: 3,
             adults: 2,
-            children: 1
+            children: 1,
+            food: "veg",
+            hostgender: "family",
+            maxdays: 5,
+            transport: "5km", // Added
+            size: "1200 sq.feet", // Added
         },
         {
             id: 26,
@@ -440,7 +565,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 3,
             beds: 4,
             adults: 3,
-            children: 1
+            children: 1,
+            food: "non-veg",
+            hostgender: "family",
+            maxdays: 3,
+            transport: "5km", // Added
+            size: "1800 sq.feet", // Added
         },
         {
             id: 27,
@@ -457,7 +587,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 2,
             beds: 3,
             adults: 2,
-            children: 1
+            children: 1,
+            food: "non-veg",
+            hostgender: "male",
+            maxdays: 2,
+            transport: "10km", // Added
+            size: "1000 sq.feet", // Added
         },
         {
             id: 28,
@@ -468,13 +603,18 @@ document.addEventListener("DOMContentLoaded", function () {
             images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
             liked: false,
             discountPercentage: 15,
-            roomType: "shared",
+            roomType: "full",
             locationType: "countryside",
-            amenities: ["wifi", "ac", "pool"],
+            amenities: ["wifi", "ac", "hotwater", "laundry", "carParking"],
             bedrooms: 3,
-            beds: 4,
-            adults: 3,
-            children: 5
+            beds: 6,
+            adults: 2,
+            children: 6,
+            food: "non-veg",
+            hostgender: "female",
+            maxdays: 4,
+            transport: "10km", // Added
+            size: "2500 sq.feet", // Added
         },
         {
             id: 29,
@@ -487,11 +627,16 @@ document.addEventListener("DOMContentLoaded", function () {
             discountPercentage: 22,
             roomType: "full",
             locationType: "countryside",
-            amenities: ["wifi", "ac", "hotwater"],
+            amenities: ["wifi", "ac"],
             bedrooms: 3,
             beds: 4,
             adults: 3,
-            children: 6
+            children: 6,
+            food: "non-veg",
+            hostgender: "male",
+            maxdays: 7,
+            transport: "5km", // Added
+            size: "3000 sq.feet", // Added
         },
         {
             id: 30,
@@ -508,10 +653,38 @@ document.addEventListener("DOMContentLoaded", function () {
             bedrooms: 3,
             beds: 4,
             adults: 3,
-            children: 0
+            children: 0,
+            food: "non-veg",
+            hostgender: "family",
+            maxdays: 7,
+            transport: "10km", // Added
+            size: "5000 sq.feet", // Added
         }
-    ]; 
+    ];
 
+    const categorizeSize = (size) => {
+        if (typeof size === 'string') {
+            // Extract the numerical value from the string (e.g., "1200 sq.feet" -> 1200)
+            const numericSize = parseFloat(size);
+            if (numericSize < 1500) {
+                return "small";
+            } else if (numericSize >= 1500 && numericSize < 3000) {
+                return "medium";
+            } else {
+                return "large";
+            }
+        }
+        // If size is already a categorical value, return it as is
+        return size;
+    };
+    
+    // Update the `size` property for each home
+    const updatedHomes = homes.map(home => ({
+        ...home,
+        size: categorizeSize(home.size)
+    }));
+    
+    console.log(updatedHomes);
     let likedHomes = [];
     displayHomes(homes);
 
@@ -531,7 +704,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function applyFilters() {
         // Get the search input and split it into an array of keywords
         const cityInput = document.getElementById("search-bar")?.value.trim().toLowerCase();
-        const keywords = cityInput.split(",").map(keyword => keyword.trim()); // Split by comma and trim whitespace
+        const keywords = cityInput.split(",").map(keyword => keyword.trim());
     
         const minPrice = parseInt(document.querySelector(".min-input")?.value) || 0;
         const maxPrice = parseInt(document.querySelector(".max-input")?.value) || Infinity;
@@ -557,6 +730,9 @@ document.addEventListener("DOMContentLoaded", function () {
             selectedAmenities.push(amenity.getAttribute("data-value"));
         });
     
+        // Get number of days
+        const noOfDays = parseInt(document.getElementById("days").textContent);
+    
         // Get selected bedrooms
         const selectedBedrooms = parseInt(document.getElementById("bedrooms").textContent);
     
@@ -569,9 +745,25 @@ document.addEventListener("DOMContentLoaded", function () {
         // Get selected children
         const selectedChildren = parseInt(document.getElementById("childrens").textContent);
     
+        // Get selected host gender
+        const selectedHostGender = document.querySelector('input[name="host"]:checked').value;
+    
+        // Get selected food preferences
+        const selectedFoodPreferences = [];
+        document.querySelectorAll("#food-preferences .select-box.active").forEach(food => {
+            selectedFoodPreferences.push(food.getAttribute("data-value"));
+        });
+    
+        // Get selected room size
+        const selectedRoomSize = document.querySelector('input[name="room-size"]:checked').value;
+    
+        // Get selected transport distance
+        const selectedTransport = document.querySelector('input[name="room-distance"]:checked').value;
+    
+        console.log("Selected Room Size:", selectedRoomSize); // Debugging
     
         // Filter homes based on user inputs
-        const filteredHomes = homes.filter(home => {
+        const filteredHomes = updatedHomes.filter(home => {
             const homePrice = parseFloat(home.price);
     
             // Check if any keyword matches the home's title or location
@@ -614,10 +806,24 @@ document.addEventListener("DOMContentLoaded", function () {
             // Check if the number of children matches the selected children
             const matchesChildren = home.children >= selectedChildren;
     
-            console.log(`Home: ${home.title}, Price: ${homePrice}, Location: ${home.location}`);
-            console.log(`Matches Keywords: ${matchesKeywords}, Matches Price: ${matchesPrice}, Matches Type: ${matchesType}`);
-            console.log(`Matches Room Type: ${matchesRoomType}, Matches Room Location: ${matchesRoomLocation}, Matches Amenities: ${matchesAmenities}`);
-            console.log(`Matches Bedrooms: ${matchesBedrooms}, Matches Beds: ${matchesBeds}, Matches Adults: ${matchesAdults}, Matches Children: ${matchesChildren}`);
+            // Check if the host gender matches the selected host gender
+            const matchesHostGender = selectedHostGender === "any" || home.hostgender === selectedHostGender;
+    
+            // Check if the food preferences match the selected food preferences
+            const matchesFoodPreferences = selectedFoodPreferences.length === 0 || selectedFoodPreferences.every(food => {
+                return home.food === food;
+            });
+    
+            // Check if the room size matches the selected room size
+            const matchesRoomSize = selectedRoomSize === "any" || home.size === selectedRoomSize;
+    
+            // Check if the transport distance matches the selected transport distance
+            const matchesTransport = selectedTransport === "any" || home.transport === selectedTransport;
+    
+            // Check if the number of days matches the selected number of days
+            const matchesDays = home.maxdays >= noOfDays;
+    
+            console.log(`Home: ${home.title}, Size: ${home.size}, Matches Room Size: ${matchesRoomSize}`); // Debugging
     
             // Return true if all conditions are met
             return (
@@ -630,9 +836,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 matchesBedrooms &&
                 matchesBeds &&
                 matchesAdults &&
-                matchesChildren
+                matchesChildren &&
+                matchesHostGender &&
+                matchesFoodPreferences &&
+                matchesRoomSize &&
+                matchesTransport &&
+                matchesDays
             );
         });
+    
+        console.log("Filtered Homes:", filteredHomes); // Debugging
     
         // Display filtered homes
         displayHomes(filteredHomes);
