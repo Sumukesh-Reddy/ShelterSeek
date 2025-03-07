@@ -1,5 +1,4 @@
 import homeData from './home_list.js';
-
 const { homes, layout_homes } = homeData;
 
     const categorizeSize = (size) => {
@@ -17,8 +16,6 @@ const { homes, layout_homes } = homeData;
         // If size is already a categorical value, return it as is
         return size;
     };
-    
-    // Update the `size` property for each home
     const updatedHomes = homes.map(home => ({
         ...home,
         size: categorizeSize(home.size),
@@ -26,12 +23,13 @@ const { homes, layout_homes } = homeData;
     }));
     
     let likedHomes = JSON.parse(localStorage.getItem("likedHomes")) || [];
+    document.addEventListener("DOMContentLoaded", () => {
+   
 
     const link = document.createElement("a");
     link.style.display = "none";
     document.body.appendChild(link);
-
-    // Search functionality
+    
     // Search functionality
     const filterSearchButton = document.getElementById("filter-search-button");
     if (filterSearchButton) {
@@ -39,14 +37,14 @@ const { homes, layout_homes } = homeData;
         applyFilters();
     });
     }
-
+    
     const searchButton = document.getElementById("search-button");
     if (searchButton) {
         searchButton.addEventListener("click", function () {
             applyFilters();
         });
     }
-
+    
     // Apply filters
     function applyFilters() {
      
@@ -277,5 +275,7 @@ const { homes, layout_homes } = homeData;
     function formatCurrency(number) {
         return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(number);
     }
-
-    export { likedHomes };
+    
+});
+    export default { likedHomes };
+    

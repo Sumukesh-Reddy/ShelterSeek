@@ -2,7 +2,7 @@
 import homeData from './home_list.js';
 import { likedHomes } from './sorted_houses.js';
 
-const { homes, layout_homes } = homeData;
+let { homes, layout_homes } = homeData;
 // Function to update amenities verification
 function updateAmenitiesVerification(home) {
     for (const [amenity, isVerified] of Object.entries(home.amenities)) {
@@ -229,6 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
             updateMedia();
         });
 
+            
         const likeButton = document.getElementById("save-button");
         likeButton.classList.toggle("liked", likedHomes.includes(home.id)); // Set initial state
 
@@ -237,15 +238,18 @@ document.addEventListener("DOMContentLoaded", () => {
             event.stopPropagation();
             const isLiked = likedHomes.includes(home.id);
             if (isLiked) {
-                // Remove from likedHomes
-                likedHomes = likedHomes.filter(id => id !== home.id);
-                likeButton.innerText = "Save for Later"; // Update button text
+                // Remove the home ID from the array
+                const index = likedHomes.indexOf(home.id);
+                if (index !== -1) {
+                    likedHomes.splice(index, 1); // Remove the item in place
+                }
+                likeButton.innerText = "Save for Later";
             } else {
-                // Add to likedHomes
+                // Add the home ID to the array
                 likedHomes.push(home.id);
-                likeButton.innerText = "Remove from Wishlist"; // Update button text
+                likeButton.innerText = "Remove from Wishlist";
             }
-            likeButton.classList.toggle("liked", !isLiked); // Toggle the liked state
+            likeButton.classList.toggle("liked", !isLiked);
             console.log("Updated likedHomes:", likedHomes); // Debugging
         });
         updateMedia();
