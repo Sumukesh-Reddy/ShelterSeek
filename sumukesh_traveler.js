@@ -1,6 +1,6 @@
-let likedHomes = JSON.parse(localStorage.getItem("likedHomes")) || [];
+export let likedHomes = JSON.parse(localStorage.getItem("likedHomes")) || [];
 
-// document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
 document.getElementById("user-button").addEventListener("click",()=>{
     const user_menu=document.getElementById("user-menu");
@@ -674,4 +674,4 @@ function addHomeToPage(home) {
 function formatCurrency(number) {
     return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(number);
 }
-// });
+ });
