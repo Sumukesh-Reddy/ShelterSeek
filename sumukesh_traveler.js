@@ -1,5 +1,6 @@
-import { likedHomes } from "./sorted_houses.js";
-document.addEventListener("DOMContentLoaded", function () {
+let likedHomes = JSON.parse(localStorage.getItem("likedHomes")) || [];
+
+// document.addEventListener("DOMContentLoaded", function () {
 
 document.getElementById("user-button").addEventListener("click",()=>{
     const user_menu=document.getElementById("user-menu");
@@ -607,7 +608,7 @@ function addHomeToPage(home) {
 
     homeBlock.innerHTML = `
         <div class="home-photos-block">
-            <button id="home-like" data-home-id="${home.id}"><i class="fa fa-heart"></i></button>
+        <button id="home-like" data-home-id="${home.id}"><i class="fa fa-heart"></i></button>
             <button id="img-move-left">&lt;</button>
             <button id="img-move-right">&gt;</button>
             <div class="home-image" style="background-image: url(${home.images[0]})"></div> 
@@ -659,6 +660,7 @@ function addHomeToPage(home) {
             } else {
                 likedHomes = likedHomes.filter(id => id !== home.id);
             }
+            localStorage.setItem("likedHomes", JSON.stringify(likedHomes)); // Update localStorage
             console.log(likedHomes); // Debugging: Check if likedHomes is updated correctly
         });
     // Add click event listener to the entire home block
@@ -672,4 +674,4 @@ function addHomeToPage(home) {
 function formatCurrency(number) {
     return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(number);
 }
-});
+// });

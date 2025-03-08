@@ -1,6 +1,6 @@
 // Sample data for layout_homes
 import homeData from './home_list.js';
-import { likedHomes } from './sorted_houses.js';
+let likedHomes = JSON.parse(localStorage.getItem("likedHomes")) || [];
 
 let { homes, layout_homes } = homeData;
 // Function to update amenities verification
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <label for="check-out">Check-out Date:</label>
                         <input type="date" id="check-out" name="check-out">
                         <button id="rent-button">Rent Now</button>
-                         <button id="save-button" data-home-id="${home.id}">save for later</button>
+                         <button id="save-button" data-home-id="${home.id}"></button>
                     </div>
                     <div class="host">
                         <img src="${home.host.image}" alt="Host Photo" class="host-photo">
@@ -229,29 +229,47 @@ document.addEventListener("DOMContentLoaded", () => {
             updateMedia();
         });
 
-            
+        // Initialize the like button
         const likeButton = document.getElementById("save-button");
-        likeButton.classList.toggle("liked", likedHomes.includes(home.id)); // Set initial state
+        const isLiked = likedHomes.includes(home.id);
 
+        // Set the initial text of the button
+        if (isLiked) {
+            likeButton.innerText = "Remove from Wishlist";
+        } else {
+            likeButton.innerText = "Save for Later";
+        }
+
+        // Set the initial state of the button
+        likeButton.classList.toggle("liked", isLiked);
+
+        // Add event listener for the like button
         likeButton.addEventListener("click", (event) => {
             event.preventDefault();
             event.stopPropagation();
+
             const isLiked = likedHomes.includes(home.id);
+
             if (isLiked) {
                 // Remove the home ID from the array
-                const index = likedHomes.indexOf(home.id);
-                if (index !== -1) {
-                    likedHomes.splice(index, 1); // Remove the item in place
-                }
+                likedHomes = likedHomes.filter(id => id !== home.id);
                 likeButton.innerText = "Save for Later";
             } else {
                 // Add the home ID to the array
                 likedHomes.push(home.id);
+                
                 likeButton.innerText = "Remove from Wishlist";
             }
+
+            // Toggle the "liked" class
             likeButton.classList.toggle("liked", !isLiked);
+
+            // Update localStorage with the new likedHomes array
+            localStorage.setItem("likedHomes", JSON.stringify(likedHomes));
+
             console.log("Updated likedHomes:", likedHomes); // Debugging
         });
+
         updateMedia();
 
         // Rent calculation
@@ -266,15 +284,16 @@ document.addEventListener("DOMContentLoaded", () => {
         layoutHtmlDetails.innerHTML = "<p>Home not found.</p>";
     }
 
-const map = L.map('map').setView([home.host.latitude, home.host.longitude], 13);
+    // Map initialization
+    const map = L.map('map').setView([home.host.latitude, home.host.longitude], 13);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
 
-L.marker([home.host.latitude, home.host.longitude]).addTo(map)
-    .bindPopup("Your Room 🏠")
-    .openPopup();
+    L.marker([home.host.latitude, home.host.longitude]).addTo(map)
+        .bindPopup("Your Room 🏠")
+        .openPopup();
 
     function formatCurrency(number) {
         return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(number);

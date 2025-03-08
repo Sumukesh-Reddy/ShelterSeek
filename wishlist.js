@@ -1,9 +1,10 @@
-import { likedHomes } from "./sorted_houses.js";
+
 import homeData from './home_list.js';
 
 let { homes } = homeData;
 
 document.addEventListener("DOMContentLoaded", () => {
+    let likedHomes = JSON.parse(localStorage.getItem("likedHomes")) || [];
     const sent = [
         "Lets Connect To Each Other",
         "Let's confirm our room booking for the day",
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (sen) {
-        setInterval(changeSentence, 4000);
+        setInterval(changeSentence, 2000);
     }
 
     // Create a link element for navigation (if needed)
@@ -48,15 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function addHomeToPage(home) {
         const container = document.getElementById("likedrooms"); // Ensure this matches the container ID
-
         const homeBlock = document.createElement("div");
         homeBlock.classList.add("home-block");
 
         homeBlock.innerHTML = `
             <div class="home-photos-block">
-                <button id="home-like" data-home-id="${home.id}"><i class="fa fa-heart"></i></button>
-                <button id="img-move-left">&lt;</button>
-                <button id="img-move-right">&gt;</button>
                 <div class="home-image" style="background-image: url(${home.images[0]})"></div> 
             </div>
             <hr style="opacity: 0.3;">
@@ -71,44 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
         const homeImage = homeBlock.querySelector(".home-image");
-        const leftButton = homeBlock.querySelector("#img-move-left");
-        const rightButton = homeBlock.querySelector("#img-move-right");
-        let currentImageIndex = 0;
-
-        function showSlide(index) {
-            homeImage.style.backgroundImage = `url(${home.images[index]})`;
-        }
-
-        leftButton.addEventListener("click", (event) => {
-            event.preventDefault(); 
-            event.stopPropagation();
-            currentImageIndex = (currentImageIndex === 0) ? home.images.length - 1 : currentImageIndex - 1;
-            showSlide(currentImageIndex);
-        });
-
-        rightButton.addEventListener("click", (event) => {
-            event.preventDefault(); 
-            event.stopPropagation(); 
-            currentImageIndex = (currentImageIndex === home.images.length - 1) ? 0 : currentImageIndex + 1;
-            showSlide(currentImageIndex);
-        });
-
-        const likeButton = homeBlock.querySelector("#home-like");
-        likeButton.classList.toggle("liked", home.liked); // Set the initial liked state
-
-        likeButton.addEventListener("click", (event) => {
-            event.preventDefault(); 
-            event.stopPropagation();
-            home.liked = !home.liked;
-            likeButton.classList.toggle("liked");
-            if (home.liked) {
-                likedHomes.push(home.id);
-            } else {
-                likedHomes = likedHomes.filter(id => id !== home.id);
-            }
-            console.log(likedHomes); // Debugging: Check if likedHomes is updated correctly
-        });
-
         // Add click event listener to the entire home block
         homeBlock.addEventListener("click", () => {
             link.href = `room_layout.html?id=${home.id}`;
@@ -118,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
         container.appendChild(homeBlock);
     }
 
-    console.log(likedHomes); // Debugging: Check if the container is found
+    console.log("liked"+likedHomes); // Debugging: Check if the container is found
 });
 
 function formatCurrency(number) {

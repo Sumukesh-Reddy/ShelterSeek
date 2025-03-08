@@ -22,9 +22,9 @@ const { homes, layout_homes } = homeData;
         liked: home.liked
     }));
     
+    
+    // document.addEventListener("DOMContentLoaded", () => {
     let likedHomes = JSON.parse(localStorage.getItem("likedHomes")) || [];
-    document.addEventListener("DOMContentLoaded", () => {
-   
 
     const link = document.createElement("a");
     link.style.display = "none";
@@ -260,9 +260,9 @@ const { homes, layout_homes } = homeData;
             } else {
                 likedHomes = likedHomes.filter(id => id !== home.id);
             }
+            localStorage.setItem("likedHomes", JSON.stringify(likedHomes)); // Update localStorage
             console.log(likedHomes); // Debugging: Check if likedHomes is updated correctly
         });
-
         // Add click event listener to the entire home block
         homeBlock.addEventListener("click", () => {
             link.href = `room_layout.html?id=${home.id}`;
@@ -276,6 +276,6 @@ const { homes, layout_homes } = homeData;
         return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(number);
     }
     
-});
-    export { likedHomes };
+// });
+// export { likedHomes};
     
