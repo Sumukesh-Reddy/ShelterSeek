@@ -1334,5 +1334,5 @@ var layout_homes = [
         maxdays: 7
     }];
 
-
+    
 export default { homes, layout_homes };
