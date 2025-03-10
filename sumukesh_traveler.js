@@ -1,5 +1,6 @@
 export let likedHomes = JSON.parse(localStorage.getItem("likedHomes")) || [];
-
+import homeData from './home_list.js';
+let { layout_homes } = homeData;
 document.addEventListener("DOMContentLoaded", function () {
 
 document.getElementById("user-button").addEventListener("click",()=>{
@@ -704,6 +705,20 @@ priceInputMax.addEventListener("input", function () {
 //         }
 //     }
 
-
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const map = L.map('map').setView([20.5937, 78.9629], 5); // Centered on India
 
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; ShelterSeek'
+    }).addTo(map);
+
+    // Add markers for each home
+    layout_homes.forEach(home => {
+        L.marker([home.host.latitude, home.host.longitude]).addTo(map)
+            .bindPopup(`
+                <b>${home.host.name}</b><br>
+                Location: ${home.location}<br>
+            `);
+    });
+});
