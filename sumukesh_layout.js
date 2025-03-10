@@ -268,6 +268,12 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("likedHomes", JSON.stringify(likedHomes));
 
             console.log("Updated likedHomes:", likedHomes); // Debugging
+
+            // In sumukesh_layout.js
+            document.getElementById("rent-button").addEventListener("click", function () {
+                const homeId = home.id; // Assuming `home` is the current home object
+                window.location.href = `payment.html?id=${homeId}`; // Redirect to payment page with home ID
+            });
         });
 
         updateMedia();

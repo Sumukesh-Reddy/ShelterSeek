@@ -349,329 +349,361 @@ priceInputMax.addEventListener("input", function () {
 
 // liked rooms
 
-const link = document.createElement("a");
-    link.style.display = "none";
-    document.body.appendChild(link);
+// const link = document.createElement("a");
+//     link.style.display = "none";
+//     document.body.appendChild(link);
 
-// rooms boxes js starts from here
-const homes = [
-    {
-        id: 1,
-        title: "Modern Apartment",
-        location: "Mumbai",
-        price: "2500",
-        description: "Beautiful home with a great view and spacious rooms.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 20,
-        roomType: "full",
-        locationType: "in-town",
-        amenities: ["wifi", "ac"],
-        bedrooms: 2,
-        beds: 3,
-        adults: 2,
-        children: 1,
-        food:"veg",
-        hostgender:"male",
-        maxdays:4
-    },
-    {
-        id: 2,
-        title: "Cozy Cottage",
-        location: "Kerala",
-        price: "1800",
-        description: "A charming cottage surrounded by nature.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 30,
-        roomType: "shared",
-        locationType: "countryside",
-        amenities: ["wifi"],
-        bedrooms: 1,
-        beds: 2,
-        adults: 1,
-        children: 0,
-        food:"no",
-        hostgender:"male",
-        maxdays:3
-    },
-    {
-        id: 3,
-        title: "Luxury Villa",
-        location: "Goa",
-        price: "1200",
-        description: "A stunning villa with a private beach and pool.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 25,
-        roomType: "full",
-        locationType: "outside-town",
-        amenities: ["wifi", "ac", "pool"],
-        bedrooms: 3,
-        beds: 4,
-        adults: 4,
-        children: 2,
-        food:"veg",
-        hostgender:"female",
-        maxdays:2
-    },
-    {
-        id: 4,
-        title: "Downtown Loft",
-        location: "Bengaluru",
-        price: "3000",
-        description: "Spacious loft in the heart of the city with modern amenities.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 15,
-        roomType: "full",
-        locationType: "in-town",
-        amenities: ["wifi", "ac", "lift"],
-        bedrooms: 2,
-        beds: 2,
-        adults: 2,
-        children: 0,
-        food:"no",
-        hostgender:"male",
-        maxdays:5
-    },
-    {
-        id: 5,
-        title: "Beach House",
-        location: "Pondicherry",
-        price: "4500",
-        description: "A beautiful beachfront property with stunning ocean views.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 10,
-        roomType: "full",
-        locationType: "outside-town",
-        amenities: ["wifi", "ac", "hotwater"],
-        bedrooms: 3,
-        beds: 4,
-        adults: 4,
-        children: 2,
-        food:"non-veg",
-        hostgender:"male",
-        maxdays:5
-    },
-    {
-        id: 6,
-        title: "Mountain Retreat",
-        location: "Himachal Pradesh",
-        price: "3500",
-        description: "A perfect getaway nestled in the mountains with breathtaking views.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 12,
-        roomType: "full",
-        locationType: "countryside",
-        amenities: ["wifi", "hotwater"],
-        bedrooms: 2,
-        beds: 3,
-        adults: 2,
-        children: 1,
-        food:"non-veg",
-        hostgender:"male",
-        maxdays:7
-    },
-    {
-        id: 7,
-        title: "Suburban House",
-        location: "Gurgaon",
-        price: "2800",
-        description: "A spacious family home in a quiet neighborhood.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 18,
-        roomType: "full",
-        locationType: "residential-area",
-        amenities: ["wifi", "ac", "car-parking"],
-        bedrooms: 3,
-        beds: 4,
-        adults: 4,
-        children: 2,
-        food:"veg",
-        hostgender:"female",
-        maxdays:3
-    },
-    {
-        id: 8,
-        title: "Penthouse Suite",
-        location: "Delhi",
-        price: "7500",
-        description: "A luxurious penthouse with panoramic city views.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 22,
-        roomType: "full",
-        locationType: "in-town",
-        amenities: ["wifi", "ac", "lift", "car-parking"],
-        bedrooms: 3,
-        beds: 3,
-        adults: 2,
-        children: 1,
-        food:"non-veg",
-        hostgender:"family",
-        maxdays:7
-    },
-    {
-        id: 9,
-        title: "Farmhouse",
-        location: "Punjab",
-        price: "2300",
-        description: "A traditional farmhouse with acres of land and fresh air.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 17,
-        roomType: "full",
-        locationType: "countryside",
-        amenities: ["wifi", "hotwater"],
-        bedrooms: 4,
-        beds: 5,
-        adults: 6,
-        children: 3,
-        food:"veg",
-        hostgender:"family",
-        maxdays:7
-    },
-    {
-        id: 10,
-        title: "Lakefront Cabin",
-        location: "Uttarakhand",
-        price: "2000",
-        description: "A cozy cabin on the lake, perfect for relaxing weekends.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 14,
-        roomType: "shared",
-        locationType: "countryside",
-        amenities: ["wifi"],
-        bedrooms: 1,
-        beds: 2,
-        adults: 2,
-        children: 0,
-        food:"veg",
-        hostgender:"family",
-        maxdays:1
-    },
-    {
-        id: 11,
-        title: "Hilltop Mansion",
-        location: "Rajasthan",
-        price: 6000,
-        description: "A magnificent mansion on top of a hill with expansive views.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 30,
-        roomType: "full",
-        locationType: "countryside",
-        amenities: ["wifi", "ac", "pool", "car-parking"],
-        bedrooms: 5,
-        beds: 6,
-        adults: 6,
-        children: 3,
-        food:"non-veg",
-        hostgender:"male",
-        maxdays:1
-    },
-    {
-        id: 12,
-        title: "Contemporary House",
-        location: "Hyderabad",
-        price: 3500,
-        description: "Sleek and modern house with floor-to-ceiling windows.",
-        images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
-        liked: false,
-        discountPercentage: 18,
-        roomType: "full",
-        locationType: "residential-area",
-        amenities: ["wifi", "ac", "lift"],
-        bedrooms: 3,
-        beds: 3,
-        adults: 3,
-        children: 1,
-        food:"non-veg",
-        hostgender:"female",
-        maxdays:1
-    },
-]; 
+// // rooms boxes js starts from here
+// const homes = [
+//     {
+//         id: 1,
+//         title: "Modern Apartment",
+//         location: "Mumbai",
+//         price: "2500",
+//         description: "Beautiful home with a great view and spacious rooms.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false,
+//         discountPercentage: 20,
+//         roomType: "full",
+//         locationType: "in-town",
+//         amenities: ["wifi", "ac"],
+//         bedrooms: 2,
+//         beds: 3,
+//         adults: 2,
+//         children: 1,
+//         food:"veg",
+//         hostgender:"male",
+//         maxdays:4
+//     },
+//     {
+//         id: 2,
+//         title: "Cozy Cottage",
+//         location: "Kerala",
+//         price: "1800",
+//         description: "A charming cottage surrounded by nature.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false,
+//         discountPercentage: 30,
+//         roomType: "shared",
+//         locationType: "countryside",
+//         amenities: ["wifi"],
+//         bedrooms: 1,
+//         beds: 2,
+//         adults: 1,
+//         children: 0,
+//         food:"no",
+//         hostgender:"male",
+//         maxdays:3
+//     },
+//     {
+//         id: 3,
+//         title: "Luxury Villa",
+//         location: "Goa",
+//         price: "1200",
+//         description: "A stunning villa with a private beach and pool.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false,
+//         discountPercentage: 25,
+//         roomType: "full",
+//         locationType: "outside-town",
+//         amenities: ["wifi", "ac", "pool"],
+//         bedrooms: 3,
+//         beds: 4,
+//         adults: 4,
+//         children: 2,
+//         food:"veg",
+//         hostgender:"female",
+//         maxdays:2
+//     },
+//     {
+//         id: 4,
+//         title: "Downtown Loft",
+//         location: "Bengaluru",
+//         price: "3000",
+//         description: "Spacious loft in the heart of the city with modern amenities.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false,
+//         discountPercentage: 15,
+//         roomType: "full",
+//         locationType: "in-town",
+//         amenities: ["wifi", "ac", "lift"],
+//         bedrooms: 2,
+//         beds: 2,
+//         adults: 2,
+//         children: 0,
+//         food:"no",
+//         hostgender:"male",
+//         maxdays:5
+//     },
+//     {
+//         id: 5,
+//         title: "Beach House",
+//         location: "Pondicherry",
+//         price: "4500",
+//         description: "A beautiful beachfront property with stunning ocean views.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false,
+//         discountPercentage: 10,
+//         roomType: "full",
+//         locationType: "outside-town",
+//         amenities: ["wifi", "ac", "hotwater"],
+//         bedrooms: 3,
+//         beds: 4,
+//         adults: 4,
+//         children: 2,
+//         food:"non-veg",
+//         hostgender:"male",
+//         maxdays:5
+//     },
+//     {
+//         id: 6,
+//         title: "Mountain Retreat",
+//         location: "Himachal Pradesh",
+//         price: "3500",
+//         description: "A perfect getaway nestled in the mountains with breathtaking views.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false,
+//         discountPercentage: 12,
+//         roomType: "full",
+//         locationType: "countryside",
+//         amenities: ["wifi", "hotwater"],
+//         bedrooms: 2,
+//         beds: 3,
+//         adults: 2,
+//         children: 1,
+//         food:"non-veg",
+//         hostgender:"male",
+//         maxdays:7
+//     },
+//     {
+//         id: 7,
+//         title: "Suburban House",
+//         location: "Gurgaon",
+//         price: "2800",
+//         description: "A spacious family home in a quiet neighborhood.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false,
+//         discountPercentage: 18,
+//         roomType: "full",
+//         locationType: "residential-area",
+//         amenities: ["wifi", "ac", "car-parking"],
+//         bedrooms: 3,
+//         beds: 4,
+//         adults: 4,
+//         children: 2,
+//         food:"veg",
+//         hostgender:"female",
+//         maxdays:3
+//     },
+//     {
+//         id: 8,
+//         title: "Penthouse Suite",
+//         location: "Delhi",
+//         price: "7500",
+//         description: "A luxurious penthouse with panoramic city views.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false,
+//         discountPercentage: 22,
+//         roomType: "full",
+//         locationType: "in-town",
+//         amenities: ["wifi", "ac", "lift", "car-parking"],
+//         bedrooms: 3,
+//         beds: 3,
+//         adults: 2,
+//         children: 1,
+//         food:"non-veg",
+//         hostgender:"family",
+//         maxdays:7
+//     },
+//     {
+//         id: 9,
+//         title: "Farmhouse",
+//         location: "Punjab",
+//         price: "2300",
+//         description: "A traditional farmhouse with acres of land and fresh air.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false,
+//         discountPercentage: 17,
+//         roomType: "full",
+//         locationType: "countryside",
+//         amenities: ["wifi", "hotwater"],
+//         bedrooms: 4,
+//         beds: 5,
+//         adults: 6,
+//         children: 3,
+//         food:"veg",
+//         hostgender:"family",
+//         maxdays:7
+//     },
+//     {
+//         id: 10,
+//         title: "Lakefront Cabin",
+//         location: "Uttarakhand",
+//         price: "2000",
+//         description: "A cozy cabin on the lake, perfect for relaxing weekends.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false,
+//         discountPercentage: 14,
+//         roomType: "shared",
+//         locationType: "countryside",
+//         amenities: ["wifi"],
+//         bedrooms: 1,
+//         beds: 2,
+//         adults: 2,
+//         children: 0,
+//         food:"veg",
+//         hostgender:"family",
+//         maxdays:1
+//     },
+//     {
+//         id: 11,
+//         title: "Hilltop Mansion",
+//         location: "Rajasthan",
+//         price: 6000,
+//         description: "A magnificent mansion on top of a hill with expansive views.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false,
+//         discountPercentage: 30,
+//         roomType: "full",
+//         locationType: "countryside",
+//         amenities: ["wifi", "ac", "pool", "car-parking"],
+//         bedrooms: 5,
+//         beds: 6,
+//         adults: 6,
+//         children: 3,
+//         food:"non-veg",
+//         hostgender:"male",
+//         maxdays:1
+//     },
+//     {
+//         id: 12,
+//         title: "Contemporary House",
+//         location: "Hyderabad",
+//         price: 3500,
+//         description: "Sleek and modern house with floor-to-ceiling windows.",
+//         images: ["img/photo1.jpg", "img/photo2.jpg", "img/photo3.jpg", "img/photo4.jpg"],
+//         liked: false,
+//         discountPercentage: 18,
+//         roomType: "full",
+//         locationType: "residential-area",
+//         amenities: ["wifi", "ac", "lift"],
+//         bedrooms: 3,
+//         beds: 3,
+//         adults: 3,
+//         children: 1,
+//         food:"non-veg",
+//         hostgender:"female",
+//         maxdays:1
+//     },
+// ]; 
 
-// Loop through each home and add it to the page
-homes.forEach(home => addHomeToPage(home));
+// // Loop through each home and add it to the page
+// homes.forEach(home => addHomeToPage(home));
 
-function addHomeToPage(home) {
-    const container = document.getElementById("homes-container");
+// function addHomeToPage(home) {
+//     const container = document.getElementById("homes-container");
 
-    const homeBlock = document.createElement("div");
-    homeBlock.classList.add("home-block");
+//     const homeBlock = document.createElement("div");
+//     homeBlock.classList.add("home-block");
 
-    homeBlock.innerHTML = `
-        <div class="home-photos-block">
-        <button id="home-like" data-home-id="${home.id}"><i class="fa fa-heart"></i></button>
-            <button id="img-move-left">&lt;</button>
-            <button id="img-move-right">&gt;</button>
-            <div class="home-image" style="background-image: url(${home.images[0]})"></div> 
-        </div>
-        <hr style="opacity: 0.3;">
-        <div class="home-content">
-            <h3>${home.title}</h3>
-            <p>Location: ${home.location}</p>
-            <p class="price">${formatCurrency(home.price * (1 - home.discountPercentage / 100))}</p>
-            <span class="old-price">${formatCurrency(home.price)}</span>
-            <p style="color: green;font-weight: bold;">Discount : ${home.discountPercentage}% off</p>
-            <p>Description: ${home.description}</p>
-        </div>
-    `;
+//     homeBlock.innerHTML = `
+//         <div class="home-photos-block">
+//         <button id="home-like" data-home-id="${home.id}"><i class="fa fa-heart"></i></button>
+//             <button id="img-move-left">&lt;</button>
+//             <button id="img-move-right">&gt;</button>
+//             <div class="home-image" style="background-image: url(${home.images[0]})"></div> 
+//         </div>
+//         <hr style="opacity: 0.3;">
+//         <div class="home-content">
+//             <h3>${home.title}</h3>
+//             <p>Location: ${home.location}</p>
+//             <p class="price">${formatCurrency(home.price * (1 - home.discountPercentage / 100))}</p>
+//             <span class="old-price">${formatCurrency(home.price)}</span>
+//             <p style="color: green;font-weight: bold;">Discount : ${home.discountPercentage}% off</p>
+//             <p>Description: ${home.description}</p>
+//         </div>
+//     `;
 
-    const homeImage = homeBlock.querySelector(".home-image");
-    const leftButton = homeBlock.querySelector("#img-move-left");
-    const rightButton = homeBlock.querySelector("#img-move-right");
-    let currentImageIndex = 0;
+//     const homeImage = homeBlock.querySelector(".home-image");
+//     const leftButton = homeBlock.querySelector("#img-move-left");
+//     const rightButton = homeBlock.querySelector("#img-move-right");
+//     let currentImageIndex = 0;
 
-    function showSlide(index) {
-        homeImage.style.backgroundImage = `url(${home.images[index]})`;
-    }
+//     function showSlide(index) {
+//         homeImage.style.backgroundImage = `url(${home.images[index]})`;
+//     }
 
-    leftButton.addEventListener("click", (event) => {
-        event.preventDefault(); 
-        event.stopPropagation();
-        currentImageIndex = (currentImageIndex === 0) ? home.images.length - 1 : currentImageIndex - 1;
-        showSlide(currentImageIndex);
-    });
+//     leftButton.addEventListener("click", (event) => {
+//         event.preventDefault(); 
+//         event.stopPropagation();
+//         currentImageIndex = (currentImageIndex === 0) ? home.images.length - 1 : currentImageIndex - 1;
+//         showSlide(currentImageIndex);
+//     });
 
-    rightButton.addEventListener("click", (event) => {
-        event.preventDefault(); 
-        event.stopPropagation(); 
-        currentImageIndex = (currentImageIndex === home.images.length - 1) ? 0 : currentImageIndex + 1;
-        showSlide(currentImageIndex);
-    });
+//     rightButton.addEventListener("click", (event) => {
+//         event.preventDefault(); 
+//         event.stopPropagation(); 
+//         currentImageIndex = (currentImageIndex === home.images.length - 1) ? 0 : currentImageIndex + 1;
+//         showSlide(currentImageIndex);
+//     });
 
-    const likeButton = homeBlock.querySelector("#home-like");
-        likeButton.classList.toggle("liked", home.liked); // Set the initial liked state
+//     const likeButton = homeBlock.querySelector("#home-like");
+//         likeButton.classList.toggle("liked", home.liked); // Set the initial liked state
 
-        likeButton.addEventListener("click", (event) => {
-            event.preventDefault(); 
-            event.stopPropagation();
-            home.liked = !home.liked;
-            likeButton.classList.toggle("liked");
-            if (home.liked) {
-                likedHomes.push(home.id);
-            } else {
-                likedHomes = likedHomes.filter(id => id !== home.id);
-            }
-            localStorage.setItem("likedHomes", JSON.stringify(likedHomes)); // Update localStorage
-            console.log(likedHomes); // Debugging: Check if likedHomes is updated correctly
-        });
-    // Add click event listener to the entire home block
-    homeBlock.addEventListener("click", () => {
-        link.href = `room_layout.html?id=${home.id}`;
-        link.click();
-    });
+//         likeButton.addEventListener("click", (event) => {
+//             event.preventDefault(); 
+//             event.stopPropagation();
+//             home.liked = !home.liked;
+//             likeButton.classList.toggle("liked");
+//             if (home.liked) {
+//                 likedHomes.push(home.id);
+//             } else {
+//                 likedHomes = likedHomes.filter(id => id !== home.id);
+//             }
+//             localStorage.setItem("likedHomes", JSON.stringify(likedHomes)); // Update localStorage
+//             console.log(likedHomes); // Debugging: Check if likedHomes is updated correctly
+//         });
+//     // Add click event listener to the entire home block
+//     homeBlock.addEventListener("click", () => {
+//         link.href = `room_layout.html?id=${home.id}`;
+//         link.click();
+//     });
 
-    container.appendChild(homeBlock);
-}
-function formatCurrency(number) {
-    return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(number);
-}
- });
+//     container.appendChild(homeBlock);
+// }
+// function formatCurrency(number) {
+//     return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(number);
+// }
+//  });
+
+//  // In sumukesh_traveler.js or sorted_houses.js
+// document.addEventListener("DOMContentLoaded", function () {
+//     const urlParams = new URLSearchParams(window.location.search);
+//     const paymentSuccess = urlParams.get('paymentSuccess');
+//     const homeId = urlParams.get('id');
+
+//     if (paymentSuccess === "true" && homeId) {
+//         // Mark the home as rented in localStorage
+//         let rentedHomes = JSON.parse(localStorage.getItem("rentedHomes")) || [];
+//         rentedHomes.push(homeId);
+//         localStorage.setItem("rentedHomes", JSON.stringify(rentedHomes));
+
+//         // Blur the rented home block
+//         const homeBlock = document.querySelector(`.home-block[data-home-id="${homeId}"]`);
+//         if (homeBlock) {
+//             homeBlock.style.opacity = "0.5";
+//             homeBlock.style.pointerEvents = "none"; // Disable further interactions
+//         }
+
+//         // Add the home to the user's history
+//         let userHistory = JSON.parse(localStorage.getItem("userHistory")) || [];
+//         const home = homes.find(h => h.id === parseInt(homeId));
+//         if (home) {
+//             userHistory.push(home);
+//             localStorage.setItem("userHistory", JSON.stringify(userHistory));
+//         }
+//     }
+
+
+});
+

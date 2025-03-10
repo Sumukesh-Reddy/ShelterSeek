@@ -205,6 +205,7 @@ const { homes, layout_homes } = homeData;
 
         const homeBlock = document.createElement("div");
         homeBlock.classList.add("home-block");
+        homeBlock.setAttribute("data-home-id", home.id);
 
         homeBlock.innerHTML = `
             <div class="home-photos-block">
@@ -279,3 +280,40 @@ const { homes, layout_homes } = homeData;
 // });
 // export { likedHomes};
     
+// In sumukesh_traveler.js or sorted_houses.js
+document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const paymentSuccess = urlParams.get('paymentSuccess');
+    const homeId = urlParams.get('id');
+
+    if (paymentSuccess === "true" && homeId) {
+        // Mark the home as rented in localStorage
+        let rentedHomes = JSON.parse(localStorage.getItem("rentedHomes")) || [];
+        rentedHomes.push(homeId);
+        localStorage.setItem("rentedHomes", JSON.stringify(rentedHomes));
+
+        // Blur the rented home block
+        const homeBlock = document.querySelector(`.home-block[data-home-id="${homeId}"]`);
+        if (homeBlock) {
+            homeBlock.style.opacity = "0.5";
+            homeBlock.style.pointerEvents = "none"; // Disable further interactions
+        }
+
+        // Add the home to the user's history
+        let userHistory = JSON.parse(localStorage.getItem("userHistory")) || [];
+        const home = homes.find(h => h.id === parseInt(homeId));
+        if (home) {
+            userHistory.push(home);
+            localStorage.setItem("userHistory", JSON.stringify(userHistory));
+        }
+    }
+    const rentedHomes = JSON.parse(localStorage.getItem("rentedHomes")) || [];
+
+    rentedHomes.forEach(homeId => {
+        const homeBlock = document.querySelector(`.home-block[data-home-id="${homeId}"]`);
+        if (homeBlock) {
+            homeBlock.style.opacity = "0.5";
+            homeBlock.style.pointerEvents = "none"; // Disable further interactions
+        }
+    });
+});
