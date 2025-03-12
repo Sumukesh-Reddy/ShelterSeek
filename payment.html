@@ -13,11 +13,27 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const homeId = urlParams.get('id');
+        const checkIn = urlParams.get('checkIn');
+        const checkOut = urlParams.get('checkOut');
 
         document.getElementById("complete-payment").addEventListener("click", function () {
-            // Simulate a successful payment
-            // Redirect back to the main page with a success flag
-            window.location.href = `index.html?paymentSuccess=true&id=${homeId}`;
+            // Simulate payment completion
+            alert("Payment completed successfully!");
+
+            // Save the booking details to localStorage
+            const booking = {
+                homeId: homeId,
+                checkIn: checkIn,
+                checkOut: checkOut,
+                paymentDate: new Date().toISOString()
+            };
+
+            let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+            bookings.push(booking);
+            localStorage.setItem("bookings", JSON.stringify(bookings));
+
+            // Redirect back to the main page or history page
+            window.location.href = "index.html"; // or "history.html"
         });
     </script>
 </body>

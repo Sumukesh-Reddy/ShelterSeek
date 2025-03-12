@@ -1,8 +1,29 @@
 export let likedHomes = JSON.parse(localStorage.getItem("likedHomes")) || [];
 import homeData from './home_list.js';
 let { layout_homes } = homeData;
-document.addEventListener("DOMContentLoaded", function () {
 
+document.addEventListener("DOMContentLoaded", function () {
+    
+    const loginLogoutText = document.getElementById("login-button");
+
+    // Function to check if the user is logged in
+    function checkLoginStatus() {
+        const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+        if (currentUser) {
+            loginLogoutText.textContent = "Logout"; 
+        } else {
+            loginLogoutText.textContent = "Login"; 
+        }
+    }
+
+    // Check login status on page load
+    checkLoginStatus();
+
+    if(loginLogoutText.textContent === "Login"){
+        window.addEventListener("click",()=>{
+            window.location.href="/login/loginweb.html"
+        })
+    }
 document.getElementById("user-button").addEventListener("click",()=>{
     const user_menu=document.getElementById("user-menu");
     if(user_menu.display==="block"){
@@ -721,4 +742,57 @@ document.addEventListener("DOMContentLoaded", function () {
                 Location: ${home.location}<br>
             `);
     });
+});
+// Function to open modal
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "flex"; 
+        document.body.style.overflow = "hidden"; 
+    }
+}
+
+window.onclick = function (event) {
+    if (event.target.classList.contains("modal")) {
+        event.target.style.display = "none"; 
+        document.body.style.overflow = "auto";
+    }
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+    
+    const destinationButtons = document.querySelectorAll(".destination-card .btn");
+    destinationButtons.forEach((button) => {
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const destination = this.closest(".destination-card").querySelector("h3").textContent.toLowerCase();
+            openModal(`${destination}-modal`);
+        });
+    });
+
+    const testimonialButtons = document.querySelectorAll(".testimonial-card .btn");
+    testimonialButtons.forEach((button) => {
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const testimonialName = this.closest(".testimonial-card").querySelector("h3").textContent.toLowerCase().replace(/ /g, "-");
+            openModal(`${testimonialName}-modal`);
+        });
+    });
+    const blogButtons = document.querySelectorAll(".blog-card .btn");
+blogButtons.forEach((button) => {
+    button.addEventListener("click", function (e) {
+        e.preventDefault();
+        const blogTitle = this.closest(".blog-card").querySelector("h3").textContent.toLowerCase().replace(/ /g, "-");
+        openModal(`${blogTitle}-modal`);
+    });
+});
+// Optional: Add event listeners to close modals when clicking outside the modal content
+window.addEventListener("click", function (event) {
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach((modal) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
 });

@@ -25,7 +25,7 @@ const { homes, layout_homes } = homeData;
     
     // document.addEventListener("DOMContentLoaded", () => {
     let likedHomes = JSON.parse(localStorage.getItem("likedHomes")) || [];
-
+    const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
     const link = document.createElement("a");
     link.style.display = "none";
     document.body.appendChild(link);
@@ -207,6 +207,13 @@ const { homes, layout_homes } = homeData;
         homeBlock.classList.add("home-block");
         homeBlock.setAttribute("data-home-id", home.id);
 
+        const isBooked = bookings.some(booking => booking.homeId === home.id);
+        if (isBooked) {
+            const homeBlock = document.querySelector(`.home-block[data-home-id="${home.id}"]`);
+            if (homeBlock) {
+                homeBlock.classList.add("booked");
+            }
+        }
         homeBlock.innerHTML = `
             <div class="home-photos-block">
                 <button id="home-like" data-home-id="${home.id}"><i class="fa fa-heart"></i></button>
@@ -280,40 +287,3 @@ const { homes, layout_homes } = homeData;
 // });
 // export { likedHomes};
     
-// In sumukesh_traveler.js or sorted_houses.js
-document.addEventListener("DOMContentLoaded", function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const paymentSuccess = urlParams.get('paymentSuccess');
-    const homeId = urlParams.get('id');
-
-    if (paymentSuccess === "true" && homeId) {
-        // Mark the home as rented in localStorage
-        let rentedHomes = JSON.parse(localStorage.getItem("rentedHomes")) || [];
-        rentedHomes.push(homeId);
-        localStorage.setItem("rentedHomes", JSON.stringify(rentedHomes));
-
-        // Blur the rented home block
-        const homeBlock = document.querySelector(`.home-block[data-home-id="${homeId}"]`);
-        if (homeBlock) {
-            homeBlock.style.opacity = "0.5";
-            homeBlock.style.pointerEvents = "none"; // Disable further interactions
-        }
-
-        // Add the home to the user's history
-        let userHistory = JSON.parse(localStorage.getItem("userHistory")) || [];
-        const home = homes.find(h => h.id === parseInt(homeId));
-        if (home) {
-            userHistory.push(home);
-            localStorage.setItem("userHistory", JSON.stringify(userHistory));
-        }
-    }
-    const rentedHomes = JSON.parse(localStorage.getItem("rentedHomes")) || [];
-
-    rentedHomes.forEach(homeId => {
-        const homeBlock = document.querySelector(`.home-block[data-home-id="${homeId}"]`);
-        if (homeBlock) {
-            homeBlock.style.opacity = "0.5";
-            homeBlock.style.pointerEvents = "none"; // Disable further interactions
-        }
-    });
-});

@@ -20,26 +20,27 @@
        
         <div class="cart"><a href="wishlist.html" ><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
         <div class="about"><a href="#" >About</a></div>
-        <div class="inbox"><a href="#"></a><i class="fa fa-envelope" aria-hidden="true"></i></div>
+        <div class="inbox"><a href="messages.html"><i class="fa fa-envelope" aria-hidden="true" id="i-inbox"></i></a></div>
         <div class="traveler"><button id="user-button"><i class="fa fa-user" aria-hidden="true"></i></button></div>
         <div id="user-menu" class="user-menu">
-            <button id="user-close-btn" class="user-close-btn">&times;</button>
+            <button id="user-close-btn" class="user-close-btn">&times;
+            </button>
             <ul>
-                <li><a href="#">profile</a></li>
-                <li><a href="#">history</a></li>
-                <li><a href="#">login</a></li>
+                <li><a href="profile/profile.html">profile</a></li>
+                <li><a href="history.html">history</a></li>
+                <li><a href="login/loginweb.html" id="login-button">login</a></li>
             </ul>
         </div>
         <div class="menubar"><button id="menubotton" ><i class="fa fa-navicon">‌</i></button></div>
         <div id="menu" class="menu">
         <button id="close-btn" class="close-btn">&times;</button>
             <ul>
-                <li><a href="#">profile</a></li>
-                <li><a href="#">inbox</a></li>
-                <li><a href="#">history</a></li>
+                <li><a href="profile/profile.html">profile</a></li>
+                <li><a href="messages.html">inbox</a></li>
+                <li><a href="history.html">history</a></li>
                 <li><a href="wishlist.html">Wish List</a></li>
                 <li><a href="#">about</a></li>
-                <li><a href="#">login</a></li>
+                <li><a href="login/loginweb.html">login</a></li>
             </ul>
         </div>
     </div>
@@ -300,15 +301,15 @@
     <div class="testimonial-grid">
         <div class="testimonial-card">
             <p>"ShelterSeek helped me find the perfect place for my vacation. Highly recommended!"</p>
-            <h3>- John Doe</h3>
+            <h3>- Captain Jack Sparrow</h3>
         </div>
         <div class="testimonial-card">
             <p>"Amazing service and great accommodations. Will definitely use again!"</p>
-            <h3>- Jane Smith</h3>
+            <h3>- Luffy</h3>
         </div>
         <div class="testimonial-card">
             <p>"The best travel website I've ever used. Everything was perfect!"</p>
-            <h3>- Mike Johnson</h3>
+            <h3>- Naruto</h3>
         </div>
     </div>
 </div>
@@ -325,8 +326,8 @@
         </div>
         <div class="blog-card">
             <img src="img/photo1.jpg" alt="Blog 2">
-            <h3>Best Destinations for 2024</h3>
-            <p>Find out the top destinations to visit in 2024.</p>
+            <h3>Best Destinations for 2025</h3>
+            <p>Find out the top destinations to visit in 2025.</p>
             <a href="#" class="btn">Read More</a>
         </div>
         <div class="blog-card">
@@ -338,12 +339,136 @@
     </div>
 </div>
 
+<!-- Modals -->
+<div id="top-10-travel-tips-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <img src="img/photo3.jpg" alt="Blog 1">
+        </div>
+        <div class="modal-body">
+            <h2>Top 10 Travel Tips</h2>
+            <p>1. Plan ahead...</p>
+            <p>2. Pack light...</p>
+            <!-- Add more content here -->
+        </div>
+    </div>
+</div>
+
+<div id="best-destinations-for-2025-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <img src="img/photo1.jpg" alt="Blog 2">
+        </div>
+        <div class="modal-body">
+            <h2>Best Destinations for 2025</h2>
+            <p>1. Paris...</p>
+            <p>2. Tokyo...</p>
+            <!-- Add more content here -->
+        </div>
+    </div>
+</div>
+
+<div id="how-to-travel-on-a-budget-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <img src="img/photo2.jpg" alt="Blog 3">
+        </div>
+        <div class="modal-body">
+            <h2>How to Travel on a Budget</h2>
+            <p>1. Use budget airlines...</p>
+            <p>2. Stay in hostels...</p>
+            <!-- Add more content here -->
+        </div>
+    </div>
+</div>
+
+<!-- New York Modal -->
+<div id="new york-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <img src="img/photo4.jpg" alt="New York">
+        </div>
+        <div class="modal-body">
+            <h2>New York</h2>
+            <p>New York City, the city that never sleeps is a vibrant metropolis that offers an unparalleled blend of culture, entertainment, and diversity. From the iconic skyline to world-class museums, Broadway shows, and diverse neighborhoods, NYC provides endless opportunities for exploration and adventure.</p>
+            <h3>Highlights</h3>
+            <ul>
+                <li>Times Square's bright lights</li>
+                <li>Central Park's natural oasis</li>
+                <li>World-class museums and galleries</li>
+                <li>Diverse culinary scene</li>
+            </ul>
+            <h3>Must-Visit Attractions</h3>
+            <ul>
+                <li>Empire State Building</li>
+                <li>Statue of Liberty</li>
+                <li>Metropolitan Museum of Art</li>
+                <li>Broadway Theater District</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Paris Modal -->
+<div id="paris-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <img src="img/photo3.jpg" alt="Paris">
+        </div>
+        <div class="modal-body">
+            <h2>Paris</h2>
+            <p>Paris, the City of Light, captivates visitors with its timeless beauty, rich history, and romantic atmosphere. From world-renowned art museums to charming cafés and architectural marvels, Paris offers an enchanting experience that leaves a lasting impression on all who visit.</p>
+            <h3>Highlights</h3>
+            <ul>
+                <li>Iconic architecture</li>
+                <li>World-class art museums</li>
+                <li>Exquisite French cuisine</li>
+                <li>Charming neighborhoods</li>
+            </ul>
+            <h3>Must-Visit Attractions</h3>
+            <ul>
+                <li>Eiffel Tower</li>
+                <li>Louvre Museum</li>
+                <li>Notre-Dame Cathedral</li>
+                <li>Champs-Élysées</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Tokyo Modal -->
+<div id="tokyo-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <img src="img/photo1.jpg" alt="Tokyo">
+        </div>
+        <div class="modal-body">
+            <h2>Tokyo</h2>
+            <p>Tokyo is a city where tradition meets innovation, creating a unique urban experience unlike anywhere else in the world. From ancient temples to futuristic technology, bustling markets to peaceful gardens, Tokyo offers visitors an exciting blend of old and new Japan.</p>
+            <h3>Highlights</h3>
+            <ul>
+                <li>Modern technology</li>
+                <li>Traditional culture</li>
+                <li>Amazing food scene</li>
+                <li>Efficient transportation</li>
+            </ul>
+            <h3>Must-Visit Attractions</h3>
+            <ul>
+                <li>Senso-ji Temple</li>
+                <li>Shibuya Crossing</li>
+                <li>Tokyo Skytree</li>
+                <li>Tsukiji Outer Market</li>
+            </ul>
+        </div>
+    </div>
+</div>
 <!-- Interactive Map -->
 <div class="interactive-map">
     <h2>Explore Our Destinations</h2>
     <div id="map"></div>
 </div>
     
+
     <!-- help -->
 <div class="help"><a href="#" ><i class="fa fa-commenting-o" aria-hidden="true" id="help-icon"></i><br><span >&nbsp;&nbsp;&nbsp;Help</span></a></div>
 
@@ -392,7 +517,7 @@
     
         <!-- Copyright Section -->
         <div class="footer-bottom">
-            <p>&copy; 2025 Travel Website. All rights reserved.</p>
+            <p>&copy; 2025 ShelterSeek Website. All rights reserved.</p>
         </div>
     </footer>
     <script type="module" src="sumukesh_traveler.js"></script>

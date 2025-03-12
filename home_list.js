@@ -20,6 +20,7 @@ const homes = [
         maxdays: 4,
         transport: "2km", // Added
         size: "1200", // Added
+        availableDates: [],
     },
     {
         id: 2,
@@ -42,6 +43,7 @@ const homes = [
         maxdays: 3,
         transport: "5km", // Added
         size: "900", // Added
+        availableDates: [],
     },
     {
         id: 3,
@@ -64,6 +66,7 @@ const homes = [
         maxdays: 2,
         transport: "10km", // Added
         size: "1000", // Added
+        availableDates: [],
     },
     {
         id: 4,
@@ -86,6 +89,7 @@ const homes = [
         maxdays: 5,
         transport: "2km", // Added
         size: "medium", // Added
+        availableDates: [],
     },
     {
         id: 5,
@@ -108,6 +112,7 @@ const homes = [
         maxdays: 5,
         transport: "5km", // Added
         size: "2000 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 6,
@@ -130,6 +135,7 @@ const homes = [
         maxdays: 7,
         transport: "10km", // Added
         size: "1800 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 7,
@@ -152,6 +158,7 @@ const homes = [
         maxdays: 3,
         transport: "5km", // Added
         size: "2200 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 8,
@@ -174,6 +181,7 @@ const homes = [
         maxdays: 7,
         transport: "2km", // Added
         size: "3000 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 9,
@@ -196,6 +204,7 @@ const homes = [
         maxdays: 7,
         transport: "10km", // Added
         size: "4000 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 10,
@@ -218,6 +227,7 @@ const homes = [
         maxdays: 1,
         transport: "5km", // Added
         size: "1000 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 11,
@@ -240,6 +250,7 @@ const homes = [
         maxdays: 1,
         transport: "10km", // Added
         size: "5000 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 12,
@@ -262,6 +273,7 @@ const homes = [
         maxdays: 1,
         transport: "5km", // Added
         size: "1800 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 13,
@@ -284,6 +296,7 @@ const homes = [
         maxdays: 1,
         transport: "10km", // Added
         size: "3000 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 14,
@@ -306,6 +319,7 @@ const homes = [
         maxdays: 1,
         transport: "2km", // Added
         size: "800 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 15,
@@ -328,6 +342,7 @@ const homes = [
         maxdays: 1,
         transport: "5km", // Added
         size: "2500 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 16,
@@ -350,6 +365,7 @@ const homes = [
         maxdays: 3,
         transport: "10km", // Added
         size: "6000 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 17,
@@ -372,6 +388,7 @@ const homes = [
         maxdays: 12,
         transport: "2km", // Added
         size: "1200 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 18,
@@ -394,6 +411,7 @@ const homes = [
         maxdays: 13,
         transport: "10km", // Added
         size: "3500 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 19,
@@ -416,6 +434,7 @@ const homes = [
         maxdays: 14,
         transport: "10km", // Added
         size: "4000 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 20,
@@ -438,6 +457,7 @@ const homes = [
         maxdays: 16,
         transport: "2km", // Added
         size: "2800 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 21,
@@ -460,6 +480,7 @@ const homes = [
         maxdays: 16,
         transport: "10km", // Added
         size: "1500 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 22,
@@ -482,6 +503,7 @@ const homes = [
         maxdays: 3,
         transport: "5km", // Added
         size: "4500 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 23,
@@ -504,6 +526,7 @@ const homes = [
         maxdays: 4,
         transport: "10km", // Added
         size: "3000 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 24,
@@ -526,6 +549,7 @@ const homes = [
         maxdays: 2,
         transport: "2km", // Added
         size: "2000 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 25,
@@ -548,6 +572,7 @@ const homes = [
         maxdays: 5,
         transport: "5km", // Added
         size: "1200 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 26,
@@ -570,6 +595,7 @@ const homes = [
         maxdays: 3,
         transport: "5km", // Added
         size: "1800 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 27,
@@ -592,6 +618,7 @@ const homes = [
         maxdays: 2,
         transport: "10km", // Added
         size: "1000 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 28,
@@ -614,6 +641,7 @@ const homes = [
         maxdays: 4,
         transport: "10km", // Added
         size: "2500 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 29,
@@ -636,6 +664,7 @@ const homes = [
         maxdays: 7,
         transport: "5km", // Added
         size: "3000 sq.feet", // Added
+        availableDates: [],
     },
     {
         id: 30,
@@ -658,6 +687,7 @@ const homes = [
         maxdays: 7,
         transport: "10km", // Added
         size: "5000 sq.feet", // Added
+        availableDates: [],
     }
 ];
 

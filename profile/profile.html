@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wishlist</title>
-    <link rel="stylesheet" href="sumukesh_traveler.css">
-    <link rel="stylesheet" href="sumukesh_room_layout.css">
-    <link rel="stylesheet" href="wishlist.css">
+    <title>Profile - ShelterSeek</title>
+    <link rel="stylesheet" href="/sumukesh_traveler.css">
+    <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-     <!-- navbar -->
-     <div class="traveler_navbar">
-        <div id="traveler_logo"><a href="index.html" style="text-decoration:none"><div ><span id="logo-s">S</span><span id="logo-r">helter</span><span id="logo-s">S</span><span id="logo-r">eek</span></div></a> </div>
+    <!-- Navbar -->
+    <div class="traveler_navbar">
+        <div id="traveler_logo"><a href="/index.html" style="text-decoration:none"><div ><span id="logo-s">S</span><span id="logo-r">helter</span><span id="logo-s">S</span><span id="logo-r">eek</span></div></a> </div>
          <div id="traveler_searchbar">
              <input type="text" id="search-bar" name="destination" placeholder="Where to go!">
              <button><i class="fa fa-search" id="search-button"></i></button>
          </div>
         
-         <div class="cart"><a href="wishlist.html" ><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
+         <div class="cart"><a href="/wishlist.html" ><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
          <div class="about"><a href="#" >About</a></div>
          <div class="inbox"><a href="#"></a><i class="fa fa-envelope" aria-hidden="true"></i></div>
          <div class="traveler"><button id="user-button"><i class="fa fa-user" aria-hidden="true"></i></button></div>
@@ -26,7 +25,7 @@
              <button id="user-close-btn" class="user-close-btn">&times;
              </button>
              <ul>
-                 <li><a href="profile/profile.html">profile</a></li>
+                 <li><a href="profile.html">profile</a></li>
                  <li><a href="#">history</a></li>
                  <li><a href="login/loginweb.html" id="login-button">login</a></li>
              </ul>
@@ -44,28 +43,64 @@
              </ul>
          </div>
      </div>
-  <!-- end of nav bar -->
-    <div class="wishlist-heading">
-        <span id="wishlist-span">Your wishlist</span><br>
-        <span id="wishlist-span-1">We are here to show your favorite rooms</span>
-    </div>     
-    <hr style="opacity: 0.3;">
 
-    <div class="main-wish-home-block" id="likedrooms"></div>
-     <!-- help -->
-     <div class="help"><a href="#"><i class="fa fa-commenting-o" aria-hidden="true" id="help-icon"></i><br><span >&nbsp;&nbsp;&nbsp;Help</span></a></div>
-   
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <h1>Your Profile</h1>
+        <div class="profile-info">
+            <div class="profile-picture">
+                <img src="/img/photo1.jpg" alt="Profile Picture" id="profile-pic">
+                
+            </div>
+            <div class="profile-details">
+                <div class="detail">
+                    <label>Name:</label>
+                    <span id="profile-name">Loading...</span>
+                </div>
+                <div class="detail">
+                    <label>Email:</label>
+                    <span id="profile-email">Loading...</span>
+                </div>
+                <div class="detail">
+                    <label>Account Type:</label>
+                    <span id="profile-account-type">Loading...</span>
+                </div>
+            </div>
+        </div>
 
-     <!-- footer -->
-     <footer class="footer">
+        <!-- Edit Profile Form -->
+        <!-- <div class="edit-profile">
+            <h2>Edit Profile</h2>
+            <form id="edit-profile-form">
+                <div class="form-group">
+                    <label for="edit-name">Name:</label>
+                    <input type="text" id="edit-name" name="edit-name" placeholder="Enter your name" value="">
+                </div>
+                <div class="form-group">
+                    <label for="edit-email">Email:</label>
+                    <input type="email" id="edit-email" name="edit-email" placeholder="Enter your email" value="">
+                </div>
+                <div class="form-group">
+                    <label for="edit-password">New Password:</label>
+                    <input type="password" id="edit-password" name="edit-password" placeholder="Enter new password">
+                </div>
+                <button type="submit" class="save-changes-btn">Save Changes</button>
+            </form>
+        </div> -->
+        <!-- Account Actions -->
+        <div class="account-actions">
+            <h2>Account Actions</h2>
+            <button id="delete-account" class="danger-btn">Delete Account</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-container">
-            <!-- About Section -->
             <div class="footer-section">
                 <h3>About Us</h3>
                 <p>We provide the best travel experiences with a wide range of accommodations to suit your needs. Explore the world with us!</p>
             </div>
-    
-            <!-- Quick Links Section -->
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
@@ -76,18 +111,14 @@
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
-    
-            <!-- Contact Section -->
             <div class="footer-section">
                 <h3>Contact Us</h3>
                 <ul>
-                    <li><i class="fa fa-map-marker"></i> G04  IIIT Sri City, Chittor, India</li>
+                    <li><i class="fa fa-map-marker"></i> G04 IIIT Sri City, Chittor, India</li>
                     <li><i class="fa fa-phone"></i> +91-0123456789</li>
                     <li><i class="fa fa-envelope"></i> ShelterSeek@gmail.com</li>
                 </ul>
             </div>
-    
-            <!-- Social Media Section -->
             <div class="footer-section">
                 <h3>Follow Us</h3>
                 <div class="social-icons">
@@ -98,15 +129,11 @@
                 </div>
             </div>
         </div>
-    
-        <!-- Copyright Section -->
         <div class="footer-bottom">
             <p>&copy; 2025 ShelterSeek Website. All rights reserved.</p>
         </div>
     </footer>
-    <script type="module" src="sumukesh_traveler.js"></script>
-    <script type="module" src="sorted_houses.js"></script>
-     <script type="module" src="/wishlist.js"></script>
-    <script type="module" src="/sumukesh_layout.js"></script>
+    <script type="module" src="/sumukesh_traveler.js"></script>
+    <script type="module" src="profile.js"></script>
 </body>
 </html>

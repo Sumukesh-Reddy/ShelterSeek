@@ -94,18 +94,19 @@ function calculateRent(home) {
 
             if (days > home.maxdays) {
                 rentButton.textContent = "Select valid days";
-                return;
+                rentButton.disabled = true;
             } else {
-            const pricePerNight = parseFloat(home.price); // Get price from home data
-            const totalCost = days * pricePerNight *(1- home.discountPercentage/100); // Calculate total cost
-            rentButton.textContent = `Rent Now for ₹${totalCost}`; // Update button text
+                const pricePerNight = parseFloat(home.price); // Get price from home data
+                const totalCost = days * pricePerNight * (1 - home.discountPercentage / 100); // Calculate total cost
+                rentButton.textContent = `Rent Now for ₹${totalCost}`; // Update button text
+                rentButton.disabled = false; // Enable the button
             }
         } else {
             rentButton.textContent = "Select valid dates";
+            rentButton.disabled = true; // Disable the button
         }
     }
 }
-
 // DOMContentLoaded event listener
 document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
@@ -268,14 +269,41 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("likedHomes", JSON.stringify(likedHomes));
 
             console.log("Updated likedHomes:", likedHomes); // Debugging
-
-            // In sumukesh_layout.js
-            document.getElementById("rent-button").addEventListener("click", function () {
-                const homeId = home.id; // Assuming `home` is the current home object
-                window.location.href = `payment.html?id=${homeId}`; // Redirect to payment page with home ID
-            });
+            
+            
         });
-
+        document.getElementById("rent-button").addEventListener("click", function () {
+            const checkInInput = document.getElementById("check-in");
+            const checkOutInput = document.getElementById("check-out");
+        
+            const checkInDate = new Date(checkInInput.value);
+            const checkOutDate = new Date(checkOutInput.value);
+        
+            if (checkInDate && checkOutDate && checkOutDate > checkInDate) {
+                const timeDiff = checkOutDate - checkInDate;
+                const days = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)); // Calculate number of days
+        
+                if (days <= home.maxdays) {
+                    // Redirect to payment page with home ID and dates
+                    window.location.href = `payment.html?id=${home.id}&checkIn=${checkInInput.value}&checkOut=${checkOutInput.value}`;
+                } else {
+                    alert("Select valid days within the maximum allowed days.");
+                }
+            } else {
+                alert("Select valid dates.");
+            }
+        });
+        
+        const messageButton = document.getElementById("message");        
+        if (messageButton) {
+            console.log("Message button found!"); 
+            messageButton.addEventListener("click", () => {
+                console.log("Message button clicked!"); 
+                window.location.href = `message.html?hostId=${home.host.name}`;
+            });
+        } else {
+            console.error("Message button not found!"); // Debugging log
+        }
         updateMedia();
 
         // Rent calculation

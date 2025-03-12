@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sumukesh_traveler.css">
-    <link rel="stylesheet" href="sumukesh_room_layout.css">
+    <link rel="stylesheet" href="/sumukesh_traveler.css">
+    <link rel="stylesheet" href="/sumukesh_room_layout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
@@ -23,23 +23,24 @@
          <div class="inbox"><a href="#"></a><i class="fa fa-envelope" aria-hidden="true"></i></div>
          <div class="traveler"><button id="user-button"><i class="fa fa-user" aria-hidden="true"></i></button></div>
          <div id="user-menu" class="user-menu">
-             <button id="user-close-btn" class="user-close-btn">&times;</button>
+             <button id="user-close-btn" class="user-close-btn">&times;
+             </button>
              <ul>
-                 <li><a href="#">profile</a></li>
+                 <li><a href="profile/profile.html">profile</a></li>
                  <li><a href="#">history</a></li>
-                 <li><a href="#">login</a></li>
+                 <li><a href="login/loginweb.html" id="login-button">login</a></li>
              </ul>
          </div>
          <div class="menubar"><button id="menubotton" ><i class="fa fa-navicon">‌</i></button></div>
          <div id="menu" class="menu">
          <button id="close-btn" class="close-btn">&times;</button>
              <ul>
-                 <li><a href="#">profile</a></li>
+                 <li><a href="profile/profile.html">profile</a></li>
                  <li><a href="#">inbox</a></li>
                  <li><a href="#">history</a></li>
                  <li><a href="wishlist.html">Wish List</a></li>
                  <li><a href="#">about</a></li>
-                 <li><a href="#">login</a></li>
+                 <li><a href="login/loginweb.html">login</a></li>
              </ul>
          </div>
      </div>
@@ -66,7 +67,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="https://jaswanth-m25.github.io/Help-page/">Contact</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
@@ -95,11 +96,12 @@
     
         <!-- Copyright Section -->
         <div class="footer-bottom">
-            <p>&copy; 2025 Travel Website. All rights reserved.</p>
+            <p>&copy; 2025 ShelterSeek Website. All rights reserved.</p>
         </div>
     </footer>
-     <script type="module" src="sumukesh_traveler.js"></script>
-     <script type="module" src="sumukesh_layout.js"></script>
-     <script type="module" src="sorted_houses.js"></script>
+    <script type="module" src="sumukesh_traveler.js"></script>
+    <script type="module" src="sorted_houses.js"></script>
+     <script type="module" src="/sumukesh_layout.js"></script>
+     
 </body>
 </html>
