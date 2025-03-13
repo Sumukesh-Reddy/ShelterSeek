@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if(loginLogoutText.textContent === "Login"){
         window.addEventListener("click",()=>{
-            window.location.href="/login/loginweb.html"
+            window.location.href="login/loginweb.html"
         })
     }
 document.getElementById("user-button").addEventListener("click",()=>{
