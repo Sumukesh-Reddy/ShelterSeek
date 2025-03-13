@@ -76,7 +76,7 @@ import dataStore from './saidataStore.js';
                         if (user.accountType === 'admin' || user.accountType === 'host') {
                             window.location.href = 'hostweb.html';
                         } else {
-                            window.location.href = '/index.html';
+                            window.location.href = './index.html';
                         }
                     } else {
                         alert('Please select the correct account type for your login.');
